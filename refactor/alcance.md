@@ -1,0 +1,15 @@
+- Refactor de Alacena, ayudar con la IA a definir el MVP del proyecto
+- Escoger la mejor tecnología para el refactor, es un código antiguo
+- Primero mantener la funcionalidad offline
+- Luego evolucionar la parte online y de login
+- Casos de uso con Gherkin, Moscow para priorizar
+- Obtener un proyecto publicable en web, como PWA, con la funcionalidad de login y de guardar los datos en la nube
+- Añadir un agente de IA, que permita realizar menús saludables, como experto en alimentación sana y siguiendo las recomendaciones estándar, que se adapten a las necesidades y los ingredientes disponibles del usuario, así como la gestión de la lista de la compra de la aplicación en base al menú semanal generado o las preferencias del usuario, debe permitir indicar que se ha comido o cenado fuera para cualquiera de los momentos
+- Debe tener TDD y CI/CD, para poder publicar fácilmente en web
+- Debe tener un diseño limpio y moderno
+- Debe tener un diseño responsive
+- Debe tener un diseño accesible
+- Debe tener un diseño que se adapte a diferentes tamaños de pantalla
+- Debe tener un diseño que se adapte a diferentes resoluciones
+- Debe tener un diseño que se adapte a diferentes navegadores
+- Debe tener un diseño que se adapte a diferentes idiomas
