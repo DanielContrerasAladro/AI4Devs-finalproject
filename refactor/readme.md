@@ -162,17 +162,17 @@
 ### **2.1.1 (actual)**
 > ```mermaid
 > flowchart TD
->     subgraph Cliente [Aplicación Móvil (Ionic + Angular)]
+>     subgraph Cliente [Aplicación Móvil Ionic + Angular]
 >         UI[Interfaz de Usuario]
->         Logic[Lógica de Negocio (Angular Services)]
+>         Logic[Lógica de Negocio Angular Services]
 >         Notif[Notificaciones Locales]
 >     end
 >
 >     subgraph Servidor [Firebase]
->         Auth[Autenticación (Firebase Auth)]
->         DB[Base de Datos en Tiempo Real (Realtime Database)]
+>         Auth[Autenticación Firebase Auth]
+>         DB[Base de Datos en Tiempo Real Realtime Database]
 >         Storage[Almacenamiento de Archivos]
->         FCM[Notificaciones Push (Firebase Cloud Messaging)]
+>         FCM[Notificaciones Push Firebase Cloud Messaging]
 >     end
 >
 >     UI --> Logic
@@ -194,8 +194,8 @@
 >
 >     %% Despliegue
 >     subgraph Despliegue
->         FirebaseHosting[Firebase Hosting (Web)]
->         AppStores[App Stores (iOS/Android)]
+>         FirebaseHosting[Firebase Hosting Web]
+>         AppStores[App Stores iOS/Android]
 >     end
 >     Cliente -->|Distribución| AppStores
 >     Servidor -->|Web| FirebaseHosting
@@ -214,15 +214,15 @@
 ### **2.1.2 (objetivo)**
 > ```mermaid
 > flowchart TD
->     subgraph Cliente [PWA (PyScript/Anvil)]
->         UI[UI/UX (TailwindCSS + Python)]
->         Logic[Lógica de Negocio (Python)]
->         SW[Service Worker (Offline)]
->         IA[Agente IA (API Python)]
+>     subgraph Cliente [PWA PyScript/Anvil]
+>         UI[UI/UX TailwindCSS + Python]
+>         Logic[Lógica de Negocio Python]
+>         SW[Service Worker Offline]
+>         IA[Agente IA API Python]
 >     end
 >
->     subgraph Backend [Supabase]
->         Auth[Auth (OAuth, Email, Social)]
+>     subgraph Backend [Supabase Hosting]
+>         Auth[Auth OAuth, Email, Social]
 >         DB[PostgreSQL DB + JSONB]
 >         Storage[Storage]
 >         Edge[Edge Functions]
@@ -238,7 +238,7 @@
 >     Logic -->|Recomendaciones| IA
 >     SW -->|Sincronización| DB
 >
->     Cliente -->|Web| Supabase Hosting
+>     Cliente -->|Web| Supabase
 >     IA -->|API| Backend
 > ```
 
@@ -291,57 +291,54 @@
 #### 2.3.1 (actual)
 
 > El proyecto actual está basado en una arquitectura móvil híbrida utilizando Angular, Ionic y Firebase. La estructura de ficheros se organiza en torno a los módulos de Angular, componentes de Ionic y la configuración de Firebase, permitiendo una gestión eficiente de la lógica de negocio, vistas y servicios. Incluye carpetas para componentes, servicios, modelos, assets y configuración específica de la plataforma. El despliegue y la integración con Firebase están presentes en la raíz del proyecto.
->
-> ```mermaid
-> flowchart TD
->     Root[Raíz del proyecto]
->     src[ /src ]
->     app[ /src/app ]
->     assets[ /src/assets ]
->     environments[ /src/environments ]
->     firebase[ /firebase ]
->     config[ /config ]
->     node[ /node_modules ]
->     ionic[ Configuración Ionic ]
->     package[ package.json ]
->     angular[ angular.json ]
->     firebasejson[ firebase.json ]
->
->     Root --> src
->     src --> app
->     src --> assets
->     src --> environments
->     Root --> firebase
->     Root --> config
->     Root --> node
->     Root --> ionic
->     Root --> package
->     Root --> angular
->     Root --> firebasejson
-> ```
+```md
+Alacena
+|── src
+| |── app
+| |── classes
+| |── providers
+| |── pipes
+| |── components
+| |── theme
+| |── assets
+| |── pages
+| |-- services
+|── firebase
+|── config
+|── node_modules
+|── ionic.config.json
+|── package.json
+|── angular.json
+|── firebase.json
+```
 
 #### 2.3.2 (objetivo)
 
 > La situación objetivo plantea una PWA moderna y modular, desarrollada principalmente en Python (PyScript/Anvil) y desplegada sobre Supabase. La estructura de carpetas se orienta a la separación clara entre frontend (PWA en Python), microservicio de IA, configuración de Supabase, tests y automatización CI/CD. Esto facilita la escalabilidad, el mantenimiento y la integración continua, permitiendo una evolución ágil del producto.
 >
-> ```mermaid
-> flowchart TD
->     Root[Raíz del proyecto]
->     frontend[ /frontend (PWA Python) ]
->     ia[ /ia-service (Microservicio IA) ]
->     supabase[ /supabase (Config. y migraciones) ]
->     tests[ /tests ]
->     github[ /.github/workflows (CI/CD) ]
->     readme[ README.md ]
->     req[ requirements.txt ]
->
->     Root --> frontend
->     Root --> ia
->     Root --> supabase
->     Root --> tests
->     Root --> github
->     Root --> readme
->     Root --> req
+> ```mmd
+> Alacena
+> |── /frontend
+> | |── /components
+> | |── /pages
+> | |── /services
+> | |── /assets
+> | |── /theme
+> |── /ia-service
+> | |── /models
+> | |── /controllers
+> | |── /utils
+> |── /supabase
+> | |── /migrations
+> | |── /config
+> |── /tests
+> | |── /unit
+> | |── /integration
+> | |── /e2e
+> |── /.github
+> | |── /workflows
+> |── README.md
+> |── requirements.txt
 > ```
 
 ### **2.4. Infraestructura y despliegue**
@@ -356,8 +353,8 @@
 >     Git[Repositorio Git]
 >     CLI[Ionic/Angular CLI]
 >     FirebaseHosting[Firebase Hosting]
->     AppStores[App Stores (iOS/Android)]
->     App[Aplicación Móvil (Ionic/Angular)]
+>     AppStores[App Stores iOS/Android]
+>     App[Aplicación Móvil Ionic/Angular]
 >     Auth[Firebase Auth]
 >     DB[Firebase Realtime Database]
 >     Storage[Firebase Storage]
@@ -390,15 +387,15 @@
 > flowchart TD
 >     Dev[Desarrollador]
 >     Git[Repositorio GitHub]
->     Actions[GitHub Actions (CI/CD)]
->     SupabaseHosting[Supabase Hosting (PWA)]
->     PWA[PWA (PyScript/Anvil)]
+>     Actions[GitHub Actions CI/CD]
+>     SupabaseHosting[Supabase Hosting PWA]
+>     PWA[PWA PyScript/Anvil]
 >     Auth[Supabase Auth]
 >     DB[Supabase PostgreSQL + JSONB]
 >     Storage[Supabase Storage]
 >     Edge[Supabase Edge Functions]
 >     Realtime[Supabase Realtime]
->     IA[Microservicio IA (Python)]
+>     IA[Microservicio IA Python]
 >
 >     Dev -->|Push| Git
 >     Git -->|CI/CD| Actions
@@ -460,72 +457,72 @@
 #### 2.6.2 (objetivo)
 
 > En la arquitectura objetivo, se amplía la cobertura de tests, incluyendo tests unitarios, de integración y end-to-end tanto para el frontend (PWA en Python) como para el backend (Supabase y microservicios Python). Se utilizarán herramientas como Pytest para Python, y frameworks de testing para PWA (por ejemplo, Playwright o Selenium para pruebas de interfaz).
-> 
+>
 > Se definen los siguientes casos de uso principales, detallados en formato Gherkin:
-> 
+>
 > **Caso de uso 1: Gestión de inventario de la despensa**
 > ```gherkin
 > Feature: Gestión de inventario
 >   As a usuario
 >   I want to añadir, editar y eliminar alimentos en mi despensa
 >   So that pueda mantener un inventario actualizado
-> 
+>
 >   Scenario: Añadir un alimento
 >     Given el usuario está autenticado
 >     When añade un alimento con nombre "Manzana" y cantidad 5
 >     Then el alimento aparece en la lista de la despensa
-> 
+>
 >   Scenario: Editar un alimento
 >     Given existe un alimento "Manzana" en la despensa
 >     When el usuario actualiza la cantidad a 10
 >     Then la cantidad del alimento "Manzana" es 10
-> 
+>
 >   Scenario: Eliminar un alimento
 >     Given existe un alimento "Manzana" en la despensa
 >     When el usuario elimina el alimento
 >     Then el alimento "Manzana" ya no aparece en la lista
 > ```
-> 
+>
 > **Caso de uso 2: Planificación de menús saludables con IA**
 > ```gherkin
 > Feature: Sugerencia de menús saludables
 >   As a usuario
 >   I want to recibir sugerencias de menús personalizados según mis preferencias y mi inventario
 >   So that pueda planificar mi alimentación de forma saludable
-> 
+>
 >   Scenario: Sugerencia de menú semanal
 >     Given el usuario tiene alimentos disponibles en la despensa
 >     When solicita una sugerencia de menú semanal
 >     Then el sistema muestra un menú adaptado a sus preferencias y restricciones
 > ```
-> 
+>
 > **Caso de uso 3: Sincronización y funcionalidad offline**
 > ```gherkin
 > Feature: Sincronización y modo offline
 >   As a usuario
 >   I want to poder usar la aplicación sin conexión y sincronizar los cambios al recuperar la conexión
 >   So that no pierda información y pueda gestionar mi despensa en cualquier momento
-> 
+>
 >   Scenario: Añadir alimento sin conexión
 >     Given el usuario está sin conexión
 >     When añade un alimento a la despensa
 >     Then el alimento se guarda localmente
 >     And cuando se recupera la conexión, el alimento se sincroniza con el servidor
 > ```
-> 
+>
 > **Caso de uso 4: Notificaciones inteligentes**
 > ```gherkin
 > Feature: Notificaciones de caducidad y compra
 >   As a usuario
 >   I want to recibir notificaciones cuando un alimento esté a punto de caducar o falte para una receta
 >   So that pueda consumir los productos a tiempo y completar mis menús
-> 
+>
 >   Scenario: Notificación de caducidad próxima
 >     Given un alimento caduca en 3 días
 >     When se acerca la fecha de caducidad
 >     Then el usuario recibe una notificación de aviso
 > ```
-> 
+>
 > Estos tests aseguran la calidad, robustez y experiencia de usuario en la nueva arquitectura, cubriendo tanto la lógica de negocio como la integración con Supabase y el microservicio de IA.
 
 ---
