@@ -15,9 +15,9 @@ Puedes añadir adicionalmente la conversación completa como link o archivo adju
   - [**2.6. Tests**](#26-tests)
 - [3. Modelo de Datos](#3-modelo-de-datos)
 - [4. Especificación de la API](#4-especificación-de-la-api)
-- [5. Historias de Usuario](#5-historias-de-usuario)
-- [6. Tickets de Trabajo](#6-tickets-de-trabajo)
+- [5. Historias de Usuario y Tickets de Trabajo](#5-historias-de-usuario-y-tickets-de-trabajo)
 - [7. Pull Requests](#7-pull-requests)
+  - [7.1 Commits](#71-commits)
 
 ---
 
@@ -133,36 +133,78 @@ Perfecto, amplía los dos diagramas en formato mermaid y añade todos los parám
 
 **Prompt 1:**
 
+Actúa como experto en desarrollo backend de APIs con @Supabase @Supabase Python @Python 3 revisa el proyecto en base a @propuesta_refactorizacion.md, @solution_spec.md  y lo escrito ya en el fichero @readme.md, de ser necesaria una API en el objetivo del proyecto, describe los endpoints principales de la API  en formato OpenAPI con el mayor nivel de detalle posible. Sigue las buenas prácticas estándar de diseño de APIS, usa la metodología DDD y sigue los principios SOLID y DRY
+
 **Prompt 2:**
 
-**Prompt 3:**
+Perfecto, los desarrolladores, tanto frontend como backend, piden que se especifiquen ejemplos de la API, así como una manera más sencilla y visual para verla, recomienda la mejor manera, y habrá que especificar, para el desarrollo y las pruebas, una forma de trabajar con mocks tanto para frontend como para backend
 
 ---
 
-## 5. Historias de Usuario
+## 5. Historias de Usuario y Tickets de Trabajo
 
 **Prompt 1:**
 
+Actúa como experto analista de negocio que está teniendo conversaciones con el cliente y el product owner revisando los documentos @alcance.md@solution_spec.md  @propuesta_refactorizacion.md @readme.md para:
+- definir un PRD en un documento markdown en la carpeta @analisis
+- definir un Diagrama C4 que llegue en profundidad a los componentes del sistema, un documento markdown en la carpeta @analisis
+- definir una planificación a largo plazo en base a los documentos creados y existentes, un documento markdown en la carpeta @analisis
+- definir las Historias de Usuario, agrupándolas en Épicas funcionales, guárdalas en una carpeta que se llame backlog (créala si no ecxiste dentro de la carpeta @analisis, cada una en un documento markdown, con el formato siguiente:
+```
+Título de la Historia de Usuario:
+
+Como [rol del usuario],
+quiero [acción que desea realizar el usuario],
+para que [beneficio que espera obtener el usuario].
+
+Criterios de Aceptación:
+[Detalle específico de funcionalidad]
+
+Notas Adicionales:
+[Cualquier consideración adicional]
+
+Historias de Usuario Relacionadas:
+[Relaciones con otras historias de usuario]
+```
+- definir el backlog para el proyecto, priorizando las historias de usuario generadas en base a MoSCoW
+- define, para cada historia de usuario, los tickets de trabajo o subtareas sobre la historia de usuario, aterrízalos a nivel técnico, los perfiles técnicos particiopantes necesarios aportan su visión en este apartado, incluso agrúpalos para los diferentes pefiles técnicos, siendo la salida de una reunión de planificación y refinamiento
+- Para cada ticket de trabajo debes dar una estimación según la metodología de tallas de camiseta, aquí deberías tomar el rol de los diferentes perfiles técnicos en que hayas agrupado los tickets de trabajo. agrúpa toda la información en un fichero markdwon por cada historia de usuario enriquecido con diagramas mermaid si es necesario, en la misma carpeta que esté el backlog
+
 **Prompt 2:**
-
-**Prompt 3:**
-
----
-
-## 6. Tickets de Trabajo
-
-**Prompt 1:**
-
-**Prompt 2:**
-
-**Prompt 3:**
 
 ---
 
 ## 7. Pull Requests
 
-**Prompt 1:**
+Como estoy siguiendo un enfoque de desarrollo ágil, cada vez que se complete una historia de usuario o un ticket de trabajo, se generará un commit en lugar de PR, que seguirán la convención de commit de Conventional Commits, y se documentará en el fichero de log de cambios @CHANGELOG.md, que se generará automáticamente al hacer un commit. El formato del commit será el siguiente:
 
-**Prompt 2:**
+```
+docs: [descripción breve]
+chore: [descripción breve] <para tareas de arquitectura, refactorización, etc.>
+feat: [historia de usuario o ticket de trabajo] - [descripción breve]
+fix: [historia de usuario o ticket de trabajo] - [descripción breve] <bugs encontrados y corregidos tras la revisión de los feat>
+````
 
-**Prompt 3:**
+### 7.1 Commits
+
+**Prompt/Commit 1:**
+**Prompt/Commit 2:**
+**Prompt/Commit 3:**
+**Prompt/Commit 4:**
+**Prompt/Commit 5:**
+**Prompt/Commit 6:**
+**Prompt/Commit 7:**
+**Prompt/Commit 8:**
+**Prompt/Commit 9:**
+**Prompt/Commit 10:**
+**Prompt/Commit 11:**
+**Prompt/Commit 12:**
+**Prompt/Commit 13:**
+**Prompt/Commit 14:**
+**Prompt/Commit 15:**
+**Prompt/Commit 16:**
+**Prompt/Commit 17:**
+**Prompt/Commit 18:**
+**Prompt/Commit 19:**
+**Prompt/Commit 20:**
+**Prompt/Commit 21:**

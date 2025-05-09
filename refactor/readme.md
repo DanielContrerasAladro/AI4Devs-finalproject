@@ -6,8 +6,7 @@
 3. [Modelo de datos](#3-modelo-de-datos)
 4. [Especificación de la API](#4-especificación-de-la-api)
 5. [Historias de usuario](#5-historias-de-usuario)
-6. [Tickets de trabajo](#6-tickets-de-trabajo)
-7. [Pull requests](#7-pull-requests)
+6. [Pull requests](#6-pull-requests)
 
 ---
 
@@ -27,7 +26,8 @@
 > El objetivo del proyecto es realizar una refactorización del proyecto, renovando el código del proyecto a las últimas versiones de las tecnologías utilizadas o modificar las tecnologías actualizadas para adaptarlo a las nuevas necesidades.
 > En el proyecto se va a obviar la parte de applicación móvil y se reconvertirá en una PWA, manteniendo toda la funcionalidad
 > A la funcionalidad se intentará añadir un agente IA experto en nutrición saludable que ayude en la elección de menús, realización de lista de la compra y demás acciones que deban realizarse automáticamente según el uso de cada usuario
-> Se ha escrito una [propuesta de refactorización](propuesta_refactorizacion.md) del proyecto en base a estas necesidades
+> Se ha escrito una [propuesta de refactorización](propuesta_refactorizacion.md) del proyecto en base a estas necesidades.
+> También se ha definido un [Documento de Requisitos del Producto (PRD)](analisis/prd.md) que detalla los objetivos y funcionalidades del proyecto.
 
 ### **0.4. URL del proyecto:**
 
@@ -291,26 +291,26 @@
 #### 2.3.1 (actual)
 
 > El proyecto actual está basado en una arquitectura móvil híbrida utilizando Angular, Ionic y Firebase. La estructura de ficheros se organiza en torno a los módulos de Angular, componentes de Ionic y la configuración de Firebase, permitiendo una gestión eficiente de la lógica de negocio, vistas y servicios. Incluye carpetas para componentes, servicios, modelos, assets y configuración específica de la plataforma. El despliegue y la integración con Firebase están presentes en la raíz del proyecto.
-```md
-Alacena
-|── src
-| |── app
-| |── classes
-| |── providers
-| |── pipes
-| |── components
-| |── theme
-| |── assets
-| |── pages
-| |-- services
-|── firebase
-|── config
-|── node_modules
-|── ionic.config.json
-|── package.json
-|── angular.json
-|── firebase.json
-```
+> ```md
+> Alacena
+> |── src
+> | |── app
+> | |── classes
+> | |── providers
+> | |── pipes
+> | |── components
+> | |── theme
+> | |── assets
+> | |── pages
+> | |-- services
+> |── firebase
+> |── config
+> |── node_modules
+> |── ionic.config.json
+> |── package.json
+> |── angular.json
+> |── firebase.json
+> ```
 
 #### 2.3.2 (objetivo)
 
@@ -693,41 +693,208 @@ Alacena
 
 ## 4. Especificación de la API
 
-> Si tu backend se comunica a través de API, describe los endpoints principales (máximo 3) en formato OpenAPI. Opcionalmente puedes añadir un ejemplo de petición y de respuesta para mayor claridad
+Se define la especificación de la [API](openapi.yaml) objetivo del proyecto en formato OpenAPI.
+
+Para facilitar el desarrollo y las pruebas, tanto para el frontend como para el backend, es recomendable utilizar herramientas que permitan visualizar y probar la API de manera sencilla, así como implementar mocks para simular el comportamiento de la API durante el desarrollo. A continuación, se detallan las recomendaciones:
+
+### 1. **Visualización y Pruebas de la API**
+
+#### **Herramienta Recomendada: Swagger UI**
+
+Swagger UI es una herramienta ampliamente utilizada para visualizar y probar APIs definidas en formato OpenAPI. Permite a los desarrolladores interactuar con la API directamente desde el navegador, enviando solicitudes y viendo las respuestas en tiempo real.
+
+**Pasos para implementar Swagger UI:**
+
+1. **Generar la especificación OpenAPI**: Asegúrate de que la especificación OpenAPI esté completa y correctamente definida en un archivo `openapi.yaml` o `openapi.json`.
+
+2. **Integrar Swagger UI en el proyecto**:
+   - Si estás utilizando un framework como Flask o FastAPI en el backend, puedes integrar Swagger UI fácilmente con la librería `swagger-ui` o `fastapi` (que incluye Swagger UI por defecto).
+   - Para otros frameworks, puedes servir el archivo OpenAPI y usar la interfaz de Swagger UI disponible en [Swagger UI](https://swagger.io/tools/swagger-ui/).
+
+**Ejemplo de integración con FastAPI:**
+
+```python
+from fastapi import FastAPI
+from fastapi.openapi.utils import get_openapi
+
+app = FastAPI()
+
+# Definir tus endpoints aquí
+
+def custom_openapi():
+    if app.openapi_schema:
+        return app.openapi_schema
+    openapi_schema = get_openapi(
+        title="Alacena API",
+        version="1.0.0",
+        description="API para la gestión de la despensa, recetas, menús y notificaciones en la aplicación Alacena.",
+        routes=app.routes,
+    )
+    app.openapi_schema = openapi_schema
+    return app.openapi_schema
+
+app.openapi = custom_openapi
+```
+
+3. **Acceder a Swagger UI**: Una vez que el servidor esté en funcionamiento, puedes acceder a la interfaz de Swagger UI en `http://localhost:8000/docs` (en el caso de FastAPI).
+
+### 2. **Ejemplos de la API**
+
+Es importante proporcionar ejemplos de solicitudes y respuestas para cada endpoint en la especificación OpenAPI. Esto ayuda a los desarrolladores a entender cómo interactuar con la API.
+
+**Ejemplo de especificación OpenAPI con ejemplos:**
+
+```yaml
+paths:
+  /usuarios:
+    post:
+      summary: Crear un nuevo usuario
+      description: Crea un nuevo usuario en el sistema.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuario'
+            example:
+              nombre: "Juan Pérez"
+              email: "juan.perez@example.com"
+      responses:
+        '201':
+          description: Usuario creado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+              example:
+                id: "550e8400-e29b-41d4-a716-446655440000"
+                nombre: "Juan Pérez"
+                email: "juan.perez@example.com"
+```
+
+### 3. **Mocks para Desarrollo y Pruebas**
+
+#### **Herramienta Recomendada: JSON Server**
+
+> JSON Server es una herramienta sencilla que permite crear un servidor RESTful a partir de un archivo JSON. Es ideal para simular el comportamiento de la API durante el desarrollo del frontend.
+>
+> **Pasos para implementar JSON Server:**
+>
+> 1. **Instalar JSON Server**:
+>    ```bash
+>    npm install -g json-server
+>    ```
+>
+> 2. **Crear un archivo JSON con datos de ejemplo**:
+>    ```json
+>    {
+>      "usuarios": [
+>        {
+>          "id": "550e8400-e29b-41d4-a716-446655440000",
+>          "nombre": "Juan Pérez",
+>          "email": "juan.perez@example.com"
+>        }
+>      ],
+>      "alimentos": [
+>        {
+>          "id": "550e8400-e29b-41d4-a716-446655440001",
+>          "usuario_id": "550e8400-e29b-41d4-a716-446655440000",
+>          "nombre": "Manzana",
+>          "cantidad": 5,
+>          "unidad": "kg",
+>          "caducidad": "2024-07-01"
+>        }
+>      ]
+>    }
+>    ```
+>
+> 3. **Iniciar JSON Server**:
+>    ```bash
+>    json-server --watch db.json
+>    ```
+>
+> 4. **Interactuar con el servidor mock**: El servidor estará disponible en `http://localhost:3000`, y podrás realizar solicitudes GET, POST, PUT, DELETE, etc., como si fuera la API real.
+>
+> #### **Mocks en el Backend**
+>
+> Para el backend, puedes utilizar librerías como `unittest.mock` en Python para simular las respuestas de la API durante las pruebas unitarias.
+>
+> **Ejemplo de mock en Python:**
+>
+> ```python
+> from unittest.mock import patch
+> import requests
+>
+> def test_get_usuarios():
+>     with patch('requests.get') as mock_get:
+>         mock_get.return_value.status_code = 200
+>         mock_get.return_value.json.return_value = [
+>             {"id": "550e8400-e29b-41d4-a716-446655440000", "nombre": "Juan Pérez", "email": "juan.perez@example.com"}
+>         ]
+>
+>         response = requests.get('http://localhost:3000/usuarios')
+>         assert response.status_code == 200
+>         assert response.json()[0]['nombre'] == "Juan Pérez"
+> ```
+>
+> ### Resumen
+>
+> - **Swagger UI**: Para visualizar y probar la API de manera interactiva.
+> - **Ejemplos en OpenAPI**: Para proporcionar ejemplos claros de solicitudes y respuestas.
+> - **JSON Server**: Para crear un servidor mock que simule la API durante el desarrollo del frontend.
+> - **unittest.mock**: Para simular respuestas de la API en pruebas unitarias del backend.
+>
+> Estas herramientas y prácticas facilitarán el desarrollo, las pruebas y la colaboración entre los equipos de frontend y backend.
 
 ---
 
 ## 5. Historias de Usuario
 
-> Documenta 3 de las historias de usuario principales utilizadas durante el desarrollo, teniendo en cuenta las buenas prácticas de producto al respecto.
+> Se ha definido la documentación más completa posible, en base a todo lo establecido en este documento y los ficheros creados al definir este documento, y se han creado los documentos necesarios para crear las historias de usuario de la siguiente manera:
 
-**Historia de Usuario 1**
-
-**Historia de Usuario 2**
-
-**Historia de Usuario 3**
+> - [Documento prd](analisis/prd.md)
+> - [Diagrama C4](analisis/DiagramaC4.md)
+> - [Planificación a largo plazo](analisis/PlanificacionLargoPlazo.md)
+> - [Planificación de Releases y roadmap](analisis/PlanificacionReleasesRoadmap.md)
+> - [Checklist sobre el analisis realizado](analisis/ChecklistAnalisis.md)
+> - [Backlog priorizado](analisis/backlog/BacklogPriorizado.md)
+> - [Épicas de trabajo](analisis/backlog/Epicas.md)
+> - Historias de usuario:
+>   - [HU_1](analisis/backlog/HU_1.md)
+>   - [HU_2](analisis/backlog/HU_2.md)
+>   - [HU_3](analisis/backlog/HU_3.md)
+>   - [HU_4](analisis/backlog/HU_4.md)
+>   - [HU_5](analisis/backlog/HU_5.md)
+>   - [HU_6](analisis/backlog/HU_6.md)
+>   - [HU_7](analisis/backlog/HU_7.md)
+>   - [HU_8](analisis/backlog/HU_8.md)
+>   - [HU_9](analisis/backlog/HU_9.md)
+>   - [HU_10](analisis/backlog/HU_10.md)
+>   - [HU_11](analisis/backlog/HU_11.md)
 
 ---
 
-## 6. Tickets de Trabajo
+## 6. Pull Requests
 
-> Documenta 3 de los tickets de trabajo principales del desarrollo, uno de backend, uno de frontend, y uno de bases de datos. Da todo el detalle requerido para desarrollar la tarea de inicio a fin teniendo en cuenta las buenas prácticas al respecto.
+> Al seguir un enfoque [Trunk-Based Development](https://trunkbaseddevelopment.com/), cada vez que se complete una historia de usuario o un ticket de trabajo, se generará un commit en lugar de PR, que seguirán la convención de commit de [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), y se documentará en el fichero de log de cambios @CHANGELOG.md, que se generará automáticamente al hacer un commit. El formato del commit será el siguiente:
+>
+> ```
+> docs: [descripción breve]
+> chore: [descripción breve] <para tareas de arquitectura, refactorización, etc.>
+> feat: [historia de usuario o ticket de trabajo] - [descripción breve]
+> fix: [historia de usuario o ticket de trabajo] - [descripción breve] <bugs encontrados y corregidos tras la revisión de los feat>
+> ````
 
-**Ticket 1**
+### 6.1 Prompt preparación repositorio
 
-**Ticket 2**
+### 6.2 Commits y releases
 
-**Ticket 3**
+> **Commit [1](https://github.com/DanielContrerasAladro/Alacena/commit/1234567890abcdef1234567890abcdef12345678):**
+>   - **Descripción:**
+>   - **Cambios:**
+>   - **Release: No genera release
 
----
-
-## 7. Pull Requests
-
-> Documenta 3 de las Pull Requests realizadas durante la ejecución del proyecto
-
-**Pull Request 1**
-
-**Pull Request 2**
-
-**Pull Request 3**
-
+> **Commit [N](https://github.com/DanielContrerasAladro/Alacena/commit/1234567890abcdef1234567890abcdef12345678):**
+>   - **Descripción:**
+>   - **Cambios:**
+> - **Release:** [0.0.1](https://github.com/DanielContrerasAladro/Alacena/releases/tag/0.0.1)

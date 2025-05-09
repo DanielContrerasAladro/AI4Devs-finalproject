@@ -1,0 +1,275 @@
+openapi: 3.0.0
+info:
+  title: Alacena API
+  description: API para la gestión de la despensa, recetas, menús y notificaciones en la aplicación Alacena.
+  version: 1.0.0
+servers:
+  - url: https://api.alacena.com/v1
+    description: Servidor de producción
+  - url: https://staging.api.alacena.com/v1
+    description: Servidor de staging
+paths:
+  /usuarios:
+    post:
+      summary: Crear un nuevo usuario
+      description: Crea un nuevo usuario en el sistema.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Usuario'
+      responses:
+        '201':
+          description: Usuario creado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Usuario'
+        '400':
+          description: Datos de entrada inválidos
+        '500':
+          description: Error interno del servidor
+
+  /alimentos:
+    get:
+      summary: Obtener alimentos de la despensa
+      description: Obtiene la lista de alimentos en la despensa del usuario autenticado.
+      parameters:
+        - name: usuario_id
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de alimentos obtenida exitosamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Alimento'
+        '404':
+          description: Usuario no encontrado
+        '500':
+          description: Error interno del servidor
+
+  /recetas:
+    post:
+      summary: Crear una nueva receta
+      description: Crea una nueva receta asociada al usuario autenticado.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Receta'
+      responses:
+        '201':
+          description: Receta creada exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Receta'
+        '400':
+          description: Datos de entrada inválidos
+        '500':
+          description: Error interno del servidor
+
+  /menus:
+    get:
+      summary: Obtener menús del usuario
+      description: Obtiene la lista de menús asociados al usuario autenticado.
+      parameters:
+        - name: usuario_id
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de menús obtenida exitosamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Menu'
+        '404':
+          description: Usuario no encontrado
+        '500':
+          description: Error interno del servidor
+
+  /notificaciones:
+    get:
+      summary: Obtener notificaciones del usuario
+      description: Obtiene la lista de notificaciones asociadas al usuario autenticado.
+      parameters:
+        - name: usuario_id
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Lista de notificaciones obtenida exitosamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Notificacion'
+        '404':
+          description: Usuario no encontrado
+        '500':
+          description: Error interno del servidor
+
+  /ia/recomendaciones:
+    post:
+      summary: Obtener recomendaciones de menús
+      description: Obtiene recomendaciones de menús saludables basadas en los alimentos disponibles en la despensa del usuario.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                usuario_id:
+                  type: string
+                  format: uuid
+                preferencias:
+                  type: object
+              required:
+                - usuario_id
+      responses:
+        '200':
+          description: Recomendaciones obtenidas exitosamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Menu'
+        '404':
+          description: Usuario no encontrado
+        '500':
+          description: Error interno del servidor
+
+components:
+  schemas:
+    Usuario:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        nombre:
+          type: string
+        email:
+          type: string
+          format: email
+        metadata:
+          type: object
+      required:
+        - nombre
+        - email
+
+    Alimento:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        usuario_id:
+          type: string
+          format: uuid
+        nombre:
+          type: string
+        cantidad:
+          type: integer
+        unidad:
+          type: string
+        caducidad:
+          type: string
+          format: date
+        metadata:
+          type: object
+      required:
+        - usuario_id
+        - nombre
+        - cantidad
+        - unidad
+        - caducidad
+
+    Receta:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        usuario_id:
+          type: string
+          format: uuid
+        nombre:
+          type: string
+        descripcion:
+          type: string
+        ingredientes:
+          type: array
+          items:
+            type: object
+            properties:
+              alimento_id:
+                type: string
+                format: uuid
+              cantidad:
+                type: integer
+      required:
+        - usuario_id
+        - nombre
+
+    Menu:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        usuario_id:
+          type: string
+          format: uuid
+        fecha_inicio:
+          type: string
+          format: date
+        fecha_fin:
+          type: string
+          format: date
+        recetas:
+          type: array
+          items:
+            type: string
+            format: uuid
+      required:
+        - usuario_id
+        - fecha_inicio
+        - fecha_fin
+
+    Notificacion:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        alimento_id:
+          type: string
+          format: uuid
+        mensaje:
+          type: string
+        fecha:
+          type: string
+          format: date
+      required:
+        - alimento_id
+        - mensaje
+        - fecha
