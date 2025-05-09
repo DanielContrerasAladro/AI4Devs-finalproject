@@ -35,7 +35,7 @@
 
 ### 0.5. URL o archivo comprimido del repositorio
 
-> [Repositorio](https://github.com/DanielContrerasAladro/Alacena)
+> [Repositorio](https://github.com/DanielContrerasAladro/AI4Devs-finalproject)
 
 
 ---
@@ -889,12 +889,12 @@ paths:
 
 ### 6.2 Commits y releases
 
-> **Commit [1](https://github.com/DanielContrerasAladro/Alacena/commit/1234567890abcdef1234567890abcdef12345678):**
+> **Commit [1](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/1234567890abcdef1234567890abcdef12345678):**
 >   - **Descripción:**
 >   - **Cambios:**
 >   - **Release: No genera release
 
-> **Commit [N](https://github.com/DanielContrerasAladro/Alacena/commit/1234567890abcdef1234567890abcdef12345678):**
+> **Commit [N](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/1234567890abcdef1234567890abcdef12345678):**
 >   - **Descripción:**
 >   - **Cambios:**
-> - **Release:** [0.0.1](https://github.com/DanielContrerasAladro/Alacena/releases/tag/0.0.1)
+> - **Release:** [0.0.1](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/releases/tag/0.0.1)
