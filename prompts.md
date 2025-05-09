@@ -16,8 +16,9 @@ Puedes añadir adicionalmente la conversación completa como link o archivo adju
 - [3. Modelo de Datos](#3-modelo-de-datos)
 - [4. Especificación de la API](#4-especificación-de-la-api)
 - [5. Historias de Usuario y Tickets de Trabajo](#5-historias-de-usuario-y-tickets-de-trabajo)
-- [7. Pull Requests](#7-pull-requests)
-  - [7.1 Commits](#71-commits)
+- [6. Desarrollo de las Historias de Usuario del proyecto](#6-desarrollo-de-las-historias-de-usuario-del-proyecto)
+  - [6.1 Preparación repositorio](#61-preparación-repositorio)
+  - [6.2 Commits y releases](#62-commits-y-releases)
 
 ---
 
@@ -174,37 +175,26 @@ Historias de Usuario Relacionadas:
 
 ---
 
-## 7. Pull Requests
+## 6. Desarrollo de las Historias de Usuario del proyecto
 
-Como estoy siguiendo un enfoque de desarrollo ágil, cada vez que se complete una historia de usuario o un ticket de trabajo, se generará un commit en lugar de PR, que seguirán la convención de commit de Conventional Commits, y se documentará en el fichero de log de cambios @CHANGELOG.md, que se generará automáticamente al hacer un commit. El formato del commit será el siguiente:
+> Cada prompt será enlazado con el commit o release correspondiente, que se documentará para seguimiento del avance del proyecto tanto el el fichero [readme.md](readme.md) como en el [CHANGELOG.md](CHANGELOG.md) del proyecto.
+> Ejemplo de log de commit:
+> **Commit [N](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/1234567890abcdef1234567890abcdef12345678):**
+>   - **Descripción:**
+>   - **Cambios:**
+>   - **Release:** [0.0.1](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/releases/tag/0.0.1) o No genera release
 
-```
-docs: [descripción breve]
-chore: [descripción breve] <para tareas de arquitectura, refactorización, etc.>
-feat: [historia de usuario o ticket de trabajo] - [descripción breve]
-fix: [historia de usuario o ticket de trabajo] - [descripción breve] <bugs encontrados y corregidos tras la revisión de los feat>
-````
+---
 
-### 7.1 Commits
+### 6.1 Preparación repositorio
 
-**Prompt/Commit 1:**
-**Prompt/Commit 2:**
-**Prompt/Commit 3:**
-**Prompt/Commit 4:**
-**Prompt/Commit 5:**
-**Prompt/Commit 6:**
-**Prompt/Commit 7:**
-**Prompt/Commit 8:**
-**Prompt/Commit 9:**
-**Prompt/Commit 10:**
-**Prompt/Commit 11:**
-**Prompt/Commit 12:**
-**Prompt/Commit 13:**
-**Prompt/Commit 14:**
-**Prompt/Commit 15:**
-**Prompt/Commit 16:**
-**Prompt/Commit 17:**
-**Prompt/Commit 18:**
-**Prompt/Commit 19:**
-**Prompt/Commit 20:**
-**Prompt/Commit 21:**
+> **Prompt 1:**
+> Como experto en @https://www.conventionalcommits.org/en/v1.0.0/#summary @GitHub Actions y commits en github, prepara el proyecto para que rellene el fichero @CHANGELOG.md al hacer un commit con el formato que tiene ahora mismo con el nuevo commit al principio del fichero, así como el fichero @readme.md con el commit en el mismo formato y en el apartado '## 6. Commits y Releases', a continuación del último commit, al final del fichero
+
+> **Prompt 2:**
+>
+
+### 6.2 Commits y releases
+
+> **Prompt Commit [N]:**
+>

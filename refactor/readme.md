@@ -874,7 +874,7 @@ paths:
 
 ---
 
-## 6. Pull Requests
+## 6. Commits y Releases
 
 > Al seguir un enfoque [Trunk-Based Development](https://trunkbaseddevelopment.com/), cada vez que se complete una historia de usuario o un ticket de trabajo, se generará un commit en lugar de PR, que seguirán la convención de commit de [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), y se documentará en el fichero de log de cambios @CHANGELOG.md, que se generará automáticamente al hacer un commit. El formato del commit será el siguiente:
 >
@@ -885,16 +885,32 @@ paths:
 > fix: [historia de usuario o ticket de trabajo] - [descripción breve] <bugs encontrados y corregidos tras la revisión de los feat>
 > ````
 
-### 6.1 Prompt preparación repositorio
+>**Commit [d69021c](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/d69021c):**
+>  - **Descripción:** docs: documentacion de arquitectura de proyecto, punto de partida y propuesta de refactorizacion
+>  - **Cambios:** Documentación de arquitectura del proyecto, punto de partida y propuesta de refactorización.
+>  - **Release:** No genera release
 
-### 6.2 Commits y releases
+>**Commit [f47e3c6](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/f47e3c6):**
+>  - **Descripción:** docs: documentacion de arquitectura de proyecto, punto de partida y propuesta de refactorizacion
+>  - **Cambios:** Documentación de arquitectura del proyecto, punto de partida y propuesta de refactorización.
+>  - **Release:** No genera release
 
-> **Commit [1](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/1234567890abcdef1234567890abcdef12345678):**
->   - **Descripción:**
->   - **Cambios:**
->   - **Release: No genera release
+>**Commit [e321125](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/e321125):**
+>  - **Descripción:** docs: ajuste formato diagramas
+>  - **Cambios:** Ajuste en el formato de los diagramas.
+>  - **Release:** No genera release
 
-> **Commit [N](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/1234567890abcdef1234567890abcdef12345678):**
->   - **Descripción:**
->   - **Cambios:**
-> - **Release:** [0.0.1](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/releases/tag/0.0.1)
+>**Commit [5ca2e6e](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/5ca2e6e):**
+>  - **Descripción:** docs: diagrama de entidad relación y descripción de entidades
+>  - **Cambios:** Diagrama de entidad relación y descripción de entidades.
+>  - **Release:** No genera release
+
+>**Commit [edfedc9](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/edfedc9):**
+>  - **Descripción:** docs: documentos de análisis, planificación y primera definición de historias de usuario
+>  - **Cambios:** Documentos de análisis, planificación y primera definición de historias de usuario.
+>  - **Release:** No genera release
+
+>**Commit [76bef8d](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/76bef8d):**
+>  - **Descripción:** chore: ajuste URL del repositorio del proyecto
+>  - **Cambios:** Ajuste en la URL del repositorio del proyecto.
+>  - **Release:** No genera release
