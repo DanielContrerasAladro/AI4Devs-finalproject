@@ -13,11 +13,11 @@ Puedes añadir adicionalmente la conversación completa como link o archivo adju
   - [**2.4. Infraestructura y despliegue**](#24-infraestructura-y-despliegue)
   - [**2.5. Seguridad**](#25-seguridad)
   - [**2.6. Tests**](#26-tests)
-  - [3. Modelo de Datos](#3-modelo-de-datos)
-  - [4. Especificación de la API](#4-especificación-de-la-api)
-  - [5. Historias de Usuario](#5-historias-de-usuario)
-  - [6. Tickets de Trabajo](#6-tickets-de-trabajo)
-  - [7. Pull Requests](#7-pull-requests)
+- [3. Modelo de Datos](#3-modelo-de-datos)
+- [4. Especificación de la API](#4-especificación-de-la-api)
+- [5. Historias de Usuario](#5-historias-de-usuario)
+- [6. Tickets de Trabajo](#6-tickets-de-trabajo)
+- [7. Pull Requests](#7-pull-requests)
 
 ---
 
@@ -117,7 +117,19 @@ En base a @propuesta_refactorizacion.md, @solution_spec.md  y lo escrito ya en e
 
 ---
 
-### 3. Modelo de Datos
+## 3. Modelo de Datos
+
+**Prompt 1:**
+
+Actúa como experto en bases de datos @Postgres y con conocimientos en @Firebase @Ionic Framework @Supabase Python revisa el proyecto en base a @propuesta_refactorizacion.md, @solution_spec.md  y lo escrito ya en el fichero @readme.md, genera un diagrama en formato mermaid con el modelo de datos actual del proyecto y con un modelo de datos en base al objetivo del proyecto
+
+**Prompt 2:**
+
+Perfecto, amplía los dos diagramas en formato mermaid y añade todos los parámetros que permite la sintaxis para dar el máximo detalle, por ejemplo las claves primarias y foráneas. También revisa el formato markdown del documento @readme.md y dame una descripción con el máximo detalle de cada entidad, como el nombre y tipo de cada atributo, descripción breve si procede, claves primarias y foráneas, relaciones y tipo de relación, restricciones (unique, not null…), etc.
+
+---
+
+## 4. Especificación de la API
 
 **Prompt 1:**
 
@@ -127,7 +139,7 @@ En base a @propuesta_refactorizacion.md, @solution_spec.md  y lo escrito ya en e
 
 ---
 
-### 4. Especificación de la API
+## 5. Historias de Usuario
 
 **Prompt 1:**
 
@@ -137,7 +149,7 @@ En base a @propuesta_refactorizacion.md, @solution_spec.md  y lo escrito ya en e
 
 ---
 
-### 5. Historias de Usuario
+## 6. Tickets de Trabajo
 
 **Prompt 1:**
 
@@ -147,17 +159,7 @@ En base a @propuesta_refactorizacion.md, @solution_spec.md  y lo escrito ya en e
 
 ---
 
-### 6. Tickets de Trabajo
-
-**Prompt 1:**
-
-**Prompt 2:**
-
-**Prompt 3:**
-
----
-
-### 7. Pull Requests
+## 7. Pull Requests
 
 **Prompt 1:**
 

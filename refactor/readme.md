@@ -531,12 +531,163 @@ Alacena
 
 ### **3.1. Diagrama del modelo de datos:**
 
-> Recomendamos usar mermaid para el modelo de datos, y utilizar todos los parámetros que permite la sintaxis para dar el máximo detalle, por ejemplo las claves primarias y foráneas.
+#### **3.1.1 (actual)**
 
+> ```mermaid
+> erDiagram
+>     USUARIOS ||--o{ ALIMENTOS : "tiene"
+>     USUARIOS ||--o{ RECETAS : "tiene"
+>     RECETAS ||--o{ INGREDIENTES : "contiene"
+>     ALIMENTOS ||--o{ NOTIFICACIONES : "genera"
+>
+>     USUARIOS {
+>         string id PK "Identificador único del usuario"
+>         string nombre "Nombre del usuario"
+>         string email "Correo electrónico del usuario"
+>         string provider "Proveedor de autenticación (Google, Apple, etc.)"
+>     }
+>
+>     ALIMENTOS {
+>         string id PK "Identificador único del alimento"
+>         string usuario_id FK "ID del usuario que posee el alimento"
+>         string nombre "Nombre del alimento"
+>         int cantidad "Cantidad del alimento"
+>         string unidad "Unidad de medida (gramos, litros, etc.)"
+>         date caducidad "Fecha de caducidad del alimento"
+>     }
+>
+>     RECETAS {
+>         string id PK "Identificador único de la receta"
+>         string usuario_id FK "ID del usuario que posee la receta"
+>         string nombre "Nombre de la receta"
+>         string descripcion "Descripción de la receta"
+>     }
+>
+>     INGREDIENTES {
+>         string id PK "Identificador único del ingrediente"
+>         string receta_id FK "ID de la receta a la que pertenece el ingrediente"
+>         string alimento_id FK "ID del alimento que es el ingrediente"
+>         int cantidad "Cantidad del ingrediente necesario"
+>     }
+>
+>     NOTIFICACIONES {
+>         string id PK "Identificador único de la notificación"
+>         string alimento_id FK "ID del alimento que genera la notificación"
+>         string mensaje "Mensaje de la notificación"
+>         date fecha "Fecha de la notificación"
+>     }
+>
+
+#### **3.1.2 (objetivo)**
+
+> ```mermaid
+> erDiagram
+>     USUARIOS ||--o{ ALIMENTOS : "tiene"
+>     USUARIOS ||--o{ RECETAS : "tiene"
+>     RECETAS ||--o{ INGREDIENTES : "contiene"
+>     ALIMENTOS ||--o{ NOTIFICACIONES : "genera"
+>     USUARIOS ||--o{ MENUS : "tiene"
+>     MENUS ||--o{ RECETAS : "incluye"
+>
+>     USUARIOS {
+>        uuid id PK "Identificador único del usuario"
+>        string nombre "Nombre del usuario (NOT NULL)"
+>        string email "Correo electrónico del usuario (NOT NULL, UNIQUE)"
+>        jsonb metadata "Metadatos adicionales del usuario"
+>     }
+>
+>     ALIMENTOS {
+>        uuid id PK "Identificador único del alimento"
+>        uuid usuario_id FK "ID del usuario que posee el alimento (NOT NULL)"
+>        string nombre "Nombre del alimento (NOT NULL)"
+>        int cantidad "Cantidad del alimento (NOT NULL)"
+>        string unidad "Unidad de medida (gramos, litros, etc.) (NOT NULL)"
+>        date caducidad "Fecha de caducidad del alimento (NOT NULL)"
+>        jsonb metadata "Metadatos adicionales del alimento"
+>     }
+>
+>     RECETAS {
+>        uuid id PK "Identificador único de la receta"
+>        uuid usuario_id FK "ID del usuario que posee la receta (NOT NULL)"
+>        string nombre "Nombre de la receta (NOT NULL)"
+>        string descripcion "Descripción de la receta"
+>        jsonb ingredientes "Lista de ingredientes en formato JSONB"
+>     }
+>
+>     INGREDIENTES {
+>        uuid id PK "Identificador único del ingrediente"
+>        uuid receta_id FK "ID de la receta a la que pertenece el ingrediente (NOT NULL)"
+>        uuid alimento_id FK "ID del alimento que es el ingrediente (NOT NULL)"
+>        int cantidad "Cantidad del ingrediente necesario (NOT NULL)"
+>     }
+>
+>     NOTIFICACIONES {
+>        uuid id PK "Identificador único de la notificación"
+>        uuid alimento_id FK "ID del alimento que genera la notificación (NOT NULL)"
+>        string mensaje "Mensaje de la notificación (NOT NULL)"
+>        date fecha "Fecha de la notificación (NOT NULL)"
+>     }
+>
+>     MENUS {
+>        uuid id PK "Identificador único del menú"
+>        uuid usuario_id FK "ID del usuario que posee el menú (NOT NULL)"
+>        date fecha_inicio "Fecha de inicio del menú (NOT NULL)"
+>        date fecha_fin "Fecha de fin del menú (NOT NULL)"
+>        jsonb recetas "Lista de recetas en formato JSONB"
+>     }
 
 ### **3.2. Descripción de entidades principales:**
 
-> Recuerda incluir el máximo detalle de cada entidad, como el nombre y tipo de cada atributo, descripción breve si procede, claves primarias y foráneas, relaciones y tipo de relación, restricciones (unique, not null…), etc.
+> - USUARIOS
+>   - id (PK): Identificador único del usuario (UUID en el modelo objetivo).
+>   - nombre: Nombre del usuario (NOT NULL en el modelo objetivo).
+>   - email: Correo electrónico del usuario (NOT NULL y UNIQUE en el modelo objetivo).
+>   - provider: Proveedor de autenticación (Google, Apple, etc.) (solo en el modelo actual).
+>   - metadata: Metadatos adicionales del usuario en formato JSONB (solo en el modelo objetivo).
+> - ALIMENTOS
+>   - id (PK): Identificador único del alimento (UUID en el modelo objetivo).
+>   - usuario_id (FK): ID del usuario que posee el alimento (NOT NULL en el modelo objetivo).
+>   - nombre: Nombre del alimento (NOT NULL en el modelo objetivo).
+>   - cantidad: Cantidad del alimento (NOT NULL en ambos modelos).
+>   - unidad: Unidad de medida (gramos, litros, etc.) (NOT NULL en el modelo objetivo).
+>   - caducidad: Fecha de caducidad del alimento (NOT NULL en el modelo objetivo).
+>   - metadata: Metadatos adicionales del alimento en formato JSONB (solo en el modelo objetivo).
+> - RECETAS
+>   - id (PK): Identificador único de la receta (UUID en el modelo objetivo).
+>   - usuario_id (FK): ID del usuario que posee la receta (NOT NULL en el modelo objetivo).
+>   - nombre: Nombre de la receta (NOT NULL en el modelo objetivo).
+>   - descripcion: Descripción de la receta.
+>   - ingredientes: Lista de ingredientes en formato JSONB (solo en el modelo objetivo).
+> - INGREDIENTES
+>   - id (PK): Identificador único del ingrediente (UUID en el modelo objetivo).
+>   - receta_id (FK): ID de la receta a la que pertenece el ingrediente (NOT NULL en el modelo objetivo).
+>   - alimento_id (FK): ID del alimento que es el ingrediente (NOT NULL en el modelo objetivo).
+>   - cantidad: Cantidad del ingrediente necesario (NOT NULL en ambos modelos).
+> - NOTIFICACIONES
+>   - id (PK): Identificador único de la notificación (UUID en el modelo objetivo).
+>   - alimento_id (FK): ID del alimento que genera la notificación (NOT NULL en el modelo objetivo).
+>   - mensaje: Mensaje de la notificación (NOT NULL en ambos modelos).
+>   - fecha: Fecha de la notificación (NOT NULL en ambos modelos).
+> - MENUS (solo en el modelo objetivo)
+>   - id (PK): Identificador único del menú (UUID).
+>   - usuario_id (FK): ID del usuario que posee el menú (NOT NULL).
+>   - fecha_inicio: Fecha de inicio del menú (NOT NULL).
+>   - fecha_fin: Fecha de fin del menú (NOT NULL).
+>   - recetas: Lista de recetas en formato JSONB.
+
+> - Relaciones y Restricciones
+>   - USUARIOS - ALIMENTOS: Un usuario puede tener muchos alimentos. Relación uno a muchos.
+>   - USUARIOS - RECETAS: Un usuario puede tener muchas recetas. Relación uno a muchos.
+>   - RECETAS - INGREDIENTES: Una receta puede tener muchos ingredientes. Relación uno a muchos.
+>   - ALIMENTOS - NOTIFICACIONES: Un alimento puede generar muchas notificaciones. Relación uno a muchos.
+>   - USUARIOS - MENUS: Un usuario puede tener muchos menús. Relación uno a muchos.
+>   - MENUS - RECETAS: Un menú puede incluir muchas recetas. Relación uno a muchos.
+
+> - Restricciones Adicionales
+>   - NOT NULL: Campos obligatorios que no pueden ser nulos.
+>   - UNIQUE: Campos que deben ser únicos en la tabla (por ejemplo, el email del usuario).
+>   - PK: Clave primaria que identifica de manera única cada registro en la tabla.
+>   - FK: Clave foránea que establece una relación con otra tabla.
 
 ---
 
