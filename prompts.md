@@ -172,6 +172,12 @@ Historias de Usuario Relacionadas:
 - Para cada ticket de trabajo debes dar una estimación según la metodología de tallas de camiseta, aquí deberías tomar el rol de los diferentes perfiles técnicos en que hayas agrupado los tickets de trabajo. agrúpa toda la información en un fichero markdwon por cada historia de usuario enriquecido con diagramas mermaid si es necesario, en la misma carpeta que esté el backlog
 
 **Prompt 2:**
+Actuando como equipo de desarrollo completo, desarrollador backend, frontend, arquitecto de software, analista de negocio, QA y DevOps, revisa las HU definidas en  @backlog  y realiza el refinamto y correcciones necesarias en base a lo que se describe en @readme.md y @propuesta_refactorizacion.md
+Debes revisar también la priorización  @BacklogPriorizado.md y planificación @PlanificacionLargoPlazo.md @PlanificacionReleasesRoadmap.md en base a que el tiempo de desarrollo no debe superar las 30H, pero no elimines historias de usuario, simplemente marca cuales entran en el MVP a realizar en ese tiempo, ten en cuenta que tiene que ser funcional y estar desplegado en @Supabase en base a estándares
+
+**Prompt 3:**
+
+Prepara los issues/tareas en formato markdown, modifica lo necesario en la carpeta @backlog y luego empieza creando lo necesario, revisa si hay una tarea para ello y sino créala o priorizala, para arrancar en local y desplegar en Supabase, @Supabase , el proyecto con un 'Hola Mundo' sobre el que luego trabajaremos las siguientes hiostorias de usuario, obviamenrte deberás crear la nueva estructura de carpetas y ficheros necesarios para este ejemplo y deberás documentar los pasos relevantes en el fichero @README.md
 
 ---
 

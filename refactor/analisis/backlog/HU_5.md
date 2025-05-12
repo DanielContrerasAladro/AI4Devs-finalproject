@@ -8,12 +8,13 @@ para que el inventario refleje siempre la cantidad real disponible.
 Criterios de Aceptación:
 - El usuario puede incrementar o disminuir la cantidad de un producto existente.
 - El sistema no permite cantidades negativas.
-- Cada movimiento queda registrado con fecha y tipo de operación (entrada/salida).
 - El usuario recibe confirmación tras cada operación.
+- El registro de movimientos es mock/simplificado en el MVP (historial avanzado en releases posteriores).
 
 Notas Adicionales:
 - Debe ser posible realizar estas acciones desde la vista de inventario.
-- El historial de movimientos debe estar disponible para consulta.
+- El historial de movimientos completo se implementará en releases posteriores.
+- **Esta historia entra en el MVP.**
 
 Historias de Usuario Relacionadas:
 - HU_3 (Gestión de productos en la alacena)

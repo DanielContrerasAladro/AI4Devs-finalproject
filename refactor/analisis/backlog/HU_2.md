@@ -9,11 +9,14 @@ Criterios de Aceptación:
 - El usuario puede introducir email y contraseña.
 - El sistema valida las credenciales y permite el acceso si son correctas.
 - Si las credenciales son incorrectas, se muestra un mensaje de error claro.
+- La sesión es persistente y segura (token JWT de Supabase).
 - El usuario puede cerrar sesión en cualquier momento.
 
 Notas Adicionales:
-- Debe existir opción de recordar contraseña.
+- El login social (Google) es opcional y se implementará en releases posteriores.
+- Debe existir opción de recordar contraseña (mock en MVP).
 - El inicio de sesión debe ser rápido y seguro.
+- **Esta historia entra en el MVP.**
 
 Historias de Usuario Relacionadas:
 - HU_1 (Registro de usuario)

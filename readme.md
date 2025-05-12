@@ -317,28 +317,50 @@
 > La situación objetivo plantea una PWA moderna y modular, desarrollada principalmente en Python (PyScript/Anvil) y desplegada sobre Supabase. La estructura de carpetas se orienta a la separación clara entre frontend (PWA en Python), microservicio de IA, configuración de Supabase, tests y automatización CI/CD. Esto facilita la escalabilidad, el mantenimiento y la integración continua, permitiendo una evolución ágil del producto.
 >
 > ```mmd
-> Alacena
-> |── /frontend
-> | |── /components
-> | |── /pages
-> | |── /services
-> | |── /assets
-> | |── /theme
-> |── /ia-service
-> | |── /models
-> | |── /controllers
-> | |── /utils
-> |── /supabase
-> | |── /migrations
-> | |── /config
-> |── /tests
-> | |── /unit
-> | |── /integration
-> | |── /e2e
-> |── /.github
-> | |── /workflows
-> |── README.md
-> |── requirements.txt
+> Alacena/
+> │
+> ├── frontend/
+> │   ├── components/
+> │   │   ├── RegisterForm.py         # Formulario de registro
+> │   │   ├── LoginForm.py            # Formulario de login
+> │   │   ├── ProductForm.py          # Añadir/editar producto
+> │   │   └── ProductList.py          # Listado de inventario
+> │   ├── pages/
+> │   │   ├── Home.py                 # Página principal (inventario)
+> │   │   ├── Register.py             # Página de registro
+> │   │   ├── Login.py                # Página de login
+> │   │   └── NotFound.py             # Página 404
+> │   ├── services/
+> │   │   ├── supabase_client.py      # Cliente y helpers de Supabase
+> │   │   ├── auth.py                 # Lógica de autenticación
+> │   │   └── products.py             # Lógica de productos
+> │   ├── assets/
+> │   │   └── logo.png
+> │   ├── theme/
+> │   │   └── tailwind.config.js      # Configuración de TailwindCSS
+> │   ├── main.py                     # Entry point de la app
+> │   └── README.md
+> │
+> ├── supabase/
+> │   ├── schema.sql                  # Esquema de tablas y RLS
+> │   └── seed.sql                    # Datos de ejemplo (opcional)
+> │
+> ├── tests/
+> │   ├── unit/
+> │   │   ├── test_auth.py
+> │   │   └── test_products.py
+> │   ├── integration/
+> │   │   └── test_end_to_end.py
+> │   └── e2e/
+> │       └── test_user_journey.py
+> │
+> ├── .github/
+> │   └── workflows/
+> │       └── deploy.yml              # CI/CD para despliegue automático
+> │
+> ├── requirements.txt                # Dependencias Python (supabase, pyscript, etc.)
+> ├── README.md                       # Documentación general del proyecto
+> └── CHANGELOG.md                    # Cambios y releases
 > ```
 
 ### **2.4. Infraestructura y despliegue**

@@ -6,14 +6,15 @@ quiero visualizar el inventario de mi alacena,
 para que pueda conocer en todo momento los productos disponibles y su estado.
 
 Criterios de Aceptación:
-- El usuario puede ver una lista de todos los productos de su alacena.
-- Se muestran detalles como nombre, cantidad y fecha de caducidad.
+- El usuario puede ver una lista clara y ordenada de todos los productos de su alacena.
+- Se muestran detalles como nombre, cantidad, unidad y fecha de caducidad.
 - Los productos próximos a caducar se resaltan visualmente.
 - El usuario puede buscar y filtrar productos por nombre o categoría.
+- La visualización es responsive y accesible.
 
 Notas Adicionales:
-- La visualización debe ser clara y ordenada.
-- Debe existir opción de ordenar por fecha de caducidad o cantidad.
+- La visualización avanzada (gráficas, agrupaciones) se implementará en releases posteriores.
+- **Esta historia entra en el MVP.**
 
 Historias de Usuario Relacionadas:
 - HU_3 (Gestión de productos en la alacena)

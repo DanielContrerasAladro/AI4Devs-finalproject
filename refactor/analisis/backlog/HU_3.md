@@ -6,14 +6,17 @@ quiero poder añadir, editar y eliminar productos en mi alacena,
 para que pueda mantener actualizado el inventario de mi despensa.
 
 Criterios de Aceptación:
-- El usuario puede añadir un nuevo producto indicando nombre, cantidad y fecha de caducidad.
-- El usuario puede editar los datos de un producto existente.
-- El usuario puede eliminar productos de la alacena.
+- El usuario puede añadir, editar y eliminar productos (CRUD completo).
+- El usuario introduce nombre, cantidad, unidad y fecha de caducidad.
 - El sistema valida los datos introducidos y muestra mensajes claros en caso de error.
+- Los cambios se reflejan en tiempo real (Supabase Realtime).
+- Solo se gestionan productos del usuario autenticado (RLS en Supabase).
 
 Notas Adicionales:
 - La gestión debe ser intuitiva y accesible desde la pantalla principal.
 - Debe existir confirmación antes de eliminar un producto.
+- Gestión avanzada (categorías, unidades personalizadas) se implementará en releases posteriores.
+- **Esta historia entra en el MVP.**
 
 Historias de Usuario Relacionadas:
 - HU_4 (Visualización de inventario)

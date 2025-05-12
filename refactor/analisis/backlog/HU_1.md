@@ -7,11 +7,15 @@ para que pueda gestionar mi alacena de forma personalizada.
 
 Criterios de Aceptación:
 - El usuario puede introducir nombre, email y contraseña.
-- El sistema valida que el email no esté registrado.
-- El usuario recibe confirmación de registro exitoso.
+- El sistema valida que el email no esté registrado (unicidad).
+- El usuario recibe feedback inmediato de éxito o error.
+- El registro está integrado con Supabase Auth.
+- El usuario puede iniciar sesión tras registrarse.
 
 Notas Adicionales:
+- El registro social (Google) es opcional y se implementará en releases posteriores.
 - El registro debe ser sencillo y accesible desde la pantalla principal.
+- **Esta historia entra en el MVP.**
 
 Historias de Usuario Relacionadas:
 - HU_2 (Inicio de sesión)
