@@ -177,7 +177,11 @@ Debes revisar también la priorización  @BacklogPriorizado.md y planificación 
 
 **Prompt 3:**
 
-Prepara los issues/tareas en formato markdown, modifica lo necesario en la carpeta @backlog y luego empieza creando lo necesario, revisa si hay una tarea para ello y sino créala o priorizala, para arrancar en local y desplegar en Supabase, @Supabase , el proyecto con un 'Hola Mundo' sobre el que luego trabajaremos las siguientes hiostorias de usuario, obviamenrte deberás crear la nueva estructura de carpetas y ficheros necesarios para este ejemplo y deberás documentar los pasos relevantes en el fichero @README.md
+Prepara los issues/tareas en formato markdown, modifica lo necesario en la carpeta @backlog y luego empieza creando lo necesario, revisa si hay una tarea para ello y sino créala o priorizala, para arrancar en local y desplegar en Supabase, @Supabase , y Vercel,  @Vercel, el proyecto con un 'Hola Mundo' sobre el que luego trabajaremos las siguientes historias de usuario, obviamente deberás crear la nueva estructura de carpetas y ficheros necesarios para este ejemplo y deberás documentar los pasos relevantes en el fichero @README.md
+
+**Prompt 4:**
+
+Vamos a hacer un CRUD completo sobre la talba 'productos', y mostrarlo de forma responsive en pantalla, fíjate en lo declarado en @supabase y en @frontend , si consideras que hay que reordenar o renombrar algo en las carpetas y/o ficheros, hazlo
 
 ---
 

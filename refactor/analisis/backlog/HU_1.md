@@ -55,3 +55,5 @@ graph TD
     FE3 --> QA1[Pruebas de registro]
     BE3 --> QA1
 ```
+
+[Volver a la tarea de inicialización y Hola Mundo](../../README.md)
