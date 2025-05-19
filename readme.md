@@ -936,3 +936,127 @@ paths:
 >  - **Descripción:** chore: ajuste URL del repositorio del proyecto
 >  - **Cambios:** Ajuste en la URL del repositorio del proyecto.
 >  - **Release:** No genera release
+
+# Documentación técnica y de arquitectura - Alacena
+
+> **Nota de transición tecnológica:**
+> El proyecto Alacena ha migrado de una arquitectura basada en Angular/Ionic/Firebase a una arquitectura moderna basada en Reflex (Python) para frontend y lógica, Supabase como backend de datos y Reflex Cloud como plataforma de despliegue. Toda la documentación, épicas e historias de usuario han sido adaptadas a este nuevo stack.
+
+## Onboarding técnico
+
+### Pasos para nuevos desarrolladores
+
+1. **Clona el repositorio:**
+   ```bash
+   git clone <URL_DEL_REPO>
+   cd Alacena/frontend
+   ```
+2. **Instala las dependencias:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Configura las variables de entorno:**
+   - Crea un archivo `.env` en `frontend/` con:
+     ```
+     SUPABASE_URL=https://<TU-PROYECTO>.supabase.co
+     SUPABASE_ANON_KEY=<TU-CLAVE-ANON>
+     ```
+4. **Arranca la app en local:**
+   ```bash
+   ./dev
+   ```
+   Accede a [http://localhost:3000](http://localhost:3000)
+
+5. **Despliegue en Reflex Cloud:**
+   - Sube tu código a GitHub.
+   - Ve a [Reflex Cloud](https://reflex.dev/hosting), conecta tu repo y añade las variables de entorno.
+   - Haz clic en Deploy y obtén tu URL pública.
+
+---
+
+## Arquitectura final
+
+- **Frontend y lógica:** Reflex (Python, web reactiva)
+- **Backend de datos:** Supabase (Postgres + API REST)
+- **Despliegue:** Reflex Cloud (https://reflex.dev/hosting)
+
+La aplicación está compuesta por un frontend desarrollado íntegramente en Python usando Reflex, que se comunica directamente con la API REST de Supabase para realizar operaciones CRUD sobre la tabla `productos`.
+
+### Diagrama visual de la arquitectura final
+
+```mermaid
+flowchart TD
+    subgraph Frontend [PWA Reflex (Python)]
+        UI[UI/UX Reflex]
+        Logic[Lógica de Negocio Python]
+        SW[Service Worker Offline]
+    end
+
+    subgraph Backend [Supabase Cloud]
+        Auth[Auth OAuth, Email, Social]
+        DB[PostgreSQL DB + JSONB]
+        Storage[Storage]
+        Realtime[Realtime]
+    end
+
+    UI --> Logic
+    Logic -->|CRUD| DB
+    Logic -->|Gestión de usuarios| Auth
+    Logic -->|Subida/Descarga| Storage
+    Logic -->|Realtime| Realtime
+    SW -->|Sincronización| DB
+
+    Frontend -->|WebSockets, REST| Backend
+    Frontend -->|Despliegue| ReflexCloud[Reflex Cloud Hosting]
+```
+
+**Explicación:**
+- El frontend está desarrollado íntegramente en Python con Reflex, ofreciendo una PWA moderna y reactiva.
+- Toda la gestión de datos, autenticación y almacenamiento se realiza a través de Supabase Cloud.
+- El despliegue en producción se realiza en Reflex Cloud, que soporta WebSockets y backend Python nativo.
+- El Service Worker permite funcionalidad offline y sincronización automática.
+
+## Flujo de despliegue y configuración
+
+### 1. Desarrollo local
+- Instala las dependencias con `pip install -r requirements.txt`.
+- Crea un archivo `.env` en la carpeta `frontend/` con las variables:
+  - `SUPABASE_URL`
+  - `SUPABASE_ANON_KEY`
+- Arranca la app con `./dev` desde la raíz del proyecto.
+
+### 2. Despliegue en Reflex Cloud
+- Sube el código a GitHub.
+- Entra en [Reflex Cloud](https://reflex.dev/hosting) y crea un nuevo proyecto.
+- Conecta el repositorio y selecciona la rama a desplegar.
+- Añade las variables de entorno necesarias (`SUPABASE_URL`, `SUPABASE_ANON_KEY`) en el panel de Reflex Cloud.
+- Haz clic en **Deploy**. Reflex Cloud construirá y desplegará la app automáticamente.
+- Obtendrás una URL pública con soporte para WebSockets y backend Python.
+
+### 3. Consideraciones
+- No es necesario ningún archivo `Procfile` ni configuración especial de puertos.
+- Reflex Cloud gestiona automáticamente el entorno de ejecución y la exposición de puertos.
+- Toda la lógica de negocio y la UI residen en el código Python de Reflex.
+
+## Stack tecnológico
+- **Reflex:** Framework Python para web reactiva y fullstack.
+- **Supabase:** Backend como servicio (BaaS) con Postgres, API REST y autenticación.
+- **Reflex Cloud:** Hosting gestionado para apps Reflex, con soporte nativo para WebSockets y Python.
+
+## Referencias
+- [Reflex Hosting Docs](https://reflex.dev/docs/hosting)
+- [Supabase Docs](https://supabase.com/docs)
+
+---
+
+## Actualización de planning e historias de usuario
+
+- Todas las referencias a Angular, Ionic, Firebase, Vercel, etc. han sido sustituidas por Reflex, Supabase y Reflex Cloud.
+- Los objetivos, épicas y HU reflejan la arquitectura actual basada en Reflex (Python) para frontend y lógica, Supabase como backend de datos y Reflex Cloud como plataforma de despliegue.
+- El flujo de desarrollo y despliegue está alineado con la nueva arquitectura.
+- Las historias de usuario y el backlog priorizado se mantienen, pero ahora se implementan sobre el stack Reflex + Supabase + Reflex Cloud.
+- La documentación de arquitectura, seguridad, tests y despliegue ha sido actualizada para reflejar este cambio.
+
+---
+
+Para detalles de desarrollo y estructura de carpetas, consulta los README de cada subcarpeta.

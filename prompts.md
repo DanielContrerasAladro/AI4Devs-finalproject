@@ -183,6 +183,10 @@ Prepara los issues/tareas en formato markdown, modifica lo necesario en la carpe
 
 Vamos a hacer un CRUD completo sobre la talba 'productos', y mostrarlo de forma responsive en pantalla, fíjate en lo declarado en @supabase y en @frontend , si consideras que hay que reordenar o renombrar algo en las carpetas y/o ficheros, hazlo
 
+**Prompt 5:**
+
+vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_discusion_propuesta.md dame el proceso llevado a cabo en esta conversación para la elección de la arquitectura final, detalla el proceso con los problemas encontrados y lo que nos ha llevado a tomar la decisión final
+
 ---
 
 ## 6. Desarrollo de las Historias de Usuario del proyecto
