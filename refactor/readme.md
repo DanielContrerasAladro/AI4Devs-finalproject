@@ -901,6 +901,10 @@ paths:
 ---
 
 ## 6. Commits y Releases
+**Commit [d11bce6](https://github.com/DanielContrerasAladro/Alacena/commit/d11bce6):**
+- **Descripción:** chore: revisión de readme y changelog precommit
+- **Cambios:** [Descripción de los cambios]
+- **Release:** No genera release
 
 > Al seguir un enfoque [Trunk-Based Development](https://trunkbaseddevelopment.com/), cada vez que se complete una historia de usuario o un ticket de trabajo, se generará un commit en lugar de PR, que seguirán la convención de commit de [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), y se documentará en el fichero de log de cambios @CHANGELOG.md, que se generará automáticamente al hacer un commit. El formato del commit será el siguiente:
 >
@@ -941,4 +945,13 @@ paths:
 >  - **Cambios:** Ajuste en la URL del repositorio del proyecto.
 >  - **Release:** No genera release
 
+> **Commit [](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/d14b283):**
+>  - **Descripción:**
+>  - **Cambios:** [Descripción de los cambios]
+>  - **Release:** No genera release
+
+> **Commit [d11bce6](https://github.com/DanielContrerasAladro/Alacena/commit/d11bce6):**
+> - **Descripción:** chore: revisión de readme y changelog precommit
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
 
