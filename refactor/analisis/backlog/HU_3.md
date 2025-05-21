@@ -66,3 +66,30 @@ graph TD
     FE5 --> QA1[Pruebas gestión productos]
     BE4 --> QA1
 ```
+
+---
+
+## Plan de trabajo y tickets (Sprint actual)
+
+### 1. Frontend & Diseño (Prioridad máxima)
+- [X] Prototipo visual de la gestión de productos (listado, formulario de alta/edición, confirmación de borrado) usando TailwindCSS.
+- [X] Validación de formularios y feedback de errores en la UI.
+- [ ] Resaltado visual para productos próximos a caducar.
+- [X] Accesibilidad y responsive desde el primer momento.
+- [X] Revisión y validación rápida con el equipo.
+
+### 2. Backend & DevOps
+- [ ] Definir el modelo de datos `Producto` en Supabase (campos: id, nombre, cantidad, unidad, fecha_caducidad, usuario_id).
+- [ ] Configurar RLS para que cada usuario solo acceda a sus productos.
+- [ ] Crear endpoints básicos (CRUD) en FastAPI/Supabase.
+- [ ] Validación de datos y control de errores en la API.
+- [ ] Soporte para eventos en tiempo real (opcional en MVP, recomendable).
+
+### 3. Integración Frontend-Backend
+- [ ] Conectar la UI con los endpoints reales.
+- [X] Pruebas de flujo completo: alta, edición, borrado y visualización de productos.
+- [ ] Feedback de errores y confirmaciones en la app.
+
+---
+
+> **Nota:** El equipo trabajará en paralelo en frontend/diseño y backend/devops, priorizando la entrega temprana de la parte visual para revisión y testeo rápido. La integración se realizará en cuanto los endpoints estén disponibles.

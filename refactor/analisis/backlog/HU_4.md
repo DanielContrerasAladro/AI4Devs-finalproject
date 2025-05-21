@@ -22,6 +22,31 @@ Historias de Usuario Relacionadas:
 
 ---
 
+## Plan de trabajo y tickets (Sprint actual)
+
+### 1. Frontend & Diseño (Prioridad máxima)
+- [X] Prototipo visual de la vista de inventario (listado de productos, detalles, resaltado de caducidad) usando TailwindCSS.
+- [X] Implementar búsqueda y filtrado en la lista.
+- [ ] Ordenación por fecha de caducidad o cantidad.
+- [X] Accesibilidad y responsive.
+- [X] Revisión y validación rápida con el equipo.
+
+### 2. Backend & DevOps
+- [ ] Endpoint para obtener listado de productos (`GET /productos`) con soporte de filtros y orden.
+- [ ] Lógica para filtrar, buscar y ordenar productos en la API.
+- [ ] Pruebas unitarias e integración de la consulta de inventario.
+
+### 3. Integración Frontend-Backend
+- [ ] Conectar la vista de inventario con el endpoint real.
+- [X] Pruebas de visualización, búsqueda y filtrado.
+- [ ] Feedback visual para productos próximos a caducar.
+
+---
+
+> **Nota:** El foco inicial es entregar una vista de inventario usable y visualmente atractiva, integrando la lógica de backend en cuanto esté disponible.
+
+---
+
 ## Desglose Técnico y Estimación de Tickets
 
 ### Frontend (Python (PyScript/Anvil))

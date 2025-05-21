@@ -1,6 +1,7 @@
 # Planificación de Releases y Roadmap
 
-## Release 1: MVP - Gestión Básica de Alacena (≤30h)
+## Release 1: MVP - Gestión Básica de Alacena
+- **Foco inicial:** HU_3 y HU_4
 - HU_1: Registro de usuario *(MVP)*
 - HU_2: Inicio de sesión *(MVP)*
 - HU_3: Gestión de productos en la alacena *(MVP)*

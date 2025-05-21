@@ -7,8 +7,8 @@
 ## Must Have (MVP)
 - HU_1: Registro de usuario *(MVP)*
 - HU_2: Inicio de sesión *(MVP)*
-- HU_3: Gestión de productos en la alacena *(MVP)*
-- HU_4: Visualización de inventario *(MVP)*
+- **HU_3: Gestión de productos en la alacena *(MVP, foco inicial de desarrollo)***
+- **HU_4: Visualización de inventario *(MVP, foco inicial de desarrollo)***
 - HU_5: Añadir y quitar productos del inventario *(MVP)*
 
 ## Should Have (Mock/Parcial en MVP, completo en releases posteriores)
@@ -22,3 +22,5 @@
 
 ## Won't Have (por ahora, solo endpoint/documentación en MVP)
 - HU_11: Integración con dispositivos IoT *(Solo endpoint/documentación en MVP)*
+
+> **Nota de priorización:** El equipo comenzará el desarrollo del MVP por las historias HU_3 (Gestión de productos) y HU_4 (Visualización de inventario), ya que son el núcleo funcional de la aplicación y habilitan el resto de funcionalidades clave.

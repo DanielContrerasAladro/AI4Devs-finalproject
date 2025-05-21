@@ -206,9 +206,45 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > Como experto en @https://www.conventionalcommits.org/en/v1.0.0/#summary @GitHub Actions y commits en github, prepara el proyecto para que rellene el fichero @CHANGELOG.md al hacer un commit con el formato que tiene ahora mismo con el nuevo commit al principio del fichero, así como el fichero @readme.md con el commit en el mismo formato y en el apartado '## 6. Commits y Releases', a continuación del último commit, al final del fichero
 
 > **Prompt 2:**
->
+> Que falta por configurar para que @pre-commit se ejecute? Debes indicarme cómo:
+> - ejecutar pre-commit de forma automática al hacer un commit
+> - como probarlo de forma manual
 
 ### 6.2 Commits y releases
 
-> **Prompt Commit [N]:**
+> **Prompts Commit [feat(hu3_hu4): estilos y comportamiento de crud de listado de elementos](https://github.com/DanielContrerasAladro/Alacena/commit/b9de33ccd3d41ef47b6c192bb5f898d92497d5ef):**
+>
+> **Prompt 1:**
+> Como equipo de desarrollo compuesto por:
+> - DevOps experto en @Reflex-hosting @Firebase @Sign in with Apple @Google Sign-In y buenas prácticas en arquitecturas Free
+> - Backend developer experto en @Supabase Python @Python 3 @NodeJS y buenas prácticas de desarollo de APIs
+> - Frontend developer experto en @Doc_Angular @Ionic Framework @Reflex y buenas prácticas de Progressive Web Apps
+> - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
+>
+> Necesito que prioricéis el @BacklogPriorizado.md para empezar con la gestión de productos de Alacena.@HU_3.md , y la Visualización de inventario, @HU_4.md , en base a lo desarrollado previamente en @src
+>
+> Tras esta priorización y dejarlo reflejado en los ficheros necesarios de @analisis y @backlog , empecemos con la primera Historia de Usuario 'Must Have' del MVP definido
+>
+> **Prompt 2:**
+> Comienza con ambas tareas, no olvides que la funcionalidad debe ser la misma que la desarrollada previamente en la carpeta @src para el frontend y @functions para el backend
+> Además, para el diseño, puedes revisar @https://chonyfrikadas.blogspot.com/2016/03/alacena-tu-nueva-app-para-gestion.html
+>
+> **Prompt 3:**
+> Vamos a empezar por reflejar el plan en los tickets de trabajo, en los ficheros de las Historias de usuario correspondientes en @backlog, y después seguiremos este orden:
+> - Frontend y diseño, trabajando codo con codo para crear la parte visual y poder revisarla lo antes posible
+> - Backend y DevOps definiendo el midelo de datos y los endpoints básicos, así como creándolos en Supabase y RLS
+> - Frontend y Backend integrando los endpoints en la aplicación
+>
+> **Prompt 4:**
+> Haz ambos cambios, si es necesario reutilizar iconos o textos, revisa @resources @resources_default y @assets para utilizarlos, copiándolos a la nueva estructura de carpetas, si son necesarios
+> Genera el código necesario para los componentes descritos, y los HTML que me has mostrado, además, copia los recursos necesarios y textos a la nueva estructura
+>
+> **Prompt 5:**
+> modifica como se muestra y oculta el producto_form en base a lo que se muestra en este ejemplo
+> @https://reflex.dev/docs/components/conditional-rendering/
+>
+
+> Aquí tivue que revisar un par de detalles del código que el agente de IA no resolvía correctamente, como la forma de mostrar y ocultar el formulario, que no era la correcta y algunos detalles de estilo, que era más rápdio tocarlos a mano
+
+> **Prompts Commit [N]():**
 >
