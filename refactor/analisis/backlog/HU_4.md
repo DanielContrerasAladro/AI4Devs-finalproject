@@ -32,14 +32,21 @@ Historias de Usuario Relacionadas:
 - [X] Revisión y validación rápida con el equipo.
 
 ### 2. Backend & DevOps
-- [ ] Endpoint para obtener listado de productos (`GET /productos`) con soporte de filtros y orden.
-- [ ] Lógica para filtrar, buscar y ordenar productos en la API.
+- [X] Endpoint para obtener listado de productos (`GET /productos`) con soporte de filtros y orden.
+- [X] Lógica para filtrar, buscar y ordenar productos en la API.
 - [ ] Pruebas unitarias e integración de la consulta de inventario.
 
 ### 3. Integración Frontend-Backend
-- [ ] Conectar la vista de inventario con el endpoint real.
+- [X] Conectar la vista de inventario con el endpoint real.
 - [X] Pruebas de visualización, búsqueda y filtrado.
 - [ ] Feedback visual para productos próximos a caducar.
+
+### Avances realizados (Sprint actual)
+- [X] Definido el modelo de datos en Supabase (ver `supabase/schema.sql`)
+- [X] Configuradas las políticas RLS para compartición de listas
+- [X] Actualizado el README con el nuevo modelo y diagrama
+- [X] Documentados los endpoints REST disponibles (Supabase autoexpone endpoints para cada tabla)
+- [X] Creado microservicio Python base (`microservice/main.py`)
 
 ---
 

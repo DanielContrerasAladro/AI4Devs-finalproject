@@ -79,16 +79,26 @@ graph TD
 - [X] Revisión y validación rápida con el equipo.
 
 ### 2. Backend & DevOps
-- [ ] Definir el modelo de datos `Producto` en Supabase (campos: id, nombre, cantidad, unidad, fecha_caducidad, usuario_id).
-- [ ] Configurar RLS para que cada usuario solo acceda a sus productos.
-- [ ] Crear endpoints básicos (CRUD) en FastAPI/Supabase.
+- [X] Definir el modelo de datos `Producto` en Supabase (campos: id, nombre, cantidad, unidad, fecha_caducidad, usuario_id).
+- [X] Configurar RLS para que cada usuario solo acceda a sus productos.
+- [X] Crear endpoints básicos (CRUD) en FastAPI/Supabase.
 - [ ] Validación de datos y control de errores en la API.
 - [ ] Soporte para eventos en tiempo real (opcional en MVP, recomendable).
 
 ### 3. Integración Frontend-Backend
-- [ ] Conectar la UI con los endpoints reales.
+- [X] Conectar la UI con los endpoints reales.
 - [X] Pruebas de flujo completo: alta, edición, borrado y visualización de productos.
 - [ ] Feedback de errores y confirmaciones en la app.
+
+### Avances realizados (Sprint actual)
+- [X] Definido el modelo de datos en Supabase (ver `supabase/schema.sql`)
+- [X] Configuradas las políticas RLS para compartición de listas y productos
+- [X] Actualizado el README con el nuevo modelo y diagrama
+- [X] Documentados los endpoints REST disponibles (Supabase autoexpone endpoints para cada tabla)
+- [X] Endpoints REST funcionales y probados para productos y listas
+- [X] Integración inicial frontend-backend en Reflex: creación y visualización de listas y productos
+- [X] Creado microservicio Python base (`microservice/main.py`)
+- [X] Política de SELECT abierta para facilitar pruebas en desarrollo (se eliminará en producción)
 
 ---
 

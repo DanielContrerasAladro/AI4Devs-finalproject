@@ -243,8 +243,52 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > modifica como se muestra y oculta el producto_form en base a lo que se muestra en este ejemplo
 > @https://reflex.dev/docs/components/conditional-rendering/
 >
-
-> Aquí tivue que revisar un par de detalles del código que el agente de IA no resolvía correctamente, como la forma de mostrar y ocultar el formulario, que no era la correcta y algunos detalles de estilo, que era más rápdio tocarlos a mano
+>
+> Aquí tuve que revisar un par de detalles del código que el agente de IA no resolvía correctamente, como la forma de mostrar y ocultar el formulario, que no era la correcta y algunos detalles de estilo, que era más rápdio tocarlos a mano
 
 > **Prompts Commit [N]():**
 >
+>
+> **Prompt 1:**
+> Vamos a continuar con el desarrollo de los tickets de trabajo, revisa lo que hay hecho en los ficheros de las Historias de usuario correspondientes en @backlog  y continuemos:
+> - Backend y DevOps definiendo el modelo de datos y los endpoints necesarios para todo el proyecto, rervisando lo que había en @functions y lo que se ha definido en @readme.md para la refactorización, así como creándolos en Supabase y RLS, teniendo en cuenta que la PoC @main.py ya tiene conexión con la base de datos de SupaBase, se podrá reutilizar algo del código allí tgenerado
+> - Frontend y Backend integrando los endpoints en la aplicación, aquí vamos a ir revisando la PoC @main.py pues ya está conectada con el backend de SupaBase para reutilizar el código allí creado
+> Antes de editar los ficheros infórmame de cuales son los cambios a realizar para validarlos y al terminar registra los pasos realizados en los ficheros de la historia de usuario correspondiente
+>
+> **Prompt 2:**
+> Vamos por el orden en el que has indicado los pasos, crea el microservicio adicional que comentas, aunque solo devuelva OK, pues nos podrá ser útil en el futuro
+>
+> **Prompt 3:**
+> Valido los cambios salvo una cosa, en el RLS debe ser fléxible para que los usuarios puedan compartir sus listas con otros usuarios. Esto me lleva a corregir el modelo de datos en @readme.md ya que faltan las listas del usuario, que puede crear las que necesite, con el nombre que quiera, que contienen distintos alimentos (por ejemplo, nevera, armario, congelador....) aparte de una lista especial que es la lista de la compra
+>
+> **Prompt 4:**
+> Corecto, vamos a reflejar estos cambios, recuerda reflejar el modelo completo en los SQL y en los endpoints
+
+> **Prompt 5:**
+> Correcto, continúa con los siguientes pasos y refléjalo en los ficheros correspondientes en la estructura de carpetas, el SQL para SupaBase también debe guardarse como fichero
+>
+> **Prompt 6:**
+> Todo correcto para continuar, salvo dos cosas:
+> - Los endpoints de SupaBase deben reflejarse en @supabase_api.py
+> - Los cambios para el frontend, debes realizarlos basándote en el estilo y funcionamiento de @inventory.py para el frontend y en @main.py para la conexión con la API de SupaBase en el backend
+>
+> **Prompt 7:**
+> Revisa bien los tipos de datos, notaciones de funciones, definición de páginas.....en base a @Reflex pues hay errores
+> en la implementación al ejecutarla
+>
+> Tras un par de cambnios en el código, para mantener la Proof of Concept (PoC) en funcionamiento, vamos a corregir el funcionamiento dado de la aplicación para seguir con el desarrollo de la aplicación, y que no se rompa la PoC, pues sirve para experimentar y aprender a usar la API de SupaBase, y el resto de la aplicación
+>
+> **Prompt 8:**
+> Funciona, pero en @lists.py me da un error al intentar crear una lista, mira el pantallazo ![alt text](image-1.png)
+> En @inventory.py tenemos funcionando la PoC para crear productos, sin tocar la PoC, revisa que @lists.py funciuone correctamente y de forma similar tanto con el backend como con la UI
+> Antes de tocar nada, haz el plan de acción y explícame todos los cambios que vas a realizar en los ficheros
+>
+> **Prompt 9:**
+> Sí, implementa estos cambios añadiendo para el usuario_id un usuario que se recoja del .env del proyecto, para ser usado sólo en ejecución local, más adelante implementaremos el regisrtro y login del usuario
+
+> **Prompts Commit [N]():**
+>
+> **Prompt 1:**
+> Comencemos con la implementación de login, añádelo aquí @frontend.py del mismo modo que está añadido 'alacena()' y crea un módulo simple y separado para hacer el login.
+> Para el login, como experto en @Google Sign-In @Sign in with Apple y @https://supabase.com/docs/guides/auth vamos a prepararlo para aceptar el login social, por número de teléfono y por email, siguiendo las buenas prácticas de @Reflex y @Supabase @Supabase Python
+> Recuerda revisar @backlog y @readme.md para preparar la implementación

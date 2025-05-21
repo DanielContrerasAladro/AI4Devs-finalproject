@@ -608,6 +608,11 @@
 
 > ```mermaid
 > erDiagram
+>     USUARIOS ||--o{ LISTAS : "crea"
+>     LISTAS ||--o{ ALIMENTOS_LISTAS : "contiene"
+>     ALIMENTOS ||--o{ ALIMENTOS_LISTAS : "pertenece a"
+>     LISTAS ||--o{ LISTAS_USUARIOS : "compartida con"
+>     USUARIOS ||--o{ LISTAS_USUARIOS : "acceso a"
 >     USUARIOS ||--o{ ALIMENTOS : "tiene"
 >     USUARIOS ||--o{ RECETAS : "tiene"
 >     RECETAS ||--o{ INGREDIENTES : "contiene"
@@ -622,19 +627,39 @@
 >        jsonb metadata "Metadatos adicionales del usuario"
 >     }
 >
+>     LISTAS {
+>        uuid id PK "Identificador único de la lista"
+>        string nombre "Nombre de la lista (NOT NULL)"
+>        uuid propietario_id FK "ID del usuario propietario (NOT NULL)"
+>        string tipo "Tipo de lista (personal, compra, compartida)"
+>        string descripcion "Descripción de la lista"
+>        timestamp fecha_creacion "Fecha de creación"
+>     }
+>
+>     LISTAS_USUARIOS {
+>        uuid lista_id FK "ID de la lista"
+>        uuid usuario_id FK "ID del usuario con acceso"
+>        string permisos "Permisos (lectura, edición, propietario)"
+>     }
+>
 >     ALIMENTOS {
 >        uuid id PK "Identificador único del alimento"
->        uuid usuario_id FK "ID del usuario que posee el alimento (NOT NULL)"
 >        string nombre "Nombre del alimento (NOT NULL)"
 >        int cantidad "Cantidad del alimento (NOT NULL)"
 >        string unidad "Unidad de medida (gramos, litros, etc.) (NOT NULL)"
 >        date caducidad "Fecha de caducidad del alimento (NOT NULL)"
+>        uuid propietario_id FK "ID del usuario propietario (NOT NULL)"
 >        jsonb metadata "Metadatos adicionales del alimento"
+>     }
+>
+>     ALIMENTOS_LISTAS {
+>        uuid alimento_id FK "ID del alimento"
+>        uuid lista_id FK "ID de la lista"
 >     }
 >
 >     RECETAS {
 >        uuid id PK "Identificador único de la receta"
->        uuid usuario_id FK "ID del usuario que posee la receta (NOT NULL)"
+>        uuid propietario_id FK "ID del usuario que posee la receta (NOT NULL)"
 >        string nombre "Nombre de la receta (NOT NULL)"
 >        string descripcion "Descripción de la receta"
 >        jsonb ingredientes "Lista de ingredientes en formato JSONB"
@@ -649,9 +674,9 @@
 >
 >     NOTIFICACIONES {
 >        uuid id PK "Identificador único de la notificación"
->        uuid alimento_id FK "ID del alimento que genera la notificación (NOT NULL)"
+>        uuid usuario_id FK "ID del usuario que recibe la notificación (NOT NULL)"
 >        string mensaje "Mensaje de la notificación (NOT NULL)"
->        date fecha "Fecha de la notificación (NOT NULL)"
+>        timestamp fecha "Fecha de la notificación (NOT NULL)"
 >     }
 >
 >     MENUS {
@@ -700,6 +725,20 @@
 >   - fecha_inicio: Fecha de inicio del menú (NOT NULL).
 >   - fecha_fin: Fecha de fin del menú (NOT NULL).
 >   - recetas: Lista de recetas en formato JSONB.
+> - LISTAS
+>   - id (PK): Identificador único de la lista (UUID).
+>   - nombre: Nombre de la lista (NOT NULL).
+>   - propietario_id (FK): ID del usuario propietario (NOT NULL).
+>   - tipo: Tipo de lista (personal, compra, compartida).
+>   - descripcion: Descripción de la lista.
+>   - fecha_creacion: Fecha de creación.
+> - LISTAS_USUARIOS
+>   - lista_id (FK): ID de la lista.
+>   - usuario_id (FK): ID del usuario con acceso.
+>   - permisos: Permisos (lectura, edición, propietario).
+> - ALIMENTOS_LISTAS
+>   - alimento_id (FK): ID del alimento.
+>   - lista_id (FK): ID de la lista.
 
 > - Relaciones y Restricciones
 >   - USUARIOS - ALIMENTOS: Un usuario puede tener muchos alimentos. Relación uno a muchos.
@@ -952,6 +991,12 @@ paths:
 
 > **Commit [d11bce6](https://github.com/DanielContrerasAladro/Alacena/commit/d11bce6):**
 > - **Descripción:** chore: revisión de readme y changelog precommit
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [f65d9fa](https://github.com/DanielContrerasAladro/Alacena/commit/f65d9fa):**
+> - **Descripción:** Update deploy.yml
 > - **Cambios:** [Descripción de los cambios]
 > - **Release:** No genera release
 
