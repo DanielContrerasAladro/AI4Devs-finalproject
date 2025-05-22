@@ -246,7 +246,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 >
 > Aquí tuve que revisar un par de detalles del código que el agente de IA no resolvía correctamente, como la forma de mostrar y ocultar el formulario, que no era la correcta y algunos detalles de estilo, que era más rápdio tocarlos a mano
 
-> **Prompts Commit [N]():**
+> **Prompts Commit [feat(hu3_hu4): estilos y estilos y api correspondiente al modelo de datos definido](https://github.com/DanielContrerasAladro/Alacena/commit/092e22f0bfac770cc02f254a7a89f15c3d6cfc74):**
 >
 >
 > **Prompt 1:**
@@ -288,7 +288,22 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 
 > **Prompts Commit [N]():**
 >
+>
 > **Prompt 1:**
 > Comencemos con la implementación de login, añádelo aquí @frontend.py del mismo modo que está añadido 'alacena()' y crea un módulo simple y separado para hacer el login.
-> Para el login, como experto en @Google Sign-In @Sign in with Apple y @https://supabase.com/docs/guides/auth vamos a prepararlo para aceptar el login social, por número de teléfono y por email, siguiendo las buenas prácticas de @Reflex y @Supabase @Supabase Python
+> Para el login, como experto en @[Google Sign-In @Sign in with Apple](https://supabase.com/docs/guides/auth/auth-identity-linking?queryGroups=language&language=python#manual-linking-beta) y @https://supabase.com/docs/guides/auth vamos a prepararlo para aceptar el login social y por email, siguiendo las buenas prácticas de @Reflex y @Supabase @Supabase Python
 > Recuerda revisar @backlog y @readme.md para preparar la implementación
+>
+> **Prompt 2:**
+> Ahora vamos a
+> - integrar el flujo de usuario autenticado en el resto de la app, las llamadas a la API según corresponda
+> - gestionar el token JWT tras el login, para estar logado cuando vuelva a entrar desde el mismo dispositivo o navegador, recuerda que estamos creando una PWA
+>
+> **Prompt 3:**
+> ahora que tenemos una parte funcional con login, con frontend, con backend
+> el equipo de desarrollo mencionado previamente ha decidido reestructurar el código siguiendo las best practices para hacerlo modular, escalable y legible, además de implementar los tests unitarios necesarios para, a partir de ahora, acometer las historias de usuario utilizando TDD
+>
+> **Prompt 4:**
+> Revisa las historias de usuario y el la planificación en @analisis para actualizar los tickets de trabajo en los que hemos avanzado en esta sesión y reflejarlo en los fichertos correspondientes
+
+> **Prompts Commit [N]():**

@@ -25,23 +25,27 @@ Historias de Usuario Relacionadas:
 ## Desglose Técnico y Estimación de Tickets
 
 ### Frontend (Python (PyScript/Anvil))
-- **Implementar formulario de registro de usuario**
+- [X] Implementar formulario de registro de usuario
   _Talla de camiseta: S_
-- **Validación de campos y mensajes de error**
+- [X] Validación de campos y mensajes de error
   _Talla de camiseta: S_
-- **Integración con API de registro**
+- [X] Integración con API de registro
   _Talla de camiseta: S_
 
 ### Backend (FastAPI)
-- **Endpoint de registro de usuario (POST /usuarios)**
+- [X] Endpoint de registro de usuario (POST /usuarios)
   _Talla de camiseta: M_
-- **Validación de unicidad de email y lógica de negocio**
+- [X] Validación de unicidad de email y lógica de negocio
   _Talla de camiseta: S_
-- **Envío de respuesta y manejo de errores**
+- [X] Envío de respuesta y manejo de errores
   _Talla de camiseta: S_
 
 ### QA/Testing
-- **Pruebas unitarias y de integración para el registro**
+- [X] Pruebas unitarias y de integración para el registro
+  _Talla de camiseta: S_
+- [X] Automatización de tests y calidad en pre-commit
+  _Talla de camiseta: S_
+- [X] Validación de casos de error y edge cases en el registro
   _Talla de camiseta: S_
 
 ---
@@ -57,3 +61,9 @@ graph TD
 ```
 
 [Volver a la tarea de inicialización y Hola Mundo](../../README.md)
+
+**Avances implementados:**
+- El registro de usuario está completamente funcional e integrado con Supabase Auth.
+- El formulario de registro valida campos y muestra mensajes de error claros.
+- Se han cubierto los casos de error más comunes (email duplicado, campos vacíos, etc.).
+- Los tests unitarios y de integración pasan correctamente y están automatizados en el flujo de calidad.

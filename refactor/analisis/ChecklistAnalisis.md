@@ -9,6 +9,7 @@
 - [x] Backlog priorizado y actualizado
 - [x] Planificación de releases y roadmap visual
 - [x] Documentación almacenada en la estructura acordada
+- [x] **Tests unitarios y automatización de calidad validados**
 
 ---
 

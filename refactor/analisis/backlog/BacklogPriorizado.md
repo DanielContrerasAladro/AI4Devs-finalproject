@@ -5,23 +5,23 @@
 > **Nota:** El MVP (≤30h) incluye solo las historias imprescindibles para una app funcional y desplegada en Supabase. El resto se implementará en releases posteriores o como mock/documentación.
 
 ## Must Have (MVP)
-- [] HU_1: Registro de usuario *(MVP)*
-- [] HU_2: Inicio de sesión *(MVP)*
+- [X] HU_1: Registro de usuario *(MVP)*
+- [X] HU_2: Inicio de sesión *(MVP)*
 - [X] **HU_3: Gestión de productos en la alacena *(MVP, foco inicial de desarrollo)***
 - [X] **HU_4: Visualización de inventario *(MVP, foco inicial de desarrollo)***
 - [X] HU_5: Añadir y quitar productos del inventario *(MVP)*
 
 ## Should Have (Mock/Parcial en MVP, completo en releases posteriores)
-- HU_6: Edición de perfil de usuario *(Mock/Parcial en MVP)*
-- HU_7: Recomendaciones de IA para menús *(Mock/Parcial en MVP)*
-- HU_8: Generación automática de lista de la compra *(Mock/Parcial en MVP)*
+- [] HU_6: Edición de perfil de usuario *(Mock/Parcial en MVP)*
+- [] HU_7: Recomendaciones de IA para menús *(Mock/Parcial en MVP)*
+- [] HU_8: Generación automática de lista de la compra *(Mock/Parcial en MVP)*
 
 ## Could Have (Solo diseño/mock en MVP, completo en releases posteriores)
-- HU_9: Personalización de notificaciones *(Mock/Parcial en MVP)*
-- HU_10: Exportar datos de la alacena *(Mock/Parcial en MVP)*
+- [] HU_9: Personalización de notificaciones *(Mock/Parcial en MVP)*
+- [] HU_10: Exportar datos de la alacena *(Mock/Parcial en MVP)*
 
 ## Won't Have (por ahora, solo endpoint/documentación en MVP)
-- HU_11: Integración con dispositivos IoT *(Solo endpoint/documentación en MVP)*
+- [] HU_11: Integración con dispositivos IoT *(Solo endpoint/documentación en MVP)*
 
 > **Nota de priorización:** El equipo comenzará el desarrollo del MVP por las historias HU_3 (Gestión de productos) y HU_4 (Visualización de inventario), ya que son el núcleo funcional de la aplicación y habilitan el resto de funcionalidades clave.
 
@@ -30,3 +30,6 @@
 - [X] Políticas RLS aplicadas y probadas.
 - [X] Endpoints REST funcionales para productos y listas.
 - [X] Integración inicial frontend-backend en Reflex.
+- [X] **Tests unitarios y de integración automatizados y pasando en CI.**
+- [X] **Automatización de calidad: pre-commit con tests, linting y formateo.**
+- [X] **Solucionados problemas de imports, mocks y warnings en la batería de tests.**

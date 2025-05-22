@@ -88,6 +88,8 @@ graph TD
 ### 3. Integración Frontend-Backend
 - [X] Conectar la UI con los endpoints reales.
 - [X] Pruebas de flujo completo: alta, edición, borrado y visualización de productos.
+- [X] **Tests unitarios y de integración automatizados y pasando.**
+- [X] **Automatización de calidad en pre-commit.**
 - [ ] Feedback de errores y confirmaciones en la app.
 
 ### Avances realizados (Sprint actual)

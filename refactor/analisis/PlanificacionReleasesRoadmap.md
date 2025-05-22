@@ -7,6 +7,7 @@
 - HU_3: Gestión de productos en la alacena *(MVP)*
 - HU_4: Visualización de inventario *(MVP)*
 - HU_5: Añadir y quitar productos del inventario *(MVP)*
+- **Cobertura de tests y automatización de calidad implementada en el MVP.**
 
 ## Release 2: Personalización y Planificación Inteligente
 - HU_6: Edición de perfil de usuario *(Mock/Parcial en MVP, completo aquí)*

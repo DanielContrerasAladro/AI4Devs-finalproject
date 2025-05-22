@@ -27,29 +27,33 @@ Historias de Usuario Relacionadas:
 ## Desglose Técnico y Estimación de Tickets
 
 ### Frontend (Python (PyScript/Anvil))
-- Implementar formulario de inicio de sesión
+- [X] Implementar formulario de inicio de sesión
   _Talla de camiseta: S_
-- Validación de campos y mensajes de error
+- [X] Validación de campos y mensajes de error
   _Talla de camiseta: S_
-- Integración con API de autenticación
+- [X] Integración con API de autenticación
   _Talla de camiseta: S_
-- Implementar funcionalidad de "recordar contraseña"
+- [X] Implementar funcionalidad de "recordar contraseña" (mock MVP)
   _Talla de camiseta: S_
-- Implementar cierre de sesión
+- [X] Implementar cierre de sesión
   _Talla de camiseta: S_
 
 ### Backend (FastAPI)
-- Endpoint de autenticación de usuario (POST /login)
+- [X] Endpoint de autenticación de usuario (POST /login)
   _Talla de camiseta: M_
-- Lógica de validación de credenciales y generación de token JWT
+- [X] Lógica de validación de credenciales y generación de token JWT
   _Talla de camiseta: M_
-- Endpoint para recuperación de contraseña
+- [X] Endpoint para recuperación de contraseña (mock MVP)
   _Talla de camiseta: M_
-- Endpoint para cierre de sesión (opcional, invalidación de token)
+- [X] Endpoint para cierre de sesión (opcional, invalidación de token)
   _Talla de camiseta: S_
 
 ### QA/Testing
-- Pruebas unitarias y de integración para el inicio de sesión
+- [X] Pruebas unitarias y de integración para el inicio de sesión
+  _Talla de camiseta: S_
+- [X] Automatización de tests y calidad en pre-commit
+  _Talla de camiseta: S_
+- [X] Validación de casos de error y edge cases en login/logout
   _Talla de camiseta: S_
 
 ---
@@ -65,3 +69,14 @@ graph TD
     BE1 --> BE4[Recuperación contraseña]
     BE3 --> QA1[Pruebas de login]
     FE5 --> QA1
+
+```
+
+**Avances implementados:**
+- El inicio de sesión está completamente funcional e integrado con Supabase Auth.
+- El formulario de login valida credenciales y muestra mensajes de error claros.
+- El cierre de sesión y la persistencia de sesión funcionan correctamente.
+- Se han cubierto los casos de error más comunes (credenciales incorrectas, usuario no existente, etc.).
+- Los tests unitarios y de integración pasan correctamente y están automatizados en el flujo de calidad.
+
+---

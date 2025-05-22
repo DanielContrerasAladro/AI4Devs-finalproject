@@ -33,12 +33,13 @@ Historias de Usuario Relacionadas:
 
 ### 2. Backend & DevOps
 - [X] Endpoint para obtener listado de productos (`GET /productos`) con soporte de filtros y orden.
-- [X] Lógica para filtrar, buscar y ordenar productos en la API.
-- [ ] Pruebas unitarias e integración de la consulta de inventario.
+- [X] Lógica para filtrar, buscar y ordenar productos en la API..
+- [X] **Pruebas unitarias e integración de la consulta de inventario.**
 
 ### 3. Integración Frontend-Backend
 - [X] Conectar la vista de inventario con el endpoint real.
 - [X] Pruebas de visualización, búsqueda y filtrado.
+- [X] **Tests unitarios y de integración automatizados y pasando.**
 - [ ] Feedback visual para productos próximos a caducar.
 
 ### Avances realizados (Sprint actual)

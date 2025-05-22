@@ -1000,3 +1000,27 @@ paths:
 > - **Cambios:** [Descripción de los cambios]
 > - **Release:** No genera release
 
+
+> **Commit [cae233d](https://github.com/DanielContrerasAladro/Alacena/commit/cae233d):**
+> - **Descripción:** feat(hu1_hu2_hu5): reestructuracion codigo, tests unitarios, y login completo
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [cae233d](https://github.com/DanielContrerasAladro/Alacena/commit/cae233d):**
+> - **Descripción:** feat(hu1_hu2_hu5): reestructuracion codigo, tests unitarios, y login completo
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [cae233d](https://github.com/DanielContrerasAladro/Alacena/commit/cae233d):**
+> - **Descripción:** feat(hu1_hu2_hu5): reestructuracion codigo, tests unitarios, y login completo
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [cae233d](https://github.com/DanielContrerasAladro/Alacena/commit/cae233d):**
+> - **Descripción:** feat(hu1_hu2_hu5): reestructuracion codigo, tests unitarios, y login completo
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+

@@ -25,28 +25,38 @@ Historias de Usuario Relacionadas:
 ## Desglose Técnico y Estimación de Tickets
 
 ### Frontend (Python (PyScript/Anvil))
-- Implementar botones para añadir y quitar unidades en la vista de inventario
+- [X] Implementar botones para añadir y quitar unidades en la vista de inventario
   _Talla de camiseta: S_
-- Validación para evitar cantidades negativas
+- [X] Validación para evitar cantidades negativas
   _Talla de camiseta: S_
-- Mostrar confirmación tras cada operación
+- [X] Mostrar confirmación tras cada operación
   _Talla de camiseta: S_
-- Visualización del historial de movimientos
+- [X] Visualización del historial de movimientos (mock MVP)
   _Talla de camiseta: S_
 
 ### Backend (FastAPI)
-- Endpoint para registrar movimiento de producto (POST /movimientos)
+- [X] Endpoint para registrar movimiento de producto (POST /movimientos)
   _Talla de camiseta: M_
-- Lógica para actualizar cantidad y validar límites
+- [X] Lógica para actualizar cantidad y validar límites
   _Talla de camiseta: S_
-- Endpoint para obtener historial de movimientos (GET /movimientos)
+- [X] Endpoint para obtener historial de movimientos (GET /movimientos) (mock MVP)
   _Talla de camiseta: S_
 
 ### QA/Testing
-- Pruebas unitarias y de integración para movimientos de inventario
+- [X] Pruebas unitarias y de integración para movimientos de inventario
+  _Talla de camiseta: S_
+- [X] Automatización de tests y calidad en pre-commit
+  _Talla de camiseta: S_
+- [X] Validación de edge cases: no permitir cantidades negativas, feedback de errores
   _Talla de camiseta: S_
 
 ---
+
+**Avances implementados:**
+- La funcionalidad de añadir y quitar productos está completamente operativa desde la vista de inventario.
+- El sistema valida que no se puedan introducir cantidades negativas y muestra confirmaciones y errores claros.
+- El historial de movimientos está disponible como mock en el MVP.
+- Los tests unitarios y de integración cubren los flujos principales y edge cases, y están automatizados en el flujo de calidad.
 
 ```mermaid
 graph TD
