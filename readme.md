@@ -1024,3 +1024,15 @@ paths:
 > - **Cambios:** [Descripción de los cambios]
 > - **Release:** No genera release
 
+
+> **Commit [7ee9135](https://github.com/DanielContrerasAladro/Alacena/commit/7ee9135):**
+> - **Descripción:** docs: documentos de análisis, planificación y primera definición de historias de usuario redefinidos tras primer sprint
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [feadad6](https://github.com/DanielContrerasAladro/Alacena/commit/feadad6):**
+> - **Descripción:** chore: readme y changelog precommi corregido
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+

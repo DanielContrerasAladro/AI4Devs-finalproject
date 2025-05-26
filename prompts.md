@@ -326,3 +326,13 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > Actualiza los ficheros necesarios de las historias de usuario dentro de @backlog
 
 > **Prompts Commit [N]():**
+>
+>
+> **Prompt 1:**
+>
+
+> **Prompts Commit [N]():**
+>
+>
+> **Prompt 1:**
+>
