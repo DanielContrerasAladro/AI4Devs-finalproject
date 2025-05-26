@@ -193,7 +193,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 
 > Cada prompt será enlazado con el commit o release correspondiente, que se documentará para seguimiento del avance del proyecto tanto el el fichero [readme.md](readme.md) como en el [CHANGELOG.md](CHANGELOG.md) del proyecto.
 > Ejemplo de log de commit:
-> **Commit [N](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/commit/1234567890abcdef1234567890abcdef12345678):**
+> **Commit [N](8):**
 >   - **Descripción:**
 >   - **Cambios:**
 >   - **Release:** [0.0.1](https://github.com/DanielContrerasAladro/AI4Devs-finalproject/releases/tag/0.0.1) o No genera release
@@ -286,7 +286,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > **Prompt 9:**
 > Sí, implementa estos cambios añadiendo para el usuario_id un usuario que se recoja del .env del proyecto, para ser usado sólo en ejecución local, más adelante implementaremos el regisrtro y login del usuario
 
-> **Prompts Commit [N]():**
+> **Prompts Commit [feat(hu1_hu2_hu5): reestructuracion codigo, tests unitarios, y login completo]((https://github.com/DanielContrerasAladro/Alacena/commit/cae233d092bdbe6f3940eae337f27a72f9e85775)):**
 >
 >
 > **Prompt 1:**
@@ -305,5 +305,24 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 >
 > **Prompt 4:**
 > Revisa las historias de usuario y el la planificación en @analisis para actualizar los tickets de trabajo en los que hemos avanzado en esta sesión y reflejarlo en los fichertos correspondientes
+
+> **Prompts Commit [docs: documentos de análisis, planificación y primera definición de historias de usuario redefinidos tras primer sprint](https://github.com/DanielContrerasAladro/Alacena/commit/7ee9135c2e7603a32336873f158fdc7581a42948):**
+> Como me gusta ser ordenado, y tenemos una primera versión que despliega en producción y funciona, he hecho una revisión de lo que no está bien, falta por implementar y no se ha tenido en cuenta en el primer análisis y planificación, y he creado un listado de tareas pendientes, que se pueden ver en @HU_MVP.md, y he juntado de nuevo al equipo para analizarlo y planificar las tareas pendientes, reflejarlo en los ficheros correspondientes y crear un diagrama de seguimiento del proyecto
+>
+>
+> **Prompt 1:**
+> Como equipo experto en el proyecto actual, revisa las historias de usuario en @analisis y lo escrito en @HU_MVP.md, que contiene ajustes que hay que hacer y tareas pendientes en el proyecto, en el código existente en @frontend , revisando lo que ya se hizo en su día en @src y @functions
+> En esta revisión deberás:
+>
+> - Reflejar tickets de trabajo pendientes en las histoprias de usuario, refléjalo ewn los ficheros markdown correspondientes
+> - Si hay que crear historias de usuario nuevas, recuerda que sea en formato gherkin, sigue la secuencia para crear el fichero markdwon en @backlog
+> - Actualiza el @BacklogPriorizado.md @BacklogPriorizado.md @ChecklistAnalisis.md @PlanificacionReleasesRoadmap.md
+> - Crea un diagerama estándar en seguimientop de proyectos, en formato markdwon, que permita ver el estado actual del proyecto
+> - Al priorizar, con MoSCow, la priorización debe tener en cuenta el orden de @HU_MVP.md, se debe resolver primero lo que indica ese fichero y en el orden en que lo indica
+>
+> **Prompt 2:**
+> Actúa como un equipo de desarrollo con FE, BE, QA, PO y BA y planifica los siguientes sprints para llevar a cabo el proyecto completo según @BacklogPriorizado.md
+> Debéis estimar las tareas con tallas de camisetay actualizar @PlanificacionReleasesRoadmap.md
+> Actualiza los ficheros necesarios de las historias de usuario dentro de @backlog
 
 > **Prompts Commit [N]():**
