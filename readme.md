@@ -1036,3 +1036,15 @@ paths:
 > - **Cambios:** [Descripción de los cambios]
 > - **Release:** No genera release
 
+
+> **Commit [4687841](https://github.com/DanielContrerasAladro/Alacena/commit/4687841):**
+> - **Descripción:** chore: readme con uso de precommit
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [4687841](https://github.com/DanielContrerasAladro/Alacena/commit/4687841):**
+> - **Descripción:** chore: readme con uso de precommit
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+

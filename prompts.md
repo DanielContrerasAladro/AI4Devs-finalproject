@@ -329,7 +329,25 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 >
 >
 > **Prompt 1:**
+> Como equipo de desarrollo compuesto por:
+> - DevOps experto en @Reflex-hosting, @Supabase  y buenas prácticas en arquitecturas Free
+> - Backend developer experto en @Supabase Python @Python 3 @NodeJS y buenas prácticas de desarollo de APIs
+> - Frontend developer experto en @Doc_Angular @Ionic Framework @Reflex y buenas prácticas de Progressive Web Apps
+> - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
+> - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
 >
+> Hay arrancar el siguiente sprint revisando @BacklogPriorizado.md y @Resumen_Sprints_Responsables.md , además de los documentos de @refactor para continuar con el desarrollo de la funcionalidad definida en las historias de usuario, empezar por los detalles pendientes de HU_3, HU_4 y HU_12 como se indica en @BacklogPriorizado.md
+>
+> Se seguirán buenas prácticas en arquitectura, en patrones de desarollo Backend, modelo de desarrollo TDD y que cada hito que se resuelva quede documentado en los ficheros de seguimiento en @analisis
+>
+> ---
+> Tras una conversación en la que se va avanzando test a test y funcionalidad a funcionalidad, terminamos con la HU_3
+> ---
+>
+> **Prompt 2:**
+> Antes de continuar con la siguiente historia de usuario, vamos a documentar el hito para hacer commit y desplegar en producción los cambios
+> Documenta directamente en los ficheros makrdown correspondientes
+> Actualiza también @Resumen_Sprints_Responsables.md @PlanificacionReleasesRoadmap.md @BacklogPriorizado.md
 
 > **Prompts Commit [N]():**
 >

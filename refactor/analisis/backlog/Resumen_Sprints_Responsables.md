@@ -6,7 +6,7 @@
 |----------|--------------|--------------|--------------|--------------|--------------|-------------|
 | HU_1     | FE_Auth      | BE_Auth      | QA_Auth      | PO_Auth      | BA_Auth      | Hecho       |
 | HU_2     | FE_Auth      | BE_Auth      | QA_Auth      | PO_Auth      | BA_Auth      | Hecho       |
-| HU_3     | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | En progreso |
+| HU_3     | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Hecho       |
 | HU_4     | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | En progreso |
 | HU_5     | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Hecho       |
 | HU_12    | FE_Layout    | BE_Layout    | QA_Layout    | PO_Layout    | BA_Layout    | En progreso |
@@ -42,8 +42,8 @@
 | Estado      | Historias                                                                                                   |
 |-------------|------------------------------------------------------------------------------------------------------------|
 | Por hacer   | HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19, HU_20, HU_21, HU_22, HU_23, HU_24, HU_25                   |
-| En progreso | HU_3, HU_4, HU_12                                                                                          |
-| Hecho       | HU_1, HU_2, HU_5                                                                                           |
+| En progreso | HU_4, HU_12                                                                                                 |
+| Hecho       | HU_1, HU_2, HU_3, HU_5                                                                                      |
 ```
 
 ---
@@ -54,3 +54,7 @@
 - Actualiza el estado conforme avance cada historia en los sprints.
 - QA y PO pueden documentar los resultados de pruebas y validaciones en los propios ficheros markdown de cada historia.
 - Puedes copiar la tabla Kanban a tu herramienta de gestión de proyectos para seguimiento visual.
+
+---
+
+> [2024-07-15] HU_3 completada: Gestión de productos en la alacena implementada, validada y lista para producción.
