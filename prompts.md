@@ -325,7 +325,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > Debéis estimar las tareas con tallas de camisetay actualizar @PlanificacionReleasesRoadmap.md
 > Actualiza los ficheros necesarios de las historias de usuario dentro de @backlog
 
-> **Prompts Commit [N]():**
+> **Prompts Commit [feat(hu_3): Gestión de productos completa con validaciones, feedback y tests](https://github.com/DanielContrerasAladro/Alacena/commit/fe9974f0564546ae4dbb2a57aa1dcbfc1ffda9d0):**
 >
 >
 > **Prompt 1:**
@@ -353,4 +353,55 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 >
 >
 > **Prompt 1:**
+> Sí, vamos a avanzar con la siguiente historia de usuario, te recuerdo el equipo de desarrollo y las directrices
+>
+> - DevOps experto en @Reflex-hosting, @Supabase  y buenas prácticas en arquitecturas Free
+> - Backend developer experto en @Supabase Python @Python 3 @NodeJS y buenas prácticas de desarollo de APIs
+> - Frontend developer experto en @Doc_Angular @Ionic Framework @Reflex y buenas prácticas de Progressive Web Apps
+> - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
+> - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
+>
+> Se seguirán buenas prácticas en arquitectura, en patrones de desarollo Backend, modelo de desarrollo TDD y que cada hito que se resuelva quede documentado en los ficheros de seguimiento en @analisis
+>
+>  **Prompt 2:**
+> Comienza por los tests, vamos por el orden que has marcado, solo ten en cuenta estas correcciones para realizar las implementaciones correspondientes
+> - Aqui 'El usuario debe ver una lista clara y ordenada de todos los productos de su alacena.' los productos se agrupan por listas, luego si hay que modificar algo en backend o frontend para ello, es el momento de hacerlo
+> - Aqui 'Se muestran detalles: nombre, cantidad, unidad y fecha de caducidad.' se debe mostrar también un icóno que identificará la categoría del producto, que podrán tener el nombre que el usuario desee, y escoger entre los iconos de @icons
+>
+> ---
+> Tras una conversación en la que se va avanzando test a test y funcionalidad a funcionalidad, detectamos una anomalía en el desarrollo de la HU_4
+> ---
+>
+>  **Prompt 3:**
+> Cuando intento crear un nuevo producto, con la nueva lógica, que los productos tienen que estar asociados a una lista, sale el siguiente error
+> ```
+>
+> Error al crear producto en Supabase: {"code":"PGRST204","details":null,"hint":null,"message":"Could not find the 'lista' column of 'productos' in the schema cache"}
+> ```
+> Revisa los scripts de @supabase la api @api para corregir el error, recuerda seguir las buenas prácticas de las tecnologías y seguir TDD, y la documentación acerca de la base de datos, @README.md y @refactor  para que cumpla este nuevo requisito en la refactorización objetivo del proyecto
+>
+> ---
+> Tras una conversación en la que se va avanzando test a test y funcionalidad a funcionalidad, terminamos con el desarrollo de la HU_4
+> ---
+>
+> **Prompt 4:**
+> Antes de continuar con la siguiente historia de usuario, vamos a documentar el hito para hacer commit y desplegar en producción los cambios
+> Documenta directamente en los ficheros makrdown correspondientes
+> Actualiza también @Resumen_Sprints_Responsables.md @PlanificacionReleasesRoadmap.md @BacklogPriorizado.md
+
+> **Prompts Commit [N]():**
+>
+>
+> **Prompt 1:**
+> Tras lo desarrollado hasta ahora, hay que revisar este error de concepto, al dar de alta un segundo alimento para la misma lista, igual hay que cambiar la relación entre alimentos y alimentos_listas, la tabla alimentos tiene los alimentos que están en las listas, puede estar en varias listas con distintos valores, la tabla productos tendrá una relación de alimentos única, una fila por alimento, con su categoría, que será una tabla distinta con el nombre de la categoría y el icóno del mismo.
+> No olvides que disponemos de un squad de desarrollo compuesto por:
+>
+> - DevOps experto en @Reflex-hosting, @Supabase  y buenas prácticas en arquitecturas Free
+> - Backend developer experto en @Supabase Python @Python 3 @NodeJS y buenas prácticas de desarollo de APIs
+> - Frontend developer experto en @Doc_Angular @Ionic Framework @Reflex y buenas prácticas de Progressive Web Apps
+> - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
+> - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
+>
+> Empecemos analizando el problema y buscando la solución entre todos, si se necesita feedback de alguno de los roles, pregúntame de forma ordenada y lo resolveremos paso a paso
+> Se seguirán buenas prácticas en arquitectura, en patrones de desarollo Backend, modelo de desarrollo TDD y que cada hito que se resuelva quede documentado en los ficheros de seguimiento en @analisis
 >

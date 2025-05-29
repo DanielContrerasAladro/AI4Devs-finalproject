@@ -1048,3 +1048,255 @@ paths:
 > - **Cambios:** [Descripción de los cambios]
 > - **Release:** No genera release
 
+
+> **Commit [fe9974f](https://github.com/DanielContrerasAladro/Alacena/commit/fe9974f):**
+> - **Descripción:** feat(hu_3): Gestión de productos completa con validaciones, feedback y tests
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [564da72](https://github.com/DanielContrerasAladro/Alacena/commit/564da72):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [1f7a561](https://github.com/DanielContrerasAladro/Alacena/commit/1f7a561):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [a459682](https://github.com/DanielContrerasAladro/Alacena/commit/a459682):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [d32eb9e](https://github.com/DanielContrerasAladro/Alacena/commit/d32eb9e):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [50183df](https://github.com/DanielContrerasAladro/Alacena/commit/50183df):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [1983cce](https://github.com/DanielContrerasAladro/Alacena/commit/1983cce):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [881ff24](https://github.com/DanielContrerasAladro/Alacena/commit/881ff24):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [d38c43a](https://github.com/DanielContrerasAladro/Alacena/commit/d38c43a):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [3967c60](https://github.com/DanielContrerasAladro/Alacena/commit/3967c60):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [c12e62b](https://github.com/DanielContrerasAladro/Alacena/commit/c12e62b):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [0ccfd28](https://github.com/DanielContrerasAladro/Alacena/commit/0ccfd28):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [0124bdc](https://github.com/DanielContrerasAladro/Alacena/commit/0124bdc):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [fbe5c3e](https://github.com/DanielContrerasAladro/Alacena/commit/fbe5c3e):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [86cfcd8](https://github.com/DanielContrerasAladro/Alacena/commit/86cfcd8):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [84d28e0](https://github.com/DanielContrerasAladro/Alacena/commit/84d28e0):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [d85f272](https://github.com/DanielContrerasAladro/Alacena/commit/d85f272):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [30a4d3d](https://github.com/DanielContrerasAladro/Alacena/commit/30a4d3d):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [d64911b](https://github.com/DanielContrerasAladro/Alacena/commit/d64911b):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [8e44354](https://github.com/DanielContrerasAladro/Alacena/commit/8e44354):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [0e0b8ac](https://github.com/DanielContrerasAladro/Alacena/commit/0e0b8ac):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [5069404](https://github.com/DanielContrerasAladro/Alacena/commit/5069404):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [48c9cde](https://github.com/DanielContrerasAladro/Alacena/commit/48c9cde):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [90ff5bf](https://github.com/DanielContrerasAladro/Alacena/commit/90ff5bf):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [3bb027c](https://github.com/DanielContrerasAladro/Alacena/commit/3bb027c):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [5782561](https://github.com/DanielContrerasAladro/Alacena/commit/5782561):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [5de72f6](https://github.com/DanielContrerasAladro/Alacena/commit/5de72f6):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [69c423a](https://github.com/DanielContrerasAladro/Alacena/commit/69c423a):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [7bd90e3](https://github.com/DanielContrerasAladro/Alacena/commit/7bd90e3):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [bb67edc](https://github.com/DanielContrerasAladro/Alacena/commit/bb67edc):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [06da58f](https://github.com/DanielContrerasAladro/Alacena/commit/06da58f):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [cde795f](https://github.com/DanielContrerasAladro/Alacena/commit/cde795f):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [9d897c5](https://github.com/DanielContrerasAladro/Alacena/commit/9d897c5):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [3d74a4f](https://github.com/DanielContrerasAladro/Alacena/commit/3d74a4f):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [9a4e8d5](https://github.com/DanielContrerasAladro/Alacena/commit/9a4e8d5):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [3f97bf9](https://github.com/DanielContrerasAladro/Alacena/commit/3f97bf9):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [c8ac6ba](https://github.com/DanielContrerasAladro/Alacena/commit/c8ac6ba):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [0262973](https://github.com/DanielContrerasAladro/Alacena/commit/0262973):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [b480b08](https://github.com/DanielContrerasAladro/Alacena/commit/b480b08):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [30f3c99](https://github.com/DanielContrerasAladro/Alacena/commit/30f3c99):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [e8d89ee](https://github.com/DanielContrerasAladro/Alacena/commit/e8d89ee):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [e8d89ee](https://github.com/DanielContrerasAladro/Alacena/commit/e8d89ee):**
+> - **Descripción:** fix(hu_3): Despliegue en github action
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+

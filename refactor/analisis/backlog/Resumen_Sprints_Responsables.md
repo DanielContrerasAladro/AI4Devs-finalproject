@@ -7,7 +7,7 @@
 | HU_1     | FE_Auth      | BE_Auth      | QA_Auth      | PO_Auth      | BA_Auth      | Hecho       |
 | HU_2     | FE_Auth      | BE_Auth      | QA_Auth      | PO_Auth      | BA_Auth      | Hecho       |
 | HU_3     | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Hecho       |
-| HU_4     | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | En progreso |
+| HU_4     | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Hecho       |
 | HU_5     | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Hecho       |
 | HU_12    | FE_Layout    | BE_Layout    | QA_Layout    | PO_Layout    | BA_Layout    | En progreso |
 
@@ -42,8 +42,8 @@
 | Estado      | Historias                                                                                                   |
 |-------------|------------------------------------------------------------------------------------------------------------|
 | Por hacer   | HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19, HU_20, HU_21, HU_22, HU_23, HU_24, HU_25                   |
-| En progreso | HU_4, HU_12                                                                                                 |
-| Hecho       | HU_1, HU_2, HU_3, HU_5                                                                                      |
+| En progreso | HU_12                                                                                                 |
+| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5                                                                                      |
 ```
 
 ---
@@ -58,3 +58,4 @@
 ---
 
 > [2024-07-15] HU_3 completada: Gestión de productos en la alacena implementada, validada y lista para producción.
+> [2024-07-16] Hito: Migración completada a modelo simplificado de alimentos con campo lista_id directo. Eliminada la tabla alimentos_listas, refactorizado backend y frontend, y validada la funcionalidad de gestión y visualización de productos por lista. HU_3 y HU_4 marcadas como 'Hecho'.

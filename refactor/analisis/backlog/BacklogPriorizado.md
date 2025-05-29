@@ -51,8 +51,8 @@
 | Estado      | Historia/Ticket                                      |
 |-------------|------------------------------------------------------|
 | Por hacer   | HU_12, HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19, HU_20, HU_21, HU_22, HU_23, HU_24, HU_25 |
-| En progreso | HU_4                                                 |
-| Hecho       | HU_1, HU_2, HU_3, HU_5                               |
+| En progreso |  |
+| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5                               |
 
 gantt
     dateFormat  YYYY-MM-DD
@@ -73,3 +73,5 @@ gantt
 
     section Futuro
     Integración IoT                     :         r8, 2024-08-20, 14d
+
+> [2024-07-16] Hito: Migración a modelo simplificado de alimentos con lista_id directo, eliminación de la tabla alimentos_listas, refactor de backend y frontend, y validación de la funcionalidad. HU_3 y HU_4 completadas y listas para producción.
