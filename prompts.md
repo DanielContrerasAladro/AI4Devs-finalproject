@@ -276,7 +276,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > Revisa bien los tipos de datos, notaciones de funciones, definición de páginas.....en base a @Reflex pues hay errores
 > en la implementación al ejecutarla
 >
-> Tras un par de cambnios en el código, para mantener la Proof of Concept (PoC) en funcionamiento, vamos a corregir el funcionamiento dado de la aplicación para seguir con el desarrollo de la aplicación, y que no se rompa la PoC, pues sirve para experimentar y aprender a usar la API de SupaBase, y el resto de la aplicación
+>     Tras un par de cambios en el código, para mantener la Proof of Concept (PoC) en funcionamiento, vamos a corregir el funcionamiento dado de la aplicación para seguir con el desarrollo de la aplicación, y que no se rompa la PoC, pues sirve para experimentar y aprender a usar la API de SupaBase, y el resto de la aplicación
 >
 > **Prompt 8:**
 > Funciona, pero en @lists.py me da un error al intentar crear una lista, mira el pantallazo ![alt text](image-1.png)
@@ -341,7 +341,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > Se seguirán buenas prácticas en arquitectura, en patrones de desarollo Backend, modelo de desarrollo TDD y que cada hito que se resuelva quede documentado en los ficheros de seguimiento en @analisis
 >
 > ---
-> Tras una conversación en la que se va avanzando test a test y funcionalidad a funcionalidad, terminamos con la HU_3
+>       Tras una conversación en la que se va avanzando test a test y funcionalidad a funcionalidad, terminamos con la HU_3
 > ---
 >
 > **Prompt 2:**
@@ -369,19 +369,18 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > - Aqui 'Se muestran detalles: nombre, cantidad, unidad y fecha de caducidad.' se debe mostrar también un icóno que identificará la categoría del producto, que podrán tener el nombre que el usuario desee, y escoger entre los iconos de @icons
 >
 > ---
-> Tras una conversación en la que se va avanzando test a test y funcionalidad a funcionalidad, detectamos una anomalía en el desarrollo de la HU_4
+>     Tras una conversación en la que se va avanzando test a test y funcionalidad a funcionalidad, detectamos una anomalía en el desarrollo de la HU_4
 > ---
 >
 >  **Prompt 3:**
 > Cuando intento crear un nuevo producto, con la nueva lógica, que los productos tienen que estar asociados a una lista, sale el siguiente error
 > ```
->
 > Error al crear producto en Supabase: {"code":"PGRST204","details":null,"hint":null,"message":"Could not find the 'lista' column of 'productos' in the schema cache"}
 > ```
 > Revisa los scripts de @supabase la api @api para corregir el error, recuerda seguir las buenas prácticas de las tecnologías y seguir TDD, y la documentación acerca de la base de datos, @README.md y @refactor  para que cumpla este nuevo requisito en la refactorización objetivo del proyecto
 >
 > ---
-> Tras una conversación en la que se va avanzando test a test y funcionalidad a funcionalidad, terminamos con el desarrollo de la HU_4
+>       Tras una conversación en la que se va avanzando test a test y funcionalidad a funcionalidad, terminamos con el desarrollo de la HU_4
 > ---
 >
 > **Prompt 4:**
@@ -389,7 +388,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > Documenta directamente en los ficheros makrdown correspondientes
 > Actualiza también @Resumen_Sprints_Responsables.md @PlanificacionReleasesRoadmap.md @BacklogPriorizado.md
 
-> **Prompts Commit []():**
+> **Prompts Commit [feat(@lists): cierre y despliegue de HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19 Todas las historias de usuario del bloque @lists (HU_13 a HU_19) marcadas como `Hecho` y documentadas como completadas y desplegadas en producción. Internacionalización completa, robustez en el manejo de listas y alimentos, y corrección de errores de linter y argumentos en botones. Actualización de los ficheros de backlog, resúmenes y roadmap para reflejar el hito alcanzado. Tests unirtarios y de integración para las nuevas funcionalidades añadidas.](https://github.com/DanielContrerasAladro/Alacena/commit/5e575d97362ab07a74e7c615cddaf3a80681a3c6):**
 >
 >
 > **Prompt 1:**
@@ -426,7 +425,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > ¿Cómo versionar los tests para no perder cobertura durante la migración? No importa, podemos considerar esto como un breaking change
 >
 > ---
-> Tras una conversación en la que se tuve que salir de un bucle con errores de compìlación que se rompía por un lado y al arreglarlo generaba otro error, y al arreglar este volvíamos al primero, tuve que probar distintos modelos de LLM para arreglarlo, con distintas conversaciones, para al final romper el bucle y solucionarlo, se llegó a la solución y se avanzó en el desarrollo de la HU_4
+>       Tras una conversación en la que se tuve que salir de un bucle con errores de compìlación que se rompía por un lado y al arreglarlo generaba otro error, y al arreglar este volvíamos al primero, tuve que probar distintos modelos de LLM para arreglarlo, con distintas conversaciones, para al final romper el bucle y solucionarlo, se llegó a la solución y se avanzó en el desarrollo de la HU_4
 > ---
 >
 > **Prompt 3:**
