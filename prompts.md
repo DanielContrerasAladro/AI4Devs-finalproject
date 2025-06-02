@@ -349,7 +349,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > Documenta directamente en los ficheros makrdown correspondientes
 > Actualiza también @Resumen_Sprints_Responsables.md @PlanificacionReleasesRoadmap.md @BacklogPriorizado.md
 
-> **Prompts Commit [N]():**
+> **Prompts Commit [feat(hu_4): migración a modelo simplificado de alimentos con lista_id y refactor integral](https://github.com/DanielContrerasAladro/Alacena/commit/e584693787d760af11994046567107ad5aee7e2d):**
 >
 >
 > **Prompt 1:**
@@ -389,19 +389,53 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > Documenta directamente en los ficheros makrdown correspondientes
 > Actualiza también @Resumen_Sprints_Responsables.md @PlanificacionReleasesRoadmap.md @BacklogPriorizado.md
 
-> **Prompts Commit [N]():**
+> **Prompts Commit []():**
 >
 >
 > **Prompt 1:**
 > Tras lo desarrollado hasta ahora, hay que revisar este error de concepto, al dar de alta un segundo alimento para la misma lista, igual hay que cambiar la relación entre alimentos y alimentos_listas, la tabla alimentos tiene los alimentos que están en las listas, puede estar en varias listas con distintos valores, la tabla productos tendrá una relación de alimentos única, una fila por alimento, con su categoría, que será una tabla distinta con el nombre de la categoría y el icóno del mismo.
+> Revisa para esto lo que ya se desarrolló en @src y @functions para corregir este error de concepto en @frontend
 > No olvides que disponemos de un squad de desarrollo compuesto por:
 >
-> - DevOps experto en @Reflex-hosting, @Supabase  y buenas prácticas en arquitecturas Free
+> - DevOps experto en @Reflex-hosting  , @Supabase  y buenas prácticas en arquitecturas Free
 > - Backend developer experto en @Supabase Python @Python 3 @NodeJS y buenas prácticas de desarollo de APIs
 > - Frontend developer experto en @Doc_Angular @Ionic Framework @Reflex y buenas prácticas de Progressive Web Apps
 > - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
 > - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
+
+>Empecemos analizando el problema y buscando la solución entre todos, si se necesita feedback de alguno de los roles, pregúntame de forma ordenada y lo resolveremos paso a paso
+>Se seguirán buenas prácticas en arquitectura, en patrones de desarollo Backend, modelo de desarrollo TDD y que cada hito que se resuelva quede documentado en los ficheros de seguimiento en @analisis
 >
-> Empecemos analizando el problema y buscando la solución entre todos, si se necesita feedback de alguno de los roles, pregúntame de forma ordenada y lo resolveremos paso a paso
-> Se seguirán buenas prácticas en arquitectura, en patrones de desarollo Backend, modelo de desarrollo TDD y que cada hito que se resuelva quede documentado en los ficheros de seguimiento en @analisis
+> **Prompt 2:**
+> Voy a responder a las preguntas y vamos empezar por el siguiente orden para empezar a desarrollar las modificaciones: Backend, Frontend, Diseño, QA, DevOps
+> 1. DevOps
+> ¿Alguna consideración especial para la migración de datos y despliegue en Supabase? Sigamos los estándares de la plataforma
+> ¿Recomendaciones para mantener la integridad y performance en el modelo N:M? No es necesario, con el modelo de datos especificado es suficiente
+> 2. Backend
+> ¿Validamos la estructura propuesta? Si
+> ¿Algún patrón de API REST recomendado para exponer alimentos por lista y productos únicos? Sigue los estándares para una API Rest
+> ¿Cómo versionar la migración y mantener backwards compatibility durante el cambio? Usa los patrones estándar de Supabase para la base de datos
+> 3. Frontend
+> ¿Qué cambios serían necesarios en la lógica de consulta y visualización de alimentos por lista? La lógica es correcta, solo ajustar con el nuevo modelo para presentar los datos y hay que revisar que se carguen los alimentos de una lista al inicio de la aplicación, de la primera lista que se obtenga al obtener las listas del usuario. Además de que se podrá usar la lista de productos para hacer un predictor de texto en la caja de texto que permita escribir el nombre al añadir un nuevo elemento
+> ¿Cómo se gestionará la selección de productos únicos y su asociación a listas? los productos únicos no se borrarán aunque desaparezcan de todas las listas
+> 4. Diseño
+> ¿Alguna recomendación para la visualización de categorías e iconos en la UI? La categorías se crea con nombre y un icono de la carpeta @icons , habrá una pantalla específica para editar, crear o borrar, aqui tienes un ejemplo de como eran las categorias en el desarollo anterior @Categories.json
+> ¿Cómo mostrar de forma clara la distinción entre productos únicos y alimentos en listas? en las listas solo se ven los alimentos, los productos únicos guardados servirá para indicar la categoría de un alimento y el nombre, se podrá editar en una página aparte que también permitirá borrar, solo se crearán productos en la tabla de productos cuando se de de alta un nuevo alimento en una lista, pero si al crear un elemento en una lista ya existe (se buscará si existe por nombre) se cogerá la categoría para darlo de alta
+> 5. QA
+> ¿Qué casos de test y validación deberíamos cubrir para asegurar la integridad del nuevo modelo? Los tests unitarios siempre
+> ¿Cómo versionar los tests para no perder cobertura durante la migración? No importa, podemos considerar esto como un breaking change
+>
+> ---
+> Tras una conversación en la que se tuve que salir de un bucle con errores de compìlación que se rompía por un lado y al arreglarlo generaba otro error, y al arreglar este volvíamos al primero, tuve que probar distintos modelos de LLM para arreglarlo, con distintas conversaciones, para al final romper el bucle y solucionarlo, se llegó a la solución y se avanzó en el desarrollo de la HU_4
+> ---
+>
+> **Prompt 3:**
+> ahora hay que revisar @i18n para que set_lang esté en ese módulo y no en ProductState
+> - los ficheros con los términos traducidos para utilizar en los layouts están aqui @i18n que al compilar se trasladarán aqui @i18n
+> - hay que revisar esos ficheros y los textos que se muestran en pantalla, sean botones, nombres de columnas, nombres de campos, ejemplos, mensajes de error o éxito para que todo se traduzca, si tienes dudas de qué mensaje utlizar de los ficheros json, preguntame
+> - hay que tener en cuenta la documentación de @Reflex-hosting para que al llevarlo a producción funcione correctamente
+
+> **Prompts Commit [N]():**
+>
+> **Prompt 1:**
 >

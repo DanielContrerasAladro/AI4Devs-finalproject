@@ -1300,3 +1300,21 @@ paths:
 > - **Cambios:** [Descripción de los cambios]
 > - **Release:** No genera release
 
+
+> **Commit [e584693](https://github.com/DanielContrerasAladro/Alacena/commit/e584693):**
+> - **Descripción:** feat(hu_4): migración a modelo simplificado de alimentos con lista_id y refactor integral
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [8236917](https://github.com/DanielContrerasAladro/Alacena/commit/8236917):**
+> - **Descripción:** fix: freeze reequirements
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [8236917](https://github.com/DanielContrerasAladro/Alacena/commit/8236917):**
+> - **Descripción:** fix: freeze reequirements
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+

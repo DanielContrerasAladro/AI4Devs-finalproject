@@ -37,3 +37,9 @@ Feature: Lista de la compra inicial
 - QA: Preparar casos de prueba para cada criterio de aceptación.
 - PO: Validar que la funcionalidad cumple los criterios definidos.
 - QA: Documentar resultados de pruebas y feedback.
+
+---
+
+## [2024-07-17] Cierre de historia
+
+La HU_13 ha sido completada, validada y desplegada en producción como parte del hito de internacionalización y robustez del bloque @lists. Todos los criterios de aceptación han sido cubiertos y la funcionalidad está disponible para los usuarios finales.

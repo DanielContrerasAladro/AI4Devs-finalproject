@@ -12,6 +12,14 @@
 - [x] **Tests unitarios y automatización de calidad validados**
 - [ ] **Historias de usuario para ajustes y tareas de HU_MVP.md creadas y priorizadas**
 - [ ] **Checklist de funcionalidades PWA, i18n, listas compartibles, IA y autorrelleno revisado**
+- [x] Historia de usuario para edición y eliminación de categorías creada y priorizada (HU_26)
+- [ ] Panel/listado de categorías con opciones de editar y eliminar
+- [ ] Edición de nombre e icono de categoría
+- [ ] Eliminación de categoría con advertencia si tiene productos asociados
+- [ ] No permitir eliminar la categoría "Sin categoría"
+- [ ] Actualización reactiva de productos afectados
+- [ ] Feedback visual de éxito o error
+- [ ] Tests para edición y eliminación de categorías
 
 ---
 

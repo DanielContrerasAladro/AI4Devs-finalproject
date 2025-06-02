@@ -34,6 +34,12 @@
 | HU_24    | FE_IARecetas              | BE_IARecetas              | QA_IARecetas              | PO_IARecetas              | BA_IARecetas              | Por hacer |
 | HU_25    | FE_MenusIA                | BE_MenusIA                | QA_MenusIA                | PO_MenusIA                | BA_MenusIA                | Por hacer |
 
+## Sprint 4: Categorías y gestión de productos
+
+| Historia | FE           | BE           | QA           | PO           | BA           | Estado      |
+|----------|--------------|--------------|--------------|--------------|--------------|-------------|
+| HU_26    | FE_Categorías | BE_Categorías | QA_Categorías | PO_Categorías | BA_Categorías | Por hacer |
+
 ---
 
 # Tablero Kanban de Seguimiento Semanal
@@ -41,9 +47,9 @@
 ```markdown
 | Estado      | Historias                                                                                                   |
 |-------------|------------------------------------------------------------------------------------------------------------|
-| Por hacer   | HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19, HU_20, HU_21, HU_22, HU_23, HU_24, HU_25                   |
+| Por hacer   | HU_20, HU_21, HU_22, HU_23, HU_24, HU_25, HU_26                   |
 | En progreso | HU_12                                                                                                 |
-| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5                                                                                      |
+| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5, HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19                                                                                      |
 ```
 
 ---
@@ -59,3 +65,4 @@
 
 > [2024-07-15] HU_3 completada: Gestión de productos en la alacena implementada, validada y lista para producción.
 > [2024-07-16] Hito: Migración completada a modelo simplificado de alimentos con campo lista_id directo. Eliminada la tabla alimentos_listas, refactorizado backend y frontend, y validada la funcionalidad de gestión y visualización de productos por lista. HU_3 y HU_4 marcadas como 'Hecho'.
+> [2024-07-17] Hito: Finalizado el bloque @lists. Internacionalización completa, robustez en el manejo de listas y alimentos, y corrección de errores de linter y argumentos en botones. Listo para commit y despliegue en producción.

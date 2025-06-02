@@ -11,7 +11,7 @@
 - HU_4: Visualización de inventario *(MVP)*
 - HU_5: Añadir y quitar productos del inventario *(MVP)*
 - HU_12: Ajuste y coherencia del layout base *(MVP)*
-- HU_13: Lista de la compra obligatoria e inicial *(MVP)*
+- HU_13: Lista de la compra obligatoria e inicial *(MVP)*@
 - HU_14: Listas personalizables y compartibles *(MVP)*
 - HU_15: Iconos y categorías en productos *(MVP)*
 - HU_16: Alertas y visualización avanzada de caducidades *(MVP)*
@@ -37,6 +37,11 @@
 ## Won't Have (por ahora, solo endpoint/documentación en MVP)
 - HU_11: Integración con dispositivos IoT *(Solo endpoint/documentación en MVP)*
 
+## Next Release
+- HU_26: Edición y eliminación de categorías *(Release próximo)*
+
+> Ver detalle en [HU_26_editar_eliminar_categorias.md](HU_26_editar_eliminar_categorias.md)
+
 > **Nota de priorización:** El equipo comenzará el desarrollo del MVP por las historias HU_3 (Gestión de productos) y HU_4 (Visualización de inventario), ya que son el núcleo funcional de la aplicación y habilitan el resto de funcionalidades clave.
 
 ### Avances recientes
@@ -50,9 +55,9 @@
 
 | Estado      | Historia/Ticket                                      |
 |-------------|------------------------------------------------------|
-| Por hacer   | HU_12, HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19, HU_20, HU_21, HU_22, HU_23, HU_24, HU_25 |
+| Por hacer   | HU_12, HU_20, HU_21, HU_22, HU_23, HU_24, HU_25 |
 | En progreso |  |
-| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5                               |
+| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5, HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19                               |
 
 gantt
     dateFormat  YYYY-MM-DD
@@ -75,3 +80,5 @@ gantt
     Integración IoT                     :         r8, 2024-08-20, 14d
 
 > [2024-07-16] Hito: Migración a modelo simplificado de alimentos con lista_id directo, eliminación de la tabla alimentos_listas, refactor de backend y frontend, y validación de la funcionalidad. HU_3 y HU_4 completadas y listas para producción.
+
+> [2024-07-17] Hito: Finalización del bloque @lists. Internacionalización, robustez y corrección de errores en la gestión de listas y alimentos. Listo para commit y despliegue en producción.

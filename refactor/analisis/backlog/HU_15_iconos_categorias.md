@@ -23,3 +23,9 @@ Feature: Iconos y categorías en productos
 - Frontend (FE): S
 - Backend (BE): S
 - QA: S
+
+---
+
+## [2024-07-17] Cierre de historia
+
+La HU_15 ha sido completada, validada y desplegada en producción como parte del hito de internacionalización y robustez del bloque @lists. Todos los criterios de aceptación han sido cubiertos y la funcionalidad está disponible para los usuarios finales.

@@ -43,6 +43,22 @@
 ## Release 4: Integración y Automatización
 - HU_11: Integración con dispositivos IoT *(Solo endpoint/documentación en MVP, completo aquí)*
 
+## Próxima Release
+
+- **Historia de usuario: Edición y eliminación de categorías**
+  - Como usuario quiero poder editar y eliminar categorías para mantener mi lista de categorías organizada y actualizada.
+  - **Criterios de aceptación:**
+    - El usuario puede editar el nombre y el icono de una categoría existente.
+    - El usuario puede eliminar una categoría, con advertencia si tiene productos asociados.
+    - No se permite eliminar la categoría "Sin categoría".
+    - Los productos afectados se actualizan automáticamente.
+    - Feedback visual de éxito o error.
+  - **Tareas técnicas:**
+    - Crear panel/listado de categorías con opciones de editar y eliminar.
+    - Implementar eventos y lógica para editar/eliminar categorías en backend y frontend.
+    - Gestionar actualización reactiva de productos afectados.
+    - Añadir tests para edición y eliminación de categorías.
+
 ---
 
 ## Roadmap Visual

@@ -53,3 +53,5 @@ Desarrollar y desplegar una plataforma de gestión de alacena funcional como MVP
 - **Desalineación de requisitos:** Revisión y refinamiento continuo del backlog.
 - **Problemas de integración:** Uso de Supabase y documentación OpenAPI.
 - **Retrasos en desarrollo:** Priorización estricta del MVP y entregas incrementales.
+
+- Implementar gestión avanzada de categorías (edición y eliminación) [HU_26] en releases posteriores al MVP.
