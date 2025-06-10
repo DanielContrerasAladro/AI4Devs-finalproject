@@ -36,3 +36,25 @@ Feature: Autorrelleno de lista de la compra
 - QA: Preparar casos de prueba para cada criterio de aceptación.
 - PO: Validar que la funcionalidad cumple los criterios definidos.
 - QA: Documentar resultados de pruebas y feedback.
+
+---
+
+> Prioridad alta en el roadmap tras reunión de planificación 2024-07-17. Esta HU se abordará antes que otras funcionalidades, reservando además un 20% del tiempo de sprint para revisión de bugs y corrección de funcionalidad actual.
+
+## Tareas técnicas / Tickets
+
+- [ ] **BE**: Endpoint `/api/lista/autorrelleno` para obtener lista de la compra autorrellenada según inventario y hábitos
+- [ ] **BE**: Lógica de detección de productos faltantes (servicio)
+- [ ] **FE**: UI para mostrar y editar la lista autorrellenada
+- [ ] **QA**: Casos de prueba para criterios de aceptación
+- [ ] **PO**: Validación funcionalidad
+
+### Tabla de responsables y fechas objetivo
+
+| Tarea                                    | Responsable         | Fecha objetivo  |
+|------------------------------------------|---------------------|-----------------|
+| Endpoint autorrelleno lista (BE)         | BE_Autorrelleno     | 2024-07-22      |
+| Lógica productos faltantes (BE)          | BE_Autorrelleno     | 2024-07-22      |
+| UI lista autorrellenada (FE)             | FE_Autorrelleno     | 2024-07-24      |
+| Casos de prueba QA                       | QA_Autorrelleno     | 2024-07-25      |
+| Validación funcionalidad (PO)            | PO_Autorrelleno     | 2024-07-26      |

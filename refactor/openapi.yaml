@@ -1,4 +1,4 @@
-openapi: 3.0.0
+openapi: 3.1.0
 info:
   title: Alacena API
   description: API para la gestión de la despensa, recetas, menús y notificaciones en la aplicación Alacena.
@@ -157,6 +157,109 @@ paths:
         '500':
           description: Error interno del servidor
 
+  /chat/send:
+    post:
+      summary: Enviar mensaje al chat IA
+      description: Envía un mensaje del usuario al sistema IA y devuelve el identificador de la conversación.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: string
+                  format: uuid
+                message:
+                  type: string
+              required:
+                - user_id
+                - message
+      responses:
+        '200':
+          description: Mensaje enviado correctamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  conversation_id:
+                    type: string
+                    format: uuid
+                  status:
+                    type: string
+                    enum: [pending, completed]
+                required:
+                  - conversation_id
+                  - status
+        '400':
+          description: Datos de entrada inválidos
+        '500':
+          description: Error interno del servidor
+
+  /chat/response/{conversation_id}:
+    get:
+      summary: Obtener respuesta del chat IA
+      description: Devuelve la(s) respuesta(s) generada(s) por el orquestador y los agentes IA para una conversación.
+      parameters:
+        - name: conversation_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Respuestas de la conversación
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Conversacion'
+        '404':
+          description: Conversación no encontrada
+        '500':
+          description: Error interno del servidor
+
+  /chat/history:
+    get:
+      summary: Obtener histórico de conversaciones
+      description: Devuelve el histórico de conversaciones del usuario.
+      parameters:
+        - name: user_id
+          in: query
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Histórico de conversaciones
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ConversacionResumen'
+        '404':
+          description: Usuario no encontrado
+        '500':
+          description: Error interno del servidor
+
+  /ia/status:
+    get:
+      summary: Estado del orquestador y agentes IA
+      description: Devuelve el estado de los microservicios de IA.
+      responses:
+        '200':
+          description: Estado de los servicios IA
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EstadoIA'
+        '500':
+          description: Error interno del servidor
+
 components:
   schemas:
     Usuario:
@@ -273,3 +376,79 @@ components:
         - alimento_id
         - mensaje
         - fecha
+
+    MensajeChat:
+      type: object
+      properties:
+        sender:
+          type: string
+          enum: [user, ia_orq, ia_nutri, ia_hab, ia_inv]
+        content:
+          type: string
+        timestamp:
+          type: string
+          format: date-time
+      required:
+        - sender
+        - content
+        - timestamp
+
+    Conversacion:
+      type: object
+      properties:
+        conversation_id:
+          type: string
+          format: uuid
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/MensajeChat'
+        status:
+          type: string
+          enum: [completed, pending]
+      required:
+        - conversation_id
+        - messages
+        - status
+
+    ConversacionResumen:
+      type: object
+      properties:
+        conversation_id:
+          type: string
+          format: uuid
+        last_message:
+          type: string
+        last_timestamp:
+          type: string
+          format: date-time
+        status:
+          type: string
+          enum: [completed, pending]
+      required:
+        - conversation_id
+        - last_message
+        - last_timestamp
+        - status
+
+    EstadoIA:
+      type: object
+      properties:
+        orquestador:
+          type: string
+          enum: [online, offline]
+        agentes:
+          type: object
+          properties:
+            nutricional:
+              type: string
+              enum: [online, offline]
+            habitos:
+              type: string
+              enum: [online, offline]
+            inventario:
+              type: string
+              enum: [online, offline]
+      required:
+        - orquestador
+        - agentes

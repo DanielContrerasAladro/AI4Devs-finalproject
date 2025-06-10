@@ -434,6 +434,179 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > - hay que revisar esos ficheros y los textos que se muestran en pantalla, sean botones, nombres de columnas, nombres de campos, ejemplos, mensajes de error o éxito para que todo se traduzca, si tienes dudas de qué mensaje utlizar de los ficheros json, preguntame
 > - hay que tener en cuenta la documentación de @Reflex-hosting para que al llevarlo a producción funcione correctamente
 
+> **Prompts Commit [feat: Refactor global con integracion IA y limpieza](https://github.com/DanielContrerasAladro/Alacena/commit/3b998a2c117f9a814bc193121723f3fcb9580269):**
+>
+> **Prompt 1:**
+> @HU_23_autorrelleno_lista.md @HU_24_ia_recetas.md @HU_25_menus_semanales_ia.md Hay que revisar estas tres HU pues que hay cosas a tener en cuenta, para ello vamos a incorporar un nuevo miembro al equipo, un AI Engineer, pues en estas tres HU, que son el objetivo prioritario del siguiente sprint, hay que incluir agentes con IA para acometer las features solicitadas
+>
+> Con el equipo formado por :
+> - DevOps experto en @Reflex-hosting  , @Supabase  y buenas prácticas en arquitecturas Free
+> - Backend developer experto en @Supabase Python @Python 3 @NodeJS y buenas prácticas de desarollo de APIs
+> - Frontend developer experto en @Doc_Angular @Ionic Framework @Reflex y buenas prácticas de Progressive Web Apps
+> - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
+> - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
+> - AI Engineer experto en Agentes de IA, @LlamaAI @LlamaAILearn @LlamaAgents @LlamaAIAPI @LangGrapgh @LangChain @LangSmith @LangGraphPlatform @LangGraphStudio @LangFlow @SupaBaseMCP @MCPSO @BrowserAgentDesk @DeepSeekAPI @DeepSeekAIAgentsTut @DeepSeekMCPServerTut @CrewAI @AutoGen
+>
+> Empecemos analizando las características de las tres HU teniendo en cuenta:
+>
+> - Un agente IA orquestador que organice el trabajo del resto de agentes y permita la interacción con el usuario mediante un chat en la propia aplicación, manteniendo un histórico de conversaciones y centralizando la comunicación con el usuario
+> - Un agente autónomo de IA que sea experto en nutrición al que poder darle instrucciones espeecíficas por usuario para generar menús semanales saludables, sugerir platos rápidos para la comida o la cena según los alimentos registrados en la aplicación
+> - Un agente autónomo de IA que permita hacer un seguimiento de lo comido y comunique con el agente experto en nutrición, o sea el mismo (esto hay que evaluarlo), para estudiar los hábitos de alimentación y recomendar mejoras según objetivos definidos (pérdida de peso, reducción de azuar, mejora de energía...)
+> - Un agente autónomo IA que revise los menús, tanto si son generados como registrados por el usuario, para ir actualizando la lista de alimentos registrados en la aplicación y la lista de la compra en consecuencia, también actualizará la lista de la compra si el usuario va eliminando o reduciendo las cantidades de las otras listas, así como ser el encargado de avisar al usuario, via email, de las caducidades de los alimentos según se vayan acercando las fechas, con posibilidad de personalización por parte del usuario
+> - Buscar soluciones cloud escalables y de bajo coste, si son gratuitas o ejecutables dentro de la aplicación o en un hosting propio, ya tenemos @Supabase, mejor
+> - Estudiar la creación de un servidor MCP con información y conocimiento útil para los tres agentes, o incluso un LLM refinado, o una base de datos RAG, que se alimente y aprenda con ese MCP server, revisar con el experto estas opciones y su viabilidad
+>
+> Según estos criterios quizá haya que tener en cuenta, o se desarrollen al mismo tiempo, algunos aspectos de otras HU de @backlog , revisarlo como equipo para tenerlo en cuenta y reflejarlo en las relaciones entre las distintas HU
+>
+> Se seguirán buenas prácticas en arquitectura, en patrones de desarollo Backend, modelo de desarrollo TDD y que cada hito que se resuelva quede documentado en los ficheros de seguimiento en @analisis
+>
+> **Prompt 2:**
+> Los siguientes pasos que debes seguir, relizando los cambios necesarios sin esperar confirmación a menos que tengas preguntas necesarias que te impidan continuar:
+> - Tests automáticos de los endpoints y de los agentes
+> - Integración de IA para los agentes más avanzados
+> - Revisar que @microservice debe desplegarse en @Reflex-hosting o @Supabase , evalúa la mejor opción con lo ya configurado en el proyecto
+> - El siguiente paso de '5. Siguientes pasos sugeridos para el equipo'
+> Trabaja de forma autónoma, escribiendo y creando los ficheros y carpetas necesarias, según el rol del equipo de desarrollo que debas tomar en cada momento, para llevar a cabo los puntos descritos
+>
+> **Prompt 3:**
+> Los siguientes pasos que debes seguir, relizando los cambios necesarios sin esperar confirmación a menos que tengas preguntas necesarias que te impidan continuar:
+>
+> - Revisión y modificación de @microservice para que sea una arquitectura de funciones serverless (Edge Functions) que permita su despliegue en Supabase
+> - Preparación de ejemplos de payloads reales, scripts de despliegue, o documentación para QA y DevOps
+> - Avanzar con la integración de un modelo IA real en uno de los agentes
+> - El siguiente paso de '5. Siguientes pasos sugeridos para el equipo'
+>
+> Trabaja de forma autónoma, escribiendo y creando los ficheros y carpetas necesarias, según el rol del equipo de desarrollo que debas tomar en cada momento, para llevar a cabo los puntos descritos
+>
+> **Prompt 4:**
+> Los siguientes pasos que debes seguir, relizando los cambios necesarios sin esperar confirmación a menos que tengas preguntas necesarias que te impidan continuar:
+>
+> - Revisión y modificación , en caso de ser necesario, de la ubicación de @microservice teniendo en cuenta que el resto del proyecto está en @frontend , ten en cuenta que esta última se despliegua en Reflex, aunque se conecta con Supabase para la base de datos
+> - Preparar scripts de automatización para el despliegue de todas las funciones
+> - integración de la arquitectura serverless en el backend/orquestador principal
+> - Documente el flujo extremo a extremo para el equipo
+> - El siguiente paso de '5. Siguientes pasos sugeridos para el equipo'
+>
+> Trabaja de forma autónoma, escribiendo y creando los ficheros y carpetas necesarias, según el rol del equipo de desarrollo que debas tomar en cada momento, para llevar a cabo los puntos descritos
+>
+> **Prompt 5:**
+> Los siguientes pasos que debes seguir, relizando los cambios necesarios sin esperar confirmación a menos que tengas preguntas necesarias que te impidan continuar:
+>
+> - Crear guía rápida para desarrolladores sobre cómo añadir nuevas funcioneso agentes
+> - Avanzar con la integración directa de las Edge Functions desde el frontend Reflex (sin pasar por backend)
+> - Documentar la estrategia de staging/producción y versionado de funciones
+> - Avanzar con la integración de un modelo IA real en uno de los agentes
+> - El siguiente paso de '5. Siguientes pasos sugeridos para el equipo'
+>
+> Trabaja de forma autónoma, escribiendo y creando los ficheros y carpetas necesarias, según el rol del equipo de desarrollo que debas tomar en cada momento, para llevar a cabo los puntos descritos
+>
+> **Prompt 6:**
+> Los siguientes pasos que debes seguir, relizando los cambios necesarios sin esperar confirmación a menos que tengas preguntas necesarias que te impidan continuar:
+>
+> - automatización de rollback/versionado de funciones
+> - ejemplos de integración de logs centralizados en el orquestador y agentes
+> - Avanzar con la integración de un modelo IA real en uno de los agentes
+> - El siguiente paso de '5. Siguientes pasos sugeridos para el equipo'
+>
+> Trabaja de forma autónoma, escribiendo y creando los ficheros y carpetas necesarias, según el rol del equipo de desarrollo que debas tomar en cada momento, para llevar a cabo los puntos descritos
+>
+> **Prompt 7:**
+> Ahora vamos a revisar, como equipo, qué está hecho, qué queda por hacer, y ordenar los siguientes pasos a seguir de lo definido en @analisis para las HU @HU_23_autorrelleno_lista.md @HU_24_ia_recetas.md @HU_25_menus_semanales_ia.md
+> Establecer, como equipo, los siguientes pasos a seguir apartir de ahora
+>
+> **Prompt 8:**
+> Los siguientes pasos que debes seguir, relizando los cambios necesarios sin esperar confirmación a menos que tengas preguntas necesarias que te impidan continuar:
+>
+> - Preparar los tickets/tareas técnicas para cada punto, refléjalo en cada archivo markdoqwn de las HU
+> - una tabla de responsables y fechas objetivo para cada HU
+> - implementación de todos los endpoints/backend prioritarios
+>
+> Trabaja de forma autónoma, escribiendo y creando los ficheros y carpetas necesarias, según el rol del equipo de desarrollo que debas tomar en cada momento, para llevar a cabo los puntos descritos
+>
+> **Prompt 9:**
+> Tenemos que avanzar y experimentar en la integración real entre agentes, estamos montando un Sistema de multiagentes (MAS), por lo que trabaja como AI Engineer experto en @LlamaAI @LlamaAILearn @LlamaAgents @LlamaAIAPI @LangGrapgh @LangChain @LangSmith @LangGraphPlatform @CrewAI @AutoGen @LangFlow para desarrollar los agentes definidos en las HU y permitir que interactúen con @microservice de forma sencilla
+> También es necesario, como experto en AI Engineering establecer la forma de testear esos agentes de forma local y evaluar los LLMs, MCP Server, base de datos RAG o LLM Fine Tuning necesarios para utilizar en los agentes del sistema
+>
+> **Prompt 10:**
+> Los siguientes pasos que debes seguir, relizando los cambios necesarios sin esperar confirmación a menos que tengas preguntas necesarias que te impidan continuar:
+>
+> - Implementa un ejemplo de agente (por ejemplo, inventario) que use LangChain para lógica IA y que lea/escriba datos en Supabase (o SQLite en local)
+> - Implementa un ejemplo de agente (por ejemplo, habitos) que use LlamaIndex para lógica IA y que lea/escriba datos en Supabase (o SQLite en local)
+> - Prepara una base para que los agentes puedan llamarse entre sí (multiagente) y orquestar flujos desde un orquestador central
+> - Documenta cómo estructurar la capa de acceso a datos para que sea compatible tanto con Supabase como con SQLite/mock en local
+>
+> Trabaja de forma autónoma, escribiendo y creando los ficheros y carpetas necesarias, según el rol del equipo de desarrollo que debas tomar en cada momento, para llevar a cabo los puntos descritos
+>
+> **Prompt 11:**
+> Vamos a dejar de avanzar de momento, lo primero es explorar diferentes opciones de 'llm'
+> Veo que en @llamaindex_agent.py y @langchain_agent.py has utilizado OPENAI, lo cual está muy bien pero limitado en cuanto a uso gratuíto de los modelos más modernos
+> Quiero que, como AI Engineer, realices un módulo para cargar el LLM que permita cargar distintos LLMs y asi, desde local, poder experimentar con variedad de ellos para ver cuál es el que mejor se ajusta a las necesidades del proyecto, revisa @https://huggingface.co/models, @https://ollama.com/library, @LangGrapgh , @LangChain , @LlamaAgents y @LlamaAILearn para ver la manera de probar estos agentes con diferentes LLM gratuítos, establece un listado de los más populares
+>
+> **Prompt 12:**
+> Intégra el uso de @llm_loader.py en los agentes de ejemplo y rellena el @notebook_llm_experiments.ipynb con los diferentes modelos opensource listados en "Modelos open source populares (2024)" de la manera que se  indica en '1. Módulo llm_loader.py', pues ahora mismo está vacío y debería estar relleno con diferentes ejemplos para experimentar y evaluar el rendimiento de los distintos modelos
+>
+> **Prompt 13:**
+> Los siguientes pasos que debes seguir, relizando los cambios necesarios sin esperar confirmación a menos que tengas preguntas necesarias que te impidan continuar:
+>
+> - Prepara el @notebook_llm_experiments.ipynb para automatizar benchmarks de varios modelos
+> - También en el @notebook_llm_experiments.ipynb , prepara la manera de evaluar creatividad, coste, velocidad y fiabilidad de los distintos LLM para el objetivo de los agentes que tenemosen base a técnicas e machine learning
+> - Documenta cómo elegir el mejor modelo LLM según el caso de uso de los agentes definidos en las HU y en @agentes
+>
+> Trabaja de forma autónoma, escribiendo y creando los ficheros y carpetas necesarias, según el rol del equipo de desarrollo que debas tomar en cada momento, para llevar a cabo los puntos descritos
+>
+> ***Prompt 14:**
+> Añade más prompts ten en cuenta los agentes que estamos desarrollando en @agentes y los objetivos marcados para ellos en las HU, más modelos y gráficas que muestren los resultados para poder compararlos
+>
+> **Prompt 15:**
+> Tras el estudio realizado de los distintos modelos, vamos a modificar @llm_loader.py para que realice la distinción de modelos según el agente que esté llamando (Nutricional, Hábitos, Inventario) con un nuevo parámetro para ello. También debemos asegurarnos, o buscar la manera de estar seguros, que los modelos que se van a usar estén descargados en el lugar que se vaya a ejecutar el agente.
+> Los agentes deben seguir el patrón del ejemplo @langchain_agent.py
+> Los agentes que vamos utilizar son, y se deberá implementar en los agentes específicos:
+> - Nutricional: falcon, cuya temperatura por defecto deberá ser 0.3, refléjalo en @main.py
+> - Hábitos: falcon, cuya temperatura por defecto deberá ser 0.1, refléjalo en @main.py
+> - Inventario: openhermes, cuya temperatura por defecto deberá ser 0.2, refléjalo en @main.py
+>
+> **Prompt 16:**
+> Ahora, como experto en @Supabase y Supabase Edge Functions, teniendo en cuenta que @/edge_functions debe ser el objetivo final de la funcionalidad de @/microservice , revidsa el contenido de @/edge_functions @/agentes @/fastapi_backend y @/microservice para unificar el código, pero la parte de los agentes con langchain, que se encuentra @/agentes es la que debe prevalecer, si hay que borrar ficheros, dame el listado y lo haré yo, pero si hay que trasladar código, hazlo
+>
+> **Prompt 17:**
+>
+> Con este equipo de desarollo:
+>
+> - DevOps experto en @Reflex-hosting  , @Supabase  y buenas prácticas en arquitecturas Free
+> - Backend developer experto en @Supabase Python @Python 3 @NodeJS y buenas prácticas de desarollo de APIs
+> - Frontend developer experto en @Doc_Angular @Ionic Framework @Reflex y buenas prácticas de Progressive Web Apps
+> - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
+> - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
+>
+> Debemos hacer un cambio profundo en el código:
+>
+> - La parte de @/microservice no es correcta pues Supabase no acepta Edge Functions con Python, como el objetivo del proyecto es utilizar sólo código Python, debemos modificar esta parte para que la parte contenida en esa carpeta sea parte del backend contenido en @/frontend para ser desplegable en Reflex. Hay que refactorizar el código para trasladarlo y así poder desplegar esta parte en Reflex, sin perder funcionalidad, modifica lo que sea necesario, si necesitas borrar algo dame la lista y lo haré yo como última tarea
+> - Esto llevara a la modificación también de la parte de @/app que acceda a los microservicios, modifica lo que sea necesario
+> - Además, hay que revisar el despliegue en reflex para que la parte de backend nueva se despliegue en reflex con la parte frontend y backend correctamente, revisa para ello @deploy y @deploy.yml
+>
+> **Prompt 18:**
+> no es necesario OPENAI_API_KEY pues utilizamos langchain con ollama y modelos llm opensource y free to use, modificalo y documenta los cambios, después, dame la lista completa de archivos y carpetas a eliminar
+>
+> **Prompt 19:**
+> Vamos a proceder on los siguientes pasos:
+>
+> - Borrado de los archivos no necesarios, dame la lista y yo los borraré
+> - Revisión de los agentes para que las peticiones y respuestas queden almacenadas en base de datos, igual el modelo de base de datos sufre modificaciones, revisarlo y aactualizarlo en caso necesario
+> - Prueba de la API en local, que apunte a la base de datos desplegada en Reflex
+> - Despliegue de la aplicación en Reflex, parte Frontend y parte Backend
+> - Revisión de @deploy.yml respecto de @deploy , pues cuando se ejecuta el primero en github actions parece que el despliegue no funciona correctamente
+> - tests unitarios para la parte de @/api
+> - Inclusión de la api en @/pages para poder llamar a los agentes de la siguente manera:
+> -- botones para llamar a los agentes uno a uno, de forma que el botón pase la información necesaria al agente y luego muestre la respuesta del mismo cuando lo tenga
+> -- input de texto para poder hablar con el orquestador, el cual interactuará en background con los agentes que considerte necesario para dar una respuesta
+> - Documentación ficheros readme y en @/analisis y @openapi.yaml de ser necesario y pertinente
+>
+> Revisa la documentación necesaria en cada caso, toma el rol del equipo descrito previamente en cada caso y realiza las modificaciones necesarias sin pedir confirmación en cada punto, si tienes dudas antes de empezar uno de los puntos hazme las preguntas necesarias, pero para al terminar cada punto para que pueda revisar la corrección del mismo
+>
+> ---
+>       Tras una conversación en la que se va avanzando en cada uno de esos apartados, documentamos lo conseguido, lo probamos y lo desplegamos en producción
+> ---
+
 > **Prompts Commit [N]():**
 >
 > **Prompt 1:**

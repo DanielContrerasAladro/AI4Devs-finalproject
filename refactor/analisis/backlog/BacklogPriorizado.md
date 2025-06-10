@@ -55,9 +55,9 @@
 
 | Estado      | Historia/Ticket                                      |
 |-------------|------------------------------------------------------|
-| Por hacer   | HU_12, HU_20, HU_21, HU_22, HU_23, HU_24, HU_25 |
-| En progreso |  |
-| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5, HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19                               |
+| Por hacer   | HU_23, HU_24, HU_25, HU_22, HU_20, HU_21, HU_26 |
+| En progreso | HU_12 |
+| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5, HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19 |
 
 gantt
     dateFormat  YYYY-MM-DD
@@ -68,17 +68,35 @@ gantt
     Gestión de productos e inventario   :active,  r2, 2024-07-04, 7d
     Visualización de inventario         :active,  r3, 2024-07-11, 4d
     Ajustes y funcionalidades clave     :         r4, 2024-07-15, 14d
+    Listas y personalización            :         r5, 2024-07-29, 14d
+    Automatismos e IA                   :         r6, 2024-08-12, 14d
+
+    section Automatismos e IA
+    Autorrelleno lista de la compra     :active,  r7, 2024-08-12, 3d
+    Recetas IA y autorrelleno           :active,  r8, 2024-08-15, 4d
+    Menús semanales IA                  :active,  r9, 2024-08-19, 3d
+    Instalación PWA                     :active,  r10, 2024-08-22, 2d
+    Logado permanente                   :active,  r11, 2024-08-24, 1d
+    Internacionalización                :         r12, 2024-08-25, 2d
+    Categorías y gestión de productos   :         r13, 2024-08-27, 3d
+    QA y bugs                           :active,  r14, 2024-08-12, 3d
 
     section Personalización y IA
-    Edición de perfil                   :         r5, 2024-07-29, 5d
-    Recomendaciones IA y lista compra   :         r6, 2024-08-03, 10d
+    Edición de perfil                   :         r15, 2024-08-26, 5d
+    Recomendaciones IA y lista compra   :         r16, 2024-08-31, 10d
 
     section Avanzado
-    Notificaciones y exportación        :         r7, 2024-08-13, 7d
+    Notificaciones y exportación        :         r17, 2024-09-10, 7d
 
     section Futuro
-    Integración IoT                     :         r8, 2024-08-20, 14d
+    Integración IoT                     :         r18, 2024-09-17, 14d
 
-> [2024-07-16] Hito: Migración a modelo simplificado de alimentos con lista_id directo, eliminación de la tabla alimentos_listas, refactor de backend y frontend, y validación de la funcionalidad. HU_3 y HU_4 completadas y listas para producción.
+---
 
-> [2024-07-17] Hito: Finalización del bloque @lists. Internacionalización, robustez y corrección de errores en la gestión de listas y alimentos. Listo para commit y despliegue en producción.
+**Planificación y prioridades (reunión 2024-07-17):**
+- Se priorizan HU_23, HU_24, HU_25, HU_22 y HU_20 como siguientes tareas clave.
+- HU_21 y HU_26 quedan en la cola de prioridades.
+- Se reserva un 20% del tiempo de cada sprint para revisión de bugs y corrección de funcionalidad actual, como garantía de calidad continua.
+- Justificación: Se priorizan automatismos e IA por su impacto en la experiencia de usuario y diferenciación del producto, dejando PWA y logado permanente justo después, y asegurando siempre tiempo para calidad y estabilidad.
+
+> [2024-07-18] Hito: Refactor global de agentes IA, orquestador, autenticación y UI. Listo para abordar automatismos, IA avanzada y logado permanente.

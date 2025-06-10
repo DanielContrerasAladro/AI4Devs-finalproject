@@ -37,3 +37,7 @@ Feature: Instalación PWA
 - QA: Preparar casos de prueba para cada criterio de aceptación.
 - PO: Validar que la funcionalidad cumple los criterios definidos.
 - QA: Documentar resultados de pruebas y feedback.
+
+---
+
+> Prioridad alta en el roadmap tras reunión de planificación 2024-07-17. Esta HU se abordará tras las funcionalidades de IA, reservando además un 20% del tiempo de sprint para revisión de bugs y corrección de funcionalidad actual.

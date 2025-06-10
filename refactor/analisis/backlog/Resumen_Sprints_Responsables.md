@@ -15,24 +15,24 @@
 
 | Historia | FE         | BE         | QA         | PO         | BA         | Estado    |
 |----------|------------|------------|------------|------------|------------|-----------|
-| HU_13    | FE_Listas  | BE_Listas  | QA_Listas  | PO_Listas  | BA_Listas  | Por hacer |
-| HU_14    | FE_Listas  | BE_Listas  | QA_Listas  | PO_Listas  | BA_Listas  | Por hacer |
-| HU_15    | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Por hacer |
-| HU_16    | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Por hacer |
-| HU_17    | FE_Listas  | BE_Listas  | QA_Listas  | PO_Listas  | BA_Listas  | Por hacer |
-| HU_18    | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Por hacer |
-| HU_19    | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Por hacer |
+| HU_13    | FE_Listas  | BE_Listas  | QA_Listas  | PO_Listas  | BA_Listas  | Hecho     |
+| HU_14    | FE_Listas  | BE_Listas  | QA_Listas  | PO_Listas  | BA_Listas  | Hecho     |
+| HU_15    | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Hecho     |
+| HU_16    | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Hecho     |
+| HU_17    | FE_Listas  | BE_Listas  | QA_Listas  | PO_Listas  | BA_Listas  | Hecho     |
+| HU_18    | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Hecho     |
+| HU_19    | FE_Productos | BE_Productos | QA_Productos | PO_Productos | BA_Productos | Hecho     |
 
-## Sprint 3: Accesibilidad, idioma, PWA y automatismos
+## Sprint 3: Automatismos, IA, PWA y logado
 
 | Historia | FE                        | BE                        | QA                        | PO                        | BA                        | Estado    |
 |----------|---------------------------|---------------------------|---------------------------|---------------------------|---------------------------|-----------|
-| HU_20    | FE_Auth                   | BE_Auth                   | QA_Auth                   | PO_Auth                   | BA_Auth                   | Por hacer |
-| HU_21    | FE_Internacionalización   | BE_Internacionalización   | QA_Internacionalización   | PO_Internacionalización   | BA_Internacionalización   | Por hacer |
-| HU_22    | FE_PWA                    | BE_PWA                    | QA_PWA                    | PO_PWA                    | BA_PWA                    | Por hacer |
 | HU_23    | FE_Autorrelleno           | BE_Autorrelleno           | QA_Autorrelleno           | PO_Autorrelleno           | BA_Autorrelleno           | Por hacer |
 | HU_24    | FE_IARecetas              | BE_IARecetas              | QA_IARecetas              | PO_IARecetas              | BA_IARecetas              | Por hacer |
 | HU_25    | FE_MenusIA                | BE_MenusIA                | QA_MenusIA                | PO_MenusIA                | BA_MenusIA                | Por hacer |
+| HU_22    | FE_PWA                    | BE_PWA                    | QA_PWA                    | PO_PWA                    | BA_PWA                    | Por hacer |
+| HU_20    | FE_Auth                   | BE_Auth                   | QA_Auth                   | PO_Auth                   | BA_Auth                   | Por hacer |
+| HU_21    | FE_Internacionalización   | BE_Internacionalización   | QA_Internacionalización   | PO_Internacionalización   | BA_Internacionalización   | Por hacer |
 
 ## Sprint 4: Categorías y gestión de productos
 
@@ -44,13 +44,11 @@
 
 # Tablero Kanban de Seguimiento Semanal
 
-```markdown
 | Estado      | Historias                                                                                                   |
 |-------------|------------------------------------------------------------------------------------------------------------|
-| Por hacer   | HU_20, HU_21, HU_22, HU_23, HU_24, HU_25, HU_26                   |
-| En progreso | HU_12                                                                                                 |
-| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5, HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19                                                                                      |
-```
+| Por hacer   | HU_23, HU_24, HU_25, HU_22, HU_20, HU_21, HU_26, HU_12                                                     |
+| En progreso |                                                                                                            |
+| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5, HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19                              |
 
 ---
 
@@ -63,6 +61,12 @@
 
 ---
 
-> [2024-07-15] HU_3 completada: Gestión de productos en la alacena implementada, validada y lista para producción.
-> [2024-07-16] Hito: Migración completada a modelo simplificado de alimentos con campo lista_id directo. Eliminada la tabla alimentos_listas, refactorizado backend y frontend, y validada la funcionalidad de gestión y visualización de productos por lista. HU_3 y HU_4 marcadas como 'Hecho'.
-> [2024-07-17] Hito: Finalizado el bloque @lists. Internacionalización completa, robustez en el manejo de listas y alimentos, y corrección de errores de linter y argumentos en botones. Listo para commit y despliegue en producción.
+> [2024-07-18] Hito: Refactor global de agentes IA, autenticación y UI. Listo para commit y despliegue. Siguiente sprint: automatismos, IA avanzada, logado permanente y PWA.
+
+---
+
+**Planificación y prioridades (reunión 2024-07-17):**
+- Se priorizan HU_23, HU_24, HU_25, HU_22 y HU_20 como siguientes tareas clave.
+- HU_21 y HU_26 quedan en la cola de prioridades.
+- Se reserva un 20% del tiempo de cada sprint para revisión de bugs y corrección de funcionalidad actual, como garantía de calidad continua.
+- Justificación: Se priorizan automatismos e IA por su impacto en la experiencia de usuario y diferenciación del producto, dejando PWA y logado permanente justo después, y asegurando siempre tiempo para calidad y estabilidad.

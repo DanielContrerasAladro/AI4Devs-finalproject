@@ -36,3 +36,15 @@ Feature: Logado permanente
 - QA: Preparar casos de prueba para cada criterio de aceptación.
 - PO: Validar que la funcionalidad cumple los criterios definidos.
 - QA: Documentar resultados de pruebas y feedback.
+
+---
+
+> Prioridad alta en el roadmap tras reunión de planificación 2024-07-17. Esta HU se abordará tras las funcionalidades de IA y PWA, reservando además un 20% del tiempo de sprint para revisión de bugs y corrección de funcionalidad actual.
+
+## Estado actual
+
+- [ ] Implementación pendiente tras bloque de IA y PWA.
+- [x] Lógica de autenticación y persistencia de sesión revisada y mejorada en el refactor reciente.
+- [ ] Validación final y QA tras despliegue de nuevas funcionalidades.
+
+> Última actualización: 2024-07-18. Refleja avances en la gestión de sesión y autenticación tras refactor global.
