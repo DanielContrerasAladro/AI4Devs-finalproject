@@ -607,6 +607,46 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 >       Tras una conversación en la que se va avanzando en cada uno de esos apartados, documentamos lo conseguido, lo probamos y lo desplegamos en producción
 > ---
 
+> **Prompts Commit [feat(mvp): MVP tareas MUST finalizadas](https://github.com/DanielContrerasAladro/Alacena/commit/6b0b2348020165b4949007e2ad32a72b47f9c584):**
+>
+> **Prompt 1:**
+> Como equipo de desarrollo compuesto por:
+>
+>  - DevOps experto en @Reflex-hosting  , @Supabase  y buenas prácticas en arquitecturas Free
+>  - Backend developer experto en @Supabase Python @Python 3 y buenas prácticas de desarollo de APIs
+>  - Frontend developer experto en  @Reflex y buenas prácticas de Progressive Web Apps
+>  - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
+>  - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
+> - AI Engineer experto en Agentes de IA, @LangChain @LangChainHuggingFace @Hugging-Face-Transformers
+>
+> Vamos a revisar las HU y ficheros del final para hacer una revisión de @/src y ver qué puntos de esas HU faltan por desarollar y destacarlos pues, antes de lo que queda por hacer, hay que revisar el funcionamiento actual y ver que todo lo que hay ahora mimso está funcionando....genera dos fichjeros markdown en la carpeta @/analisis, uno para el listado de apartados pendientes, y otro para los bugs y correcciones que listaré de la aplicación, esa lista la alimentaré yo a mano, pero dame una estructura por cada una de las páginas y cada una de los agentes para rellenarla.
+> Como equipo debéis tener en cuenta que tenemos 4 días para realizar los cambios que se acuerden, por lo que, tras tener esos dos ficheros creados, los revisaremos para estimar qué podemos y qué no podemos corregir antes del deadline
+>
+> @Resumen_Sprints_Responsables.md @BacklogPriorizado.md @PlanificacionReleasesRoadmap.md
+>
+> **Prompt 2:**
+> Ya se ha hecho la revisión por parte de negocio, estos son los bugs encontrados @BugsYCorrecciones.md , hay que hacer match con @PendientesDesarrollo.md y lo considerado como MVP para establecer prioridades en base a buenas prácticas y MosCow y recordando que tenemo sun deadline de 4 días para la salida a producción, igual se tienen que quedar cosas fuera, así que lo primero es priorizar todo y generar un listado en formato markdown fácil de seguir, será un nuevo fichero, en el que, tras vuestra valoración, decidiremos qué se corrige o implementa y en qué orden
+>
+> **Prompt 3:**
+> Tomando los roles del equipo antes mencionado, revisar @PrioridadesSprint4dias.md y estimar con formato Tshirt cada uno de los items, así como establecer para cada uno de ellos el responsable directo de la tarea
+>
+> **Prompt 4:**
+> Lo he revisado, haz un listado de tareas técnicas, cada tarea debe pertenecer a un sólo rol, para MUST, otro para SHOULD y otro para COULD al final del fichero, revisa que las estimaciones estén bien y mantén el orden que he establecido en el fichero
+>
+> **Prompt 5:**
+> No es necesario, con este desglose es suficiente para empezar a trabajar, te indico como:
+>
+> Toma las tareas por orden, MUST -> SHOULD -> COULD, actúa como el rol asignado a la tarea, y resuélvela, siguiendo buenas prácticas, TDD si es necesario, del rol asignado y lanzando los tests o pruebas necesarios en cada caso, de ser necesario que realice yo alguna acción o resuelva alguna duda, paras y me lo pides, sino continúa hasta terminar la tarea, al finalizar cada tarea paras para comprobar el resultado, documentar y hacer commit, dame sólo el mensaje de commit, ya hago yo el commit
+>
+> Si tienes dudas sobre el proceso, indícamelo ahora, sino, empieza a trabasjar en background
+>
+> **Prompt 6:**
+>  Recuerda cada vez que demos por finalizada una tarea, marcarla en @PrioridadesSprint4dias.md como DONE de alguna manera
+>
+> ---
+>       Tras una conversación en la que se va avanzando en cada una de las tareas, tenemos completo el MVP, todas las tareas MUST funcionando, desplegamos en producción
+> --
+
 > **Prompts Commit [N]():**
 >
 > **Prompt 1:**

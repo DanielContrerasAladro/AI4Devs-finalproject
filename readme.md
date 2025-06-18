@@ -837,6 +837,33 @@ paths:
                 email: "juan.perez@example.com"
 ```
 
+---
+
+## 2.2. Integración de IA: agentes y orquestador en Reflex
+
+### Arquitectura de integración
+
+- **Los agentes IA** (hábitos, inventario, nutricional, etc.) están implementados en `/app/api/agents/` como clases Python.
+- **El orquestador IA** está en `/app/api/orchestrator/orchestrator.py` y decide qué agentes consultar según el mensaje del usuario.
+- **No se exponen endpoints HTTP**: toda la lógica IA se invoca directamente desde los estados y páginas de Reflex, usando llamadas Python asíncronas.
+- **El estado global** (`GlobalState` y derivados) gestiona la sesión, el usuario y la comunicación con los agentes.
+
+### Flujo de llamada (ejemplo)
+
+1. El usuario pulsa un botón o envía un mensaje en la UI.
+2. El estado correspondiente (por ejemplo, `ListsState`) llama a un método asíncrono que invoca al agente o al orquestador.
+3. El agente procesa la información y devuelve la respuesta, que se muestra en la UI.
+
+### Buenas prácticas para extender la IA
+
+- Añade nuevos agentes siguiendo el patrón de `/app/api/agents/`.
+- Usa el orquestador para coordinar respuestas complejas o multi-agente.
+- No expongas endpoints HTTP externos: toda la lógica debe ser accesible desde Reflex.
+- Usa estados y eventos para gestionar la comunicación UI ↔️ IA.
+
+---
+
+
 ### 3. **Mocks para Desarrollo y Pruebas**
 
 #### **Herramienta Recomendada: JSON Server**
@@ -1318,28 +1345,98 @@ paths:
 > - **Cambios:** [Descripción de los cambios]
 > - **Release:** No genera release
 
----
+> **Commit [3b998a2](https://github.com/DanielContrerasAladro/Alacena/commit/3b998a2):**
+> - **Descripción:** feat: Refactor global con integracion IA y limpieza
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
 
-## 2.2. Integración de IA: agentes y orquestador en Reflex
 
-### Arquitectura de integración
+> **Commit [3b998a2](https://github.com/DanielContrerasAladro/Alacena/commit/3b998a2):**
+> - **Descripción:** feat: Refactor global con integracion IA y limpieza
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
 
-- **Los agentes IA** (hábitos, inventario, nutricional, etc.) están implementados en `/app/api/agents/` como clases Python.
-- **El orquestador IA** está en `/app/api/orchestrator/orchestrator.py` y decide qué agentes consultar según el mensaje del usuario.
-- **No se exponen endpoints HTTP**: toda la lógica IA se invoca directamente desde los estados y páginas de Reflex, usando llamadas Python asíncronas.
-- **El estado global** (`GlobalState` y derivados) gestiona la sesión, el usuario y la comunicación con los agentes.
 
-### Flujo de llamada (ejemplo)
+> **Commit [3b998a2](https://github.com/DanielContrerasAladro/Alacena/commit/3b998a2):**
+> - **Descripción:** feat: Refactor global con integracion IA y limpieza
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
 
-1. El usuario pulsa un botón o envía un mensaje en la UI.
-2. El estado correspondiente (por ejemplo, `ListsState`) llama a un método asíncrono que invoca al agente o al orquestador.
-3. El agente procesa la información y devuelve la respuesta, que se muestra en la UI.
 
-### Buenas prácticas para extender la IA
+> **Commit [e4e4b21](https://github.com/DanielContrerasAladro/Alacena/commit/e4e4b21):**
+> - **Descripción:** fix: deploy and LLM access
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
 
-- Añade nuevos agentes siguiendo el patrón de `/app/api/agents/`.
-- Usa el orquestador para coordinar respuestas complejas o multi-agente.
-- No expongas endpoints HTTP externos: toda la lógica debe ser accesible desde Reflex.
-- Usa estados y eventos para gestionar la comunicación UI ↔️ IA.
 
----
+> **Commit [d9d567e](https://github.com/DanielContrerasAladro/Alacena/commit/d9d567e):**
+> - **Descripción:** chore: Planificación de finalización de MVP y corrección de bugs
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [00f61c2](https://github.com/DanielContrerasAladro/Alacena/commit/00f61c2):**
+> - **Descripción:** fix(auth): redirección automática a /lists tras login correcto
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [00f61c2](https://github.com/DanielContrerasAladro/Alacena/commit/00f61c2):**
+> - **Descripción:** fix(auth): redirección automática a /lists tras login correcto
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [1cc1b14](https://github.com/DanielContrerasAladro/Alacena/commit/1cc1b14):**
+> - **Descripción:** fix(auth): corregido error de decorador Reflex en login_state y refactor de login permanente
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [1cc1b14](https://github.com/DanielContrerasAladro/Alacena/commit/1cc1b14):**
+> - **Descripción:** fix(auth): corregido error de decorador Reflex en login_state y refactor de login permanente
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [a5e850b](https://github.com/DanielContrerasAladro/Alacena/commit/a5e850b):**
+> - **Descripción:** refactor(ui): mover formulario de alta de producto a /lists y corregir errores de importación y tests
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [a5e850b](https://github.com/DanielContrerasAladro/Alacena/commit/a5e850b):**
+> - **Descripción:** refactor(ui): mover formulario de alta de producto a /lists y corregir errores de importación y tests
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [8bc2077](https://github.com/DanielContrerasAladro/Alacena/commit/8bc2077):**
+> - **Descripción:** fix(product_form): sincroniza correctamente el nombre mostrado en el selector de categoría
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [8bc2077](https://github.com/DanielContrerasAladro/Alacena/commit/8bc2077):**
+> - **Descripción:** fix(product_form): sincroniza correctamente el nombre mostrado en el selector de categoría
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [175dffd](https://github.com/DanielContrerasAladro/Alacena/commit/175dffd):**
+> - **Descripción:** fix(crud_alimentos): alta y baja correcta de los alimentos o productos
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [175dffd](https://github.com/DanielContrerasAladro/Alacena/commit/175dffd):**
+> - **Descripción:** fix(crud_alimentos): alta y baja correcta de los alimentos o productos
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [a253cdb](https://github.com/DanielContrerasAladro/Alacena/commit/a253cdb):**
+> - **Descripción:** feat(frontend): Añade edición rápida de cantidades con botones +/- en la tabla de alimentos
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
