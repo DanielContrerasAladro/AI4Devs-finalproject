@@ -1440,3 +1440,9 @@ paths:
 > - **Cambios:** [Descripción de los cambios]
 > - **Release:** No genera release
 
+
+> **Commit [6b0b234](https://github.com/DanielContrerasAladro/Alacena/commit/6b0b234):**
+> - **Descripción:** feat(mvp): MVP tareas MUST finalizadas
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+

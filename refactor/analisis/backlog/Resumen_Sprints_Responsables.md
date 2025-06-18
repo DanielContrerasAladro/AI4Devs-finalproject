@@ -46,9 +46,9 @@
 
 | Estado      | Historias                                                                                                   |
 |-------------|------------------------------------------------------------------------------------------------------------|
-| Por hacer   | HU_23, HU_24, HU_25, HU_22, HU_20, HU_21, HU_26, HU_12                                                     |
-| En progreso |                                                                                                            |
-| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5, HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19                              |
+| Por hacer   | HU_24, HU_25, HU_22, HU_21 (parcial), HU_26                                                                |
+| En progreso | HU_12                                                                                                       |
+| Hecho       | HU_1, HU_2, HU_3, HU_4, HU_5, HU_13, HU_14, HU_15, HU_16, HU_17, HU_18, HU_19, HU_20, HU_23             |
 
 ---
 
@@ -61,12 +61,12 @@
 
 ---
 
-> [2024-07-18] Hito: Refactor global de agentes IA, autenticación y UI. Listo para commit y despliegue. Siguiente sprint: automatismos, IA avanzada, logado permanente y PWA.
+> [2024-07-18] Hito: Refactor global de agentes IA, autenticación y UI completado. Logado permanente, autorrelleno de lista y resaltado de caducidades implementados. Siguiente sprint: recetas IA, menús semanales y PWA.
 
 ---
 
 **Planificación y prioridades (reunión 2024-07-17):**
-- Se priorizan HU_23, HU_24, HU_25, HU_22 y HU_20 como siguientes tareas clave.
-- HU_21 y HU_26 quedan en la cola de prioridades.
+- Se priorizan HU_24 y HU_25 como siguientes tareas clave.
+- HU_21 (parcial) y HU_26 quedan en la cola de prioridades.
 - Se reserva un 20% del tiempo de cada sprint para revisión de bugs y corrección de funcionalidad actual, como garantía de calidad continua.
-- Justificación: Se priorizan automatismos e IA por su impacto en la experiencia de usuario y diferenciación del producto, dejando PWA y logado permanente justo después, y asegurando siempre tiempo para calidad y estabilidad.
+- Justificación: Se priorizan automatismos e IA por su impacto en la experiencia de usuario y diferenciación del producto.

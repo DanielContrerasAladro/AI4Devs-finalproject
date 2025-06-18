@@ -19,6 +19,37 @@ Feature: Selector de idioma y estilo
     Then la app cambia su apariencia según el tema elegido
 ```
 
+## Estado actual
+
+- [x] Corrección de traducciones completada
+- [x] Archivos de i18n revisados y actualizados
+- [ ] Pendiente validar funcionamiento en producción en Reflex Hosting
+- [ ] Pendiente implementar selector de tema visual
+
+## Desglose Técnico y Estimación de Tareas
+
+- Frontend (FE): M
+- Backend (BE): S
+- QA: S
+
+| Rol  | Responsable | Estado |
+|------|-------------|---------|
+| FE   | FE_Internacionalización   | En progreso |
+| BE   | BE_Internacionalización   | Completado |
+| QA   | QA_Internacionalización   | En progreso |
+| PO   | PO_Internacionalización   | En revisión |
+| BA   | BA_Internacionalización   | En revisión |
+
+## QA/PO: Criterios de aceptación y pruebas
+
+- [x] QA: Casos de prueba para traducciones completados
+- [x] PO: Traducciones validadas y correctas
+- [ ] QA: Pendiente validar selector de tema visual
+
+---
+
+> [2024-07-18] Actualización: Corrección de traducciones completada y desplegada. Pendiente validar funcionamiento en producción y completar selector de tema visual.
+
 # Historia de Usuario: Corrección bug i18n en producción
 
 Como desarrollador,

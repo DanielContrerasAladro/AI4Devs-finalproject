@@ -43,8 +43,8 @@ Feature: Logado permanente
 
 ## Estado actual
 
-- [ ] Implementación pendiente tras bloque de IA y PWA.
+- [x] Implementación completada y desplegada.
 - [x] Lógica de autenticación y persistencia de sesión revisada y mejorada en el refactor reciente.
-- [ ] Validación final y QA tras despliegue de nuevas funcionalidades.
+- [x] Validación final y QA completados.
 
-> Última actualización: 2024-07-18. Refleja avances en la gestión de sesión y autenticación tras refactor global.
+> Última actualización: 2024-07-18. Historia completada y desplegada en producción como parte del hito de autenticación y robustez.

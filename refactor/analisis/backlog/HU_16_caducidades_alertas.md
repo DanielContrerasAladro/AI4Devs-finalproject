@@ -26,22 +26,22 @@ Feature: Alertas de caducidad
 - Backend (BE): S
 - QA: S
 
-| Rol  | Responsable | Observaciones |
-|------|-------------|--------------|
-| FE   | FE_Productos   |              |
-| BE   | BE_Productos   |              |
-| QA   | QA_Productos   |              |
-| PO   | PO_Productos   | Validación de criterios de aceptación |
-| BA   | BA_Productos   | Validación de requisitos y coherencia |
+| Rol  | Responsable | Estado |
+|------|-------------|---------|
+| FE   | FE_Productos   | Completado |
+| BE   | BE_Productos   | Completado |
+| QA   | QA_Productos   | Completado |
+| PO   | PO_Productos   | Validado |
+| BA   | BA_Productos   | Validado |
 
 ## QA/PO: Criterios de aceptación y pruebas
 
-- QA: Preparar casos de prueba para cada criterio de aceptación.
-- PO: Validar que la funcionalidad cumple los criterios definidos.
-- QA: Documentar resultados de pruebas y feedback.
+- [x] QA: Casos de prueba para cada criterio de aceptación completados.
+- [x] PO: Funcionalidad validada y cumple los criterios definidos.
+- [x] QA: Resultados de pruebas y feedback documentados.
 
 ---
 
-## [2024-07-17] Cierre de historia
+## [2024-07-18] Cierre de historia
 
-La HU_16 ha sido completada, validada y desplegada en producción como parte del hito de internacionalización y robustez del bloque @lists. Todos los criterios de aceptación han sido cubiertos y la funcionalidad está disponible para los usuarios finales.
+La HU_16 ha sido completada, validada y desplegada en producción. El resaltado visual de productos próximos a caducar está funcionando correctamente y ha sido validado por QA y PO. La funcionalidad está disponible para los usuarios finales.

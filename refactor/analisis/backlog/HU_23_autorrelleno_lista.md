@@ -14,6 +14,40 @@ Feature: Autorrelleno de lista de la compra
     Then la app los añade automáticamente a la lista de la compra
 ```
 
+## Estado actual
+
+- [x] Endpoint `/api/lista/autorrelleno` implementado y funcional
+- [x] Lógica de detección de productos faltantes completada
+- [x] UI para mostrar y editar la lista autorrellenada implementada
+- [x] Casos de prueba ejecutados y pasando
+- [x] Funcionalidad validada por PO
+
+## Desglose Técnico y Estimación de Tareas
+
+- Frontend (FE): S
+- Backend (BE): M
+- QA: S
+
+| Rol  | Responsable | Estado |
+|------|-------------|---------|
+| FE   | FE_Autorrelleno   | Completado |
+| BE   | BE_Autorrelleno   | Completado |
+| QA   | QA_Autorrelleno   | Completado |
+| PO   | PO_Autorrelleno   | Validado |
+| BA   | BA_Autorrelleno   | Validado |
+
+## QA/PO: Criterios de aceptación y pruebas
+
+- [x] QA: Casos de prueba para cada criterio de aceptación completados.
+- [x] PO: Funcionalidad validada y cumple los criterios definidos.
+- [x] QA: Resultados de pruebas y feedback documentados.
+
+---
+
+## [2024-07-18] Cierre de historia
+
+La HU_23 ha sido completada, validada y desplegada en producción. El autorrelleno automático de la lista de la compra está funcionando correctamente y ha sido validado por QA y PO. La funcionalidad está disponible para los usuarios finales.
+
 ## Notas técnicas
 - Integración con inventario y hábitos de compra.
 

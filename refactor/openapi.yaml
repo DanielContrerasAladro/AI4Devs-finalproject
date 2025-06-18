@@ -41,6 +41,18 @@ paths:
           required: true
           schema:
             type: string
+            format: uuid
+        - name: categoria
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: lista_id
+          in: query
+          required: false
+          schema:
+            type: string
+            format: uuid
       responses:
         '200':
           description: Lista de alimentos obtenida exitosamente
@@ -87,6 +99,19 @@ paths:
           required: true
           schema:
             type: string
+            format: uuid
+        - name: fecha_inicio
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date
+        - name: fecha_fin
+          in: query
+          required: false
+          schema:
+            type: string
+            format: date
       responses:
         '200':
           description: Lista de menús obtenida exitosamente
@@ -111,6 +136,18 @@ paths:
           required: true
           schema:
             type: string
+            format: uuid
+        - name: tipo
+          in: query
+          required: false
+          schema:
+            type: string
+            enum: [info, warning, error]
+        - name: leida
+          in: query
+          required: false
+          schema:
+            type: boolean
       responses:
         '200':
           description: Lista de notificaciones obtenida exitosamente
@@ -141,6 +178,16 @@ paths:
                   format: uuid
                 preferencias:
                   type: object
+                  properties:
+                    dias_fuera:
+                      type: array
+                      items:
+                        type: string
+                        enum: [lunes, martes, miercoles, jueves, viernes, sabado, domingo]
+                    restricciones:
+                      type: array
+                      items:
+                        type: string
               required:
                 - usuario_id
       responses:
@@ -154,6 +201,76 @@ paths:
                   $ref: '#/components/schemas/Menu'
         '404':
           description: Usuario no encontrado
+        '500':
+          description: Error interno del servidor
+
+  /ia/habitos/analizar:
+    post:
+      summary: Analizar hábitos de compra y consumo
+      description: Analiza los hábitos de compra y consumo del usuario para generar recomendaciones personalizadas.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                usuario_id:
+                  type: string
+                  format: uuid
+                periodo:
+                  type: string
+                  enum: [semana, mes, trimestre]
+              required:
+                - usuario_id
+      responses:
+        '200':
+          description: Análisis de hábitos completado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnalisisHabitos'
+        '404':
+          description: Usuario no encontrado
+        '500':
+          description: Error interno del servidor
+
+  /ia/inventario/autorrellenar:
+    post:
+      summary: Autorrellenar lista de la compra
+      description: Genera una lista de la compra automática basada en el inventario actual y los hábitos del usuario.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                usuario_id:
+                  type: string
+                  format: uuid
+                lista_id:
+                  type: string
+                  format: uuid
+              required:
+                - usuario_id
+                - lista_id
+      responses:
+        '200':
+          description: Lista autorrellenada exitosamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  productos:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Alimento'
+                  explicacion:
+                    type: string
+        '404':
+          description: Usuario o lista no encontrados
         '500':
           description: Error interno del servidor
 
@@ -173,6 +290,11 @@ paths:
                   format: uuid
                 message:
                   type: string
+                flow:
+                  type: array
+                  items:
+                    type: string
+                    enum: [nutricional, habitos, inventario]
               required:
                 - user_id
                 - message
@@ -232,6 +354,18 @@ paths:
           schema:
             type: string
             format: uuid
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: offset
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 0
       responses:
         '200':
           description: Histórico de conversaciones
@@ -273,6 +407,17 @@ components:
         email:
           type: string
           format: email
+        preferencias:
+          type: object
+          properties:
+            idioma:
+              type: string
+              enum: [es, en]
+            tema:
+              type: string
+              enum: [claro, oscuro]
+            notificaciones:
+              type: boolean
         metadata:
           type: object
       required:
@@ -297,6 +442,10 @@ components:
         caducidad:
           type: string
           format: date
+        categoria:
+          type: string
+        icono:
+          type: string
         metadata:
           type: object
       required:
@@ -329,9 +478,26 @@ components:
                 format: uuid
               cantidad:
                 type: integer
+              unidad:
+                type: string
+        instrucciones:
+          type: array
+          items:
+            type: string
+        tiempo_preparacion:
+          type: integer
+          description: Tiempo en minutos
+        dificultad:
+          type: string
+          enum: [facil, media, dificil]
+        etiquetas:
+          type: array
+          items:
+            type: string
       required:
         - usuario_id
         - nombre
+        - ingredientes
 
     Menu:
       type: object
@@ -349,10 +515,17 @@ components:
           type: string
           format: date
         recetas:
+          type: object
+          additionalProperties:
+            type: array
+            items:
+              type: string
+              format: uuid
+        dias_fuera:
           type: array
           items:
             type: string
-            format: uuid
+            enum: [lunes, martes, miercoles, jueves, viernes, sabado, domingo]
       required:
         - usuario_id
         - fecha_inicio
@@ -364,16 +537,21 @@ components:
         id:
           type: string
           format: uuid
-        alimento_id:
+        usuario_id:
           type: string
           format: uuid
         mensaje:
           type: string
+        tipo:
+          type: string
+          enum: [info, warning, error]
+        leida:
+          type: boolean
         fecha:
           type: string
-          format: date
+          format: date-time
       required:
-        - alimento_id
+        - usuario_id
         - mensaje
         - fecha
 
@@ -382,7 +560,7 @@ components:
       properties:
         sender:
           type: string
-          enum: [user, ia_orq, ia_nutri, ia_hab, ia_inv]
+          enum: [usuario, orquestador, agente_nutricional, agente_habitos, agente_inventario]
         content:
           type: string
         timestamp:
@@ -405,7 +583,7 @@ components:
             $ref: '#/components/schemas/MensajeChat'
         status:
           type: string
-          enum: [completed, pending]
+          enum: [completada, pendiente]
       required:
         - conversation_id
         - messages
@@ -424,12 +602,47 @@ components:
           format: date-time
         status:
           type: string
-          enum: [completed, pending]
+          enum: [completada, pendiente]
       required:
         - conversation_id
         - last_message
         - last_timestamp
         - status
+
+    AnalisisHabitos:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        usuario_id:
+          type: string
+          format: uuid
+        fecha_analisis:
+          type: string
+          format: date-time
+        recomendaciones:
+          type: object
+          properties:
+            sugerencias:
+              type: array
+              items:
+                type: string
+            prioridad:
+              type: string
+              enum: [alta, media, baja]
+        metricas:
+          type: object
+          properties:
+            consumo_semanal:
+              type: object
+              additionalProperties:
+                type: number
+            balance_nutricional:
+              type: number
+      required:
+        - usuario_id
+        - fecha_analisis
 
     EstadoIA:
       type: object
@@ -449,6 +662,17 @@ components:
             inventario:
               type: string
               enum: [online, offline]
+          required:
+            - nutricional
+            - habitos
+            - inventario
+        metricas:
+          type: object
+          properties:
+            peticiones_ultimo_minuto:
+              type: integer
+            tiempo_respuesta_medio:
+              type: number
       required:
         - orquestador
         - agentes

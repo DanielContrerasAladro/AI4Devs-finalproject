@@ -650,4 +650,47 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > **Prompts Commit [N]():**
 >
 > **Prompt 1:**
+> Teniendo en cuenta este equipo de desarrollo:
 >
+>   - DevOps experto en @Reflex-hosting  , @Supabase  y buenas prácticas en arquitecturas Free
+>   - Backend developer experto en @Supabase Python @Python 3 y buenas prácticas de desarollo de APIs
+>   - Frontend developer experto en  @Reflex y buenas prácticas de Progressive Web Apps
+>   - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
+>   - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
+>  - AI Engineer experto en Agentes de IA, @LangChain @LangChainHuggingFace @Hugging-Face-Transformers
+>
+> Toma las tareas del fichero por orden, MUST -> SHOULD -> COULD, actúa como el rol asignado a la tarea, y resuélvela, siguiendo buenas prácticas del rol asignado, TDD si es necesario, de ser necesario que realice yo alguna acción o resuelva alguna duda, paras y me lo pides, sino continúa hasta terminar la tarea, al finalizar cada tarea paras para comprobar el resultado, documentar y hacer commit, dame sólo el mensaje de commit, una sóla línea, ya hago yo el commit
+>
+> Antes de empezar con una tarea, revisa el código y dime qué vas a cambiar para solucionarlo antes de empezar a cambiar código, por si tengo que corregirte en algo
+>
+> Comenzaremos con las 'Tareas SHOULD' del '## Listado de tareas técnicas por prioridad' de @PrioridadesSprint4dias.md
+>
+> **Prompt 2:**
+>
+>
+> ---
+>       Tras una conversación en la que se va avanzando en cada una de las tareas, tenemos completo el MVP, todas las tareas MUST funcionando, desplegamos en producción
+> --
+
+> **Prompts Commit [N]():**
+>
+> **Prompt 1:**
+
+
+
+
+
+
+
+Teniendo en cuenta este equipo de desarrollo:
+
+  - DevOps experto en @Reflex-hosting  , @Supabase  y buenas prácticas en arquitecturas Free
+  - Backend developer experto en @Supabase Python @Python 3 y buenas prácticas de desarollo de APIs
+  - Frontend developer experto en  @Reflex y buenas prácticas de Progressive Web Apps
+  - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
+  - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
+ - AI Engineer experto en Agentes de IA, @LangChain @LangChainHuggingFace @Hugging-Face-Transformers
+
+Toma las tareas del fichero por orden, MUST -> SHOULD -> COULD, actúa como el rol asignado a la tarea, y resuélvela, siguiendo buenas prácticas del rol asignado, TDD si es necesario, de ser necesario que realice yo alguna acción o resuelva alguna duda, paras y me lo pides, sino continúa hasta terminar la tarea, al finalizar cada tarea paras para comprobar el resultado, documentar y hacer commit, dame sólo el mensaje de commit, una sóla línea, ya hago yo el commit
+
+Antes de empezar con una tarea, revisa el código y dime qué vas a cambiar para solucionarlo antes de empezar a cambiar código, por si tengo que corregirte en algo
