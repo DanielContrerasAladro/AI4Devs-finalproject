@@ -70,3 +70,7 @@
 - HU_21 (parcial) y HU_26 quedan en la cola de prioridades.
 - Se reserva un 20% del tiempo de cada sprint para revisión de bugs y corrección de funcionalidad actual, como garantía de calidad continua.
 - Justificación: Se priorizan automatismos e IA por su impacto en la experiencia de usuario y diferenciación del producto.
+
+## Cierre de ciclo MVP
+
+El MVP ha sido completado y desplegado en producción. Todos los responsables han cumplido con sus tareas asignadas y se inicia una nueva etapa de mejora continua y ampliación de funcionalidades.

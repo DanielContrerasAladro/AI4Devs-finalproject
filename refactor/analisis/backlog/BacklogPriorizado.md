@@ -100,3 +100,6 @@ gantt
 - Justificación: Se priorizan automatismos e IA por su impacto en la experiencia de usuario y diferenciación del producto, dejando PWA y logado permanente justo después, y asegurando siempre tiempo para calidad y estabilidad.
 
 > [2024-07-18] Hito: Refactor global de agentes IA, orquestador, autenticación y UI. Listo para abordar automatismos, IA avanzada y logado permanente.
+
+## Estado del MVP
+- Todas las tareas del MVP han sido completadas y el producto está desplegado en producción.

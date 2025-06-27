@@ -676,7 +676,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 >       Tras una conversación en la que se va avanzando en cada una de las tareas, tenemos completedo el MVP, todas las tareas SHOULD funcionando, desplegamos en producción
 > --
 
-> **Prompts Commit [doc(retrospective): documentación final y retrospectiva del MVP]():**
+> **Prompts Commit [doc(retrospective): documentación final y retrospectiva del MVP](https://github.com/DanielContrerasAladro/Alacena/commit/8e3ba68aeb3541a4590ae509f18e6d1c724d41c8):**
 >
 > **Prompt 1:**
 > Teniendo en cuenta este equipo de desarrollo:

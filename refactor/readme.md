@@ -1500,3 +1500,15 @@ paths:
 > - **Cambios:** [Descripción de los cambios]
 > - **Release:** No genera release
 
+
+> **Commit [864b4d1](https://github.com/DanielContrerasAladro/Alacena/commit/864b4d1):**
+> - **Descripción:** feat(mvp): tareas SHOULD finalizadas
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [864b4d1](https://github.com/DanielContrerasAladro/Alacena/commit/864b4d1):**
+> - **Descripción:** feat(mvp): tareas SHOULD finalizadas
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
