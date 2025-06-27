@@ -1446,3 +1446,57 @@ paths:
 > - **Cambios:** [Descripción de los cambios]
 > - **Release:** No genera release
 
+
+> **Commit [9894a6c](https://github.com/DanielContrerasAladro/Alacena/commit/9894a6c):**
+> - **Descripción:** chore: actualiza esquema BD, datos de prueba y OpenAPI para agentes IA
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [9894a6c](https://github.com/DanielContrerasAladro/Alacena/commit/9894a6c):**
+> - **Descripción:** chore: actualiza esquema BD, datos de prueba y OpenAPI para agentes IA
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [19a8cd6](https://github.com/DanielContrerasAladro/Alacena/commit/19a8cd6):**
+> - **Descripción:** feat(lists): add advanced sorting and filtering capabilities
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [19a8cd6](https://github.com/DanielContrerasAladro/Alacena/commit/19a8cd6):**
+> - **Descripción:** feat(lists): add advanced sorting and filtering capabilities
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [e16a3ca](https://github.com/DanielContrerasAladro/Alacena/commit/e16a3ca):**
+> - **Descripción:** feat(recipes): implement complete CRUD for saved recipes with dynamic ingredients management
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [e16a3ca](https://github.com/DanielContrerasAladro/Alacena/commit/e16a3ca):**
+> - **Descripción:** feat(recipes): implement complete CRUD for saved recipes with dynamic ingredients management
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [70683db](https://github.com/DanielContrerasAladro/Alacena/commit/70683db):**
+> - **Descripción:** feat(UI): mejora el contraste y accesibilidad
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [70683db](https://github.com/DanielContrerasAladro/Alacena/commit/70683db):**
+> - **Descripción:** feat(UI): mejora el contraste y accesibilidad
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+
+
+> **Commit [9c08358](https://github.com/DanielContrerasAladro/Alacena/commit/9c08358):**
+> - **Descripción:** feat(mvp): tareas SHOULD finalizadas
+> - **Cambios:** [Descripción de los cambios]
+> - **Release:** No genera release
+

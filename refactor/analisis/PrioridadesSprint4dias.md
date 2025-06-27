@@ -94,30 +94,33 @@ Este documento recoge la priorización de tareas y bugs para el sprint de 4 día
 - [DONE] Resaltado de productos próximos a caducar — **S** — _Frontend_
 
 ### Tareas SHOULD
-- Ordenación y filtrado avanzado en inventario — **M** — _Responsable: Frontend + Backend_
-- Mostrar listado de recetas guardadas y permitir edición — **M** — _Backend_
-- Unificación de estilos y coherencia visual (bug orquestador más ancho) — **S** — _Diseñador_
-- Accesibilidad y responsive — **S** — _Diseñador_
-- Compartir listas con otros usuarios — **M** — _Backend_
-- El botón 'Sugerir receta' debe funcionar y mostrar receta (bug/MVP) — **M** — _AI Engineer_
-- El botón 'Añadir ingredientes faltantes' debe funcionar (bug/MVP) — **S** — _Backend_
-- El botón 'Generar menú semanal' debe funcionar y actualizar el menú (bug/MVP) — **M** — _AI Engineer_
-- El orquestador debe funcionar y responder en /orquestador (bug) — **M** — _AI Engineer_
-- Los agentes IA deben responder correctamente en /lists (nutricional, hábitos, inventario/alertas) (bug) — **M** — _AI Engineer_
+- [DONE] Ordenación y filtrado avanzado en inventario — **M** — _Responsable: Frontend + Backend_
+- [DONE] Mostrar listado de recetas guardadas y permitir edición — **M** — _Backend_
+- [DONE] Unificación de estilos y coherencia visual (bug orquestador más ancho) — **S** — _Diseñador_
+- [DONE] Accesibilidad, diseño friendly (revisión de combinaciones de colores, tipografía, etc) y responsive — **M** — _Diseñador_
+- [DONE] Los agentes IA deben responder correctamente en /lists (nutricional, hábitos, inventario/alertas) (bug) — **M** — _AI Engineer_
+- [DONE] El botón 'Sugerir receta' debe funcionar y mostrar receta (bug/MVP) — **M** — _AI Engineer_
+- [DONE] El botón 'Generar menú semanal' debe funcionar y actualizar el menú (bug/MVP) — **M** — _AI Engineer_
+- [DONE] El orquestador debe funcionar y responder en /orquestador (bug) — **M** — _AI Engineer_
+- [DONE] El botón 'Añadir ingredientes faltantes' debe funcionar (bug/MVP) — **S** — _AI Engineer_
+- [DONE] Comunicación, CRUD, con BBDD de las acciones de los agentes en la aplicación, listas, alimentos, productos, menús y recetas — **M** — _Responsable: Frontend + Backend_
+- [DONE] Validación comunicación de agentes con LLM remoto (MVP) — **M** — _AI Engineer_
+- [DONE] Tests unitarios y de integración para los flujos críticos — **M** — _QA_
+- [DONE] QA y validación de criterios de aceptación — **S** — _QA_
+
+---
 
 ### Tareas COULD
 - Manifest y service worker revisados — **S** — _DevOps_
 - La app debe ser instalable como PWA (bug/MVP) — **S** — _DevOps_
-- LLM Loader/MCP debe ser llamado y probado — **S** — _AI Engineer_
-- Tests unitarios y de integración para los flujos críticos — **M** — _QA_
-- QA y validación de criterios de aceptación — **S** — _QA_
+- Compartir listas con otros usuarios — **M** — _Backend_
 
 ---
 
 ## Resumen de tareas que podrían quedar fuera (WON'T)
-- Mejoras visuales no esenciales — **S** — _Responsable: Diseñador + Frontend_
 - Personalización avanzada de notificaciones — **M** — _Responsable: Backend + Frontend_
 - Funcionalidades avanzadas de IA no críticas para el MVP — **L** — _Responsable: AI Engineer + Backend_
+- LLM Loader/MCP debe ser llamado y probado — **S** — _AI Engineer_
 - Exportación de datos — **M** — _Responsable: Backend + Frontend_
 - Integración IoT — **L** — _Responsable: Backend + DevOps_
 

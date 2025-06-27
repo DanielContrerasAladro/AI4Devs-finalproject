@@ -636,7 +636,7 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 > **Prompt 5:**
 > No es necesario, con este desglose es suficiente para empezar a trabajar, te indico como:
 >
-> Toma las tareas por orden, MUST -> SHOULD -> COULD, actúa como el rol asignado a la tarea, y resuélvela, siguiendo buenas prácticas, TDD si es necesario, del rol asignado y lanzando los tests o pruebas necesarios en cada caso, de ser necesario que realice yo alguna acción o resuelva alguna duda, paras y me lo pides, sino continúa hasta terminar la tarea, al finalizar cada tarea paras para comprobar el resultado, documentar y hacer commit, dame sólo el mensaje de commit, ya hago yo el commit
+> Toma las tareas por orden, MUST, actúa como el rol asignado a la tarea, y resuélvela, siguiendo buenas prácticas, TDD si es necesario, del rol asignado y lanzando los tests o pruebas necesarios en cada caso, de ser necesario que realice yo alguna acción o resuelva alguna duda, paras y me lo pides, sino continúa hasta terminar la tarea, al finalizar cada tarea paras para comprobar el resultado, documentar y hacer commit, dame sólo el mensaje de commit, ya hago yo el commit
 >
 > Si tienes dudas sobre el proceso, indícamelo ahora, sino, empieza a trabasjar en background
 >
@@ -644,10 +644,10 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 >  Recuerda cada vez que demos por finalizada una tarea, marcarla en @PrioridadesSprint4dias.md como DONE de alguna manera
 >
 > ---
->       Tras una conversación en la que se va avanzando en cada una de las tareas, tenemos completo el MVP, todas las tareas MUST funcionando, desplegamos en producción
+>       Tras una conversación en la que se va avanzando en cada una de las tareas, hemos ido completando el MVP, todas las tareas MUST funcionando, desplegamos en producción
 > --
 
-> **Prompts Commit [N]():**
+> **Prompts Commit [feat(mvp): tareas SHOULD finalizadas](https://github.com/DanielContrerasAladro/Alacena/commit/9c08358c799a78de00160df1126a39c3a76fb0bb):**
 >
 > **Prompt 1:**
 > Teniendo en cuenta este equipo de desarrollo:
@@ -663,34 +663,49 @@ vale, ahora, en un documento markdown aparte en @refactor, similar a @proceso_di
 >
 > Antes de empezar con una tarea, revisa el código y dime qué vas a cambiar para solucionarlo antes de empezar a cambiar código, por si tengo que corregirte en algo
 >
-> Comenzaremos con las 'Tareas SHOULD' del '## Listado de tareas técnicas por prioridad' de @PrioridadesSprint4dias.md
->
 > **Prompt 2:**
+> Vale, toma el rol del equipo necesario para analizar cada una de estas tareas, revisando el funcionamiento veo cosas que no están bien:
+> - Al pulsar en 'Añadir ingredientes faltantes a la lista de la compra',. se produce un error, te muestro el pantallazo
+> - Al pulsar 'Autorrellenar lista de la compra' no parece que haga nada, pero tiene que consultar la tabla de 'productos' para ver qué falta la tabla 'alimentos' y que alimentos de la tabla 'alimentos' están caducados o próximos a caducar y añadirlos a la lista 'Lista de la compra'
+> - Cuando tenemos seleccionada 'Lista de la compra' la tabla inferior no debe mostrar la columna caducidad, ni el filtro sobrew caducidades, y al crear un elemento para ella con el botón 'Añadir elemento' debe crearlo con la fecha de caducidad a un año de la fecha actual
+> - Cuando el token de seguridad guardado tras hacer login está caducado y volvemos a entrar a la aplicación, no se está refrescando automáticamente para el usuario, hay que revisarlo
 >
+> Revísalas como el rol necesario en cada caso del equipo de desarrollo indicado y dame un plan de acción, no modifiques nada sin enseñármelo primero y vamos a ir paso a paso resolviendo de forma consistente
 >
 > ---
->       Tras una conversación en la que se va avanzando en cada una de las tareas, tenemos completo el MVP, todas las tareas MUST funcionando, desplegamos en producción
+>       Tras una conversación en la que se va avanzando en cada una de las tareas, tenemos completedo el MVP, todas las tareas SHOULD funcionando, desplegamos en producción
 > --
 
-> **Prompts Commit [N]():**
+> **Prompts Commit [doc(retrospective): documentación final y retrospectiva del MVP]():**
 >
 > **Prompt 1:**
-
-
-
-
-
-
-
-Teniendo en cuenta este equipo de desarrollo:
-
-  - DevOps experto en @Reflex-hosting  , @Supabase  y buenas prácticas en arquitecturas Free
-  - Backend developer experto en @Supabase Python @Python 3 y buenas prácticas de desarollo de APIs
-  - Frontend developer experto en  @Reflex y buenas prácticas de Progressive Web Apps
-  - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
-  - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
- - AI Engineer experto en Agentes de IA, @LangChain @LangChainHuggingFace @Hugging-Face-Transformers
-
-Toma las tareas del fichero por orden, MUST -> SHOULD -> COULD, actúa como el rol asignado a la tarea, y resuélvela, siguiendo buenas prácticas del rol asignado, TDD si es necesario, de ser necesario que realice yo alguna acción o resuelva alguna duda, paras y me lo pides, sino continúa hasta terminar la tarea, al finalizar cada tarea paras para comprobar el resultado, documentar y hacer commit, dame sólo el mensaje de commit, una sóla línea, ya hago yo el commit
-
-Antes de empezar con una tarea, revisa el código y dime qué vas a cambiar para solucionarlo antes de empezar a cambiar código, por si tengo que corregirte en algo
+> Teniendo en cuenta este equipo de desarrollo:
+>
+>   - DevOps experto en @Reflex-hosting  , @Supabase  y buenas prácticas en arquitecturas Free
+>   - Backend developer experto en @Supabase Python @Python 3 y buenas prácticas de desarollo de APIs
+>   - Frontend developer experto en  @Reflex y buenas prácticas de Progressive Web Apps
+>   - Diseñador experto en @Tailwind CSS y buenas prácticas en aplicaciones responsive
+>   - QA tester experto en @Pytest y buenas prácticas de testing y validación de requisitos
+>  - AI Engineer experto en Agentes de IA, @LangChain @LangChainHuggingFace @Hugging-Face-Transformers
+>
+> Vamos a realizar una reunión de retrospectiva del proyecto ya que el MVP está terminado y desplegado, vamos a documentarlo en un documento markdown que se llamará @Retrospectiva.md en la carpeta @analisis
+> En este documento se recogerán los siguientes puntos:
+> - Qué ha ido bien
+> - Qué ha ido mal
+> - Qué se ha hecho bien
+> - Qué se ha hecho mal
+> - Qué se ha aprendido
+> - Qué se ha hecho para mejorar
+>
+> Además hay que modificar los fichero sde seguimiento y de las historias de usuario, y los documentos necesarios dentro de @backlog , para que se refleje que el MVP está terminado y desplegado, así como los siguientes ficheros:
+> - @Resumen_Sprints_Responsables.md
+> - @PlanificacionReleasesRoadmap.md
+> - @BacklogPriorizado.md
+> - @PlanificacionSprints.md
+> - @BugsYCorrecciones.md
+> - @PendientesDesarrollo.md
+> - @PrioridadesSprint4dias.md
+> - @readme.md
+> - @README.md
+>
+> Hazlo teniendo en cuenta que el MVP está terminado y desplegado, y que se ha hecho un buen trabajo, pero hay que seguir trabajando para mejorar la aplicación y añadir nuevas funcionalidades, y sigue las buenas prácticas de Project Management y de desarrollo de software mediante metodologías ágiles, SCRUM concretamente
